@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<valueMaps xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<valueMap>
+<name>
+AT703_QUAL
+</name>
+<valueMapDetails>
+<value>
+AS
+</value>
+<map>
+AS
+</map>
+</valueMapDetails>
+<valueMapDetails>
+<value>
+DEF
+</value>
+<map>
+DW
+</map>
+</valueMapDetails>
+<defaultValue>
+HW</defaultValue>
+<overrideSource>
+false</overrideSource>
+<valueMapXSL>
+&lt;xsl:template name="AT703_QUAL">
+	&lt;xsl:param name="param"/>
+&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;AS&amp;apos;">&lt;xsl:value-of select="&amp;apos;AS&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;DEF&amp;apos;">&lt;xsl:value-of select="&amp;apos;DW&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:value-of select="&amp;apos;HW&amp;apos;"/>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>
+&lt;/xsl:template>
+</valueMapXSL>
+
+</valueMap>
+</valueMaps>

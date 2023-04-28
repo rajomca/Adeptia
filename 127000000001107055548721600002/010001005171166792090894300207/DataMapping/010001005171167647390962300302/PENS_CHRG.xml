@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<valueMaps xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<valueMap>
+<name>
+PENS_CHRG
+</name>
+<valueMapDetails>
+<value>
+*
+</value>
+<map>
+DD
+</map>
+</valueMapDetails>
+<valueMapDetails>
+<value>
+C
+</value>
+<map>
+CC
+</map>
+</valueMapDetails>
+<valueMapDetails>
+<value>
+N
+</value>
+<map>
+NC
+</map>
+</valueMapDetails>
+<valueMapDetails>
+<value>
+P
+</value>
+<map>
+PP
+</map>
+</valueMapDetails>
+<valueMapDetails>
+<value>
+T
+</value>
+<map>
+TP
+</map>
+</valueMapDetails>
+<defaultValue>
+</defaultValue>
+<overrideSource>
+false</overrideSource>
+<valueMapXSL>
+&lt;xsl:template name="PENS_CHRG">
+	&lt;xsl:param name="param"/>
+&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;*&amp;apos;">&lt;xsl:value-of select="&amp;apos;DD&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;C&amp;apos;">&lt;xsl:value-of select="&amp;apos;CC&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;N&amp;apos;">&lt;xsl:value-of select="&amp;apos;NC&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;P&amp;apos;">&lt;xsl:value-of select="&amp;apos;PP&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test="$param=&amp;apos;T&amp;apos;">&lt;xsl:value-of select="&amp;apos;TP&amp;apos;"/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:value-of select="&amp;apos;&amp;apos;"/>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>
+&lt;/xsl:template>
+</valueMapXSL>
+
+</valueMap>
+</valueMaps>
