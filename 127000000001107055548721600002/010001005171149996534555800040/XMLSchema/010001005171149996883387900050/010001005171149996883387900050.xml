@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
     <AU_SCHEMAXML>
+        <AU_XMLSCHEMATYPE><![CDATA[null]]></AU_XMLSCHEMATYPE>
+        <au_xmlSchemaVersion><![CDATA[2.0]]></au_xmlSchemaVersion>
+        <au_selectedroot><![CDATA[null]]></au_selectedroot>
+        <au_synchronized><![CDATA[1]]></au_synchronized>
+        <au_groupOwner><![CDATA[IndigoGroup:127000000001107055548721600002]]></au_groupOwner>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_validateXml><![CDATA[0]]></au_validateXml>
+        <AU_SAPCLIENT><![CDATA[null]]></AU_SAPCLIENT>
+        <au_id><![CDATA[010001005171149996883387900050]]></au_id>
         <au_previousVersion><![CDATA[]]></au_previousVersion>
-        <AU_IDOCEXT><![CDATA[null]]></AU_IDOCEXT>
-        <au_userOwner><![CDATA[IndigoUser:127000000001107055536473900001]]></au_userOwner>
+        <au_permissionMask><![CDATA[750]]></au_permissionMask>
         <AU_IDOCOBJTYPE><![CDATA[null]]></AU_IDOCOBJTYPE>
         <AU_APPRELEASE><![CDATA[null]]></AU_APPRELEASE>
-        <AU_SAPCLIENT><![CDATA[null]]></AU_SAPCLIENT>
-        <au_synchronized><![CDATA[0]]></au_synchronized>
-        <au_version><![CDATA[1]]></au_version>
-        <au_wsMessageCallID><![CDATA[]]></au_wsMessageCallID>
-        <au_frevvoXsd><![CDATA[]]></au_frevvoXsd>
-        <au_json><![CDATA[null]]></au_json>
-        <au_fileReferencesID><![CDATA[]]></au_fileReferencesID>
-        <au_revision><![CDATA[null]]></au_revision>
-        <au_permissionMask><![CDATA[750]]></au_permissionMask>
-        <au_entityName><![CDATA[XML_204_Schema_from_DB]]></au_entityName>
-        <au_id><![CDATA[010001005171149996883387900050]]></au_id>
-        <au_convertToXSD><![CDATA[0]]></au_convertToXSD>
-        <au_jcaAdapterID><![CDATA[null]]></au_jcaAdapterID>
-        <au_creationDate><![CDATA[2017-07-13T13:00:33]]></au_creationDate>
-        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
-        <au_description><![CDATA[204 OB XML schema from DB]]></au_description>
-        <AU_XMLSCHEMATYPE><![CDATA[null]]></AU_XMLSCHEMATYPE>
+        <au_dtdFile><![CDATA[]]></au_dtdFile>
         <providerXsdType><![CDATA[]]></providerXsdType>
-        <xsdName><![CDATA[null]]></xsdName>
-        <au_encodingUsed><![CDATA[ISO-8859-1]]></au_encodingUsed>
-        <au_selectedroot><![CDATA[null]]></au_selectedroot>
-        <au_xmlValidator><![CDATA[null]]></au_xmlValidator>
-        <AU_REUSABLE><![CDATA[null]]></AU_REUSABLE>
-        <AU_IDOCTYPE><![CDATA[null]]></AU_IDOCTYPE>
-        <AU_SYSTEMRELEASE><![CDATA[null]]></AU_SYSTEMRELEASE>
-        <xsdType><![CDATA[]]></xsdType>
-        <au_groupOwner><![CDATA[IndigoGroup:127000000001107055548721600002]]></au_groupOwner>
+        <AU_IDOCEXT><![CDATA[null]]></AU_IDOCEXT>
+        <au_convertToXSD><![CDATA[0]]></au_convertToXSD>
+        <au_userOwner><![CDATA[IndigoUser:127000000001107055536473900001]]></au_userOwner>
         <au_xsd><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
 <DB>
 <ELP500>
@@ -320,17 +306,31 @@
 </ELP500>
 </DB>
 ]]></au_xsd>
-        <au_dtdFilePath><![CDATA[\\Adeptia\shares\EDIShare\ltl_ob_204\CEUN_08-18-1701-44-58-422.xml]]></au_dtdFilePath>
+        <xsdType><![CDATA[]]></xsdType>
         <au_wsProviderID><![CDATA[]]></au_wsProviderID>
-        <au_comments><![CDATA[null]]></au_comments>
-        <au_modifiedDate><![CDATA[2017-08-18T14:39:03]]></au_modifiedDate>
-        <au_xmlSchemaVersion><![CDATA[2.0]]></au_xmlSchemaVersion>
-        <au_activeVersion><![CDATA[1]]></au_activeVersion>
-        <au_validateXml><![CDATA[0]]></au_validateXml>
-        <au_dtdFile><![CDATA[]]></au_dtdFile>
+        <au_xmlValidator><![CDATA[null]]></au_xmlValidator>
         <AU_DEFFMODE><![CDATA[null]]></AU_DEFFMODE>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <AU_IDOCTYPE><![CDATA[null]]></AU_IDOCTYPE>
+        <au_wsMessageCallID><![CDATA[]]></au_wsMessageCallID>
+        <au_modifiedDate><![CDATA[2017-08-18T14:39:03]]></au_modifiedDate>
+        <AU_SYSTEMRELEASE><![CDATA[null]]></AU_SYSTEMRELEASE>
+        <au_version><![CDATA[1]]></au_version>
+        <au_dtdFilePath><![CDATA[\\Adeptia\shares\EDIShare\ltl_ob_204\CEUN_08-18-1701-44-58-422.xml]]></au_dtdFilePath>
+        <AU_REUSABLE><![CDATA[null]]></AU_REUSABLE>
         <xsdFilePath><![CDATA[null]]></xsdFilePath>
+        <au_encodingUsed><![CDATA[ISO-8859-1]]></au_encodingUsed>
+        <au_frevvoXsd><![CDATA[]]></au_frevvoXsd>
+        <xsdName><![CDATA[null]]></xsdName>
+        <au_entityName><![CDATA[XML_204_Schema_from_DB]]></au_entityName>
         <au_projectOwner><![CDATA[Project:010001005171149996534555800040]]></au_projectOwner>
+        <au_revision><![CDATA[2cfb061ba2eeef22d909c1493064def12fe95389]]></au_revision>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_jcaAdapterID><![CDATA[null]]></au_jcaAdapterID>
+        <au_creationDate><![CDATA[2017-07-13T13:00:33]]></au_creationDate>
+        <au_json><![CDATA[null]]></au_json>
+        <au_fileReferencesID><![CDATA[]]></au_fileReferencesID>
+        <au_description><![CDATA[204 OB XML schema from DB]]></au_description>
     </AU_SCHEMAXML>
     <columnInfo dbtype="4">
         <column name="au_id" type="12"/>

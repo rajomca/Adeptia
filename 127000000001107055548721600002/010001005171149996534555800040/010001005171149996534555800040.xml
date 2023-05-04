@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
     <AU_PROJECT>
-        <au_description><![CDATA[Courier Express inbound and outbound]]></au_description>
+        <au_modifiedDate><![CDATA[2023-05-04T20:24:08]]></au_modifiedDate>
+        <au_groupOwner><![CDATA[IndigoGroup:127000000001107055548721600002]]></au_groupOwner>
+        <au_userOwner><![CDATA[IndigoUser:127000000001107055536473900001]]></au_userOwner>
+        <au_version><![CDATA[1]]></au_version>
+        <au_entityName><![CDATA[Courier_Express]]></au_entityName>
         <au_creationDate><![CDATA[2017-07-13T12:02:25]]></au_creationDate>
-        <au_revision><![CDATA[null]]></au_revision>
+        <au_projectOwner><![CDATA[null]]></au_projectOwner>
+        <au_permissionMask><![CDATA[777]]></au_permissionMask>
+        <au_description><![CDATA[Courier Express inbound and outbound transaction]]></au_description>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_synchronized><![CDATA[1]]></au_synchronized>
         <au_comments><![CDATA[null]]></au_comments>
         <au_activeVersion><![CDATA[1]]></au_activeVersion>
-        <au_entityName><![CDATA[Courier_Express]]></au_entityName>
         <au_projectType><![CDATA[null]]></au_projectType>
-        <au_previousVersion><![CDATA[]]></au_previousVersion>
-        <au_modifiedDate><![CDATA[2017-07-13T12:02:25]]></au_modifiedDate>
-        <au_projectGroup><![CDATA[IndigoGroup:010001005171142981399545800091]]></au_projectGroup>
-        <au_userOwner><![CDATA[IndigoUser:127000000001107055536473900001]]></au_userOwner>
-        <au_groupOwner><![CDATA[IndigoGroup:127000000001107055548721600002]]></au_groupOwner>
-        <au_version><![CDATA[1]]></au_version>
-        <au_synchronized><![CDATA[0]]></au_synchronized>
-        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
-        <au_permissionMask><![CDATA[777]]></au_permissionMask>
-        <au_projectOwner><![CDATA[null]]></au_projectOwner>
         <au_id><![CDATA[010001005171149996534555800040]]></au_id>
+        <au_revision><![CDATA[2cfb061ba2eeef22d909c1493064def12fe95389]]></au_revision>
+        <au_projectGroup><![CDATA[IndigoGroup:010001005171142981399545800091]]></au_projectGroup>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
     </AU_PROJECT>
     <columnInfo dbtype="4">
         <column name="au_id" type="12"/>
