@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_SCHEMAXML>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <AU_IDOCEXT><![CDATA[null]]></AU_IDOCEXT>
+        <au_userOwner><![CDATA[IndigoUser:127000000001107055536473900001]]></au_userOwner>
+        <AU_IDOCOBJTYPE><![CDATA[null]]></AU_IDOCOBJTYPE>
+        <AU_APPRELEASE><![CDATA[null]]></AU_APPRELEASE>
+        <AU_SAPCLIENT><![CDATA[null]]></AU_SAPCLIENT>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_version><![CDATA[1]]></au_version>
+        <au_wsMessageCallID><![CDATA[]]></au_wsMessageCallID>
+        <au_frevvoXsd><![CDATA[]]></au_frevvoXsd>
+        <au_json><![CDATA[null]]></au_json>
+        <au_fileReferencesID><![CDATA[]]></au_fileReferencesID>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_permissionMask><![CDATA[750]]></au_permissionMask>
+        <au_entityName><![CDATA[XML_204_Schema_from_DB]]></au_entityName>
+        <au_id><![CDATA[010001005171149996883387900050]]></au_id>
+        <au_convertToXSD><![CDATA[0]]></au_convertToXSD>
+        <au_jcaAdapterID><![CDATA[null]]></au_jcaAdapterID>
+        <au_creationDate><![CDATA[2017-07-13T13:00:33]]></au_creationDate>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_description><![CDATA[204 OB XML schema from DB]]></au_description>
+        <AU_XMLSCHEMATYPE><![CDATA[null]]></AU_XMLSCHEMATYPE>
+        <providerXsdType><![CDATA[]]></providerXsdType>
+        <xsdName><![CDATA[null]]></xsdName>
+        <au_encodingUsed><![CDATA[ISO-8859-1]]></au_encodingUsed>
+        <au_selectedroot><![CDATA[null]]></au_selectedroot>
+        <au_xmlValidator><![CDATA[null]]></au_xmlValidator>
+        <AU_REUSABLE><![CDATA[null]]></AU_REUSABLE>
+        <AU_IDOCTYPE><![CDATA[null]]></AU_IDOCTYPE>
+        <AU_SYSTEMRELEASE><![CDATA[null]]></AU_SYSTEMRELEASE>
+        <xsdType><![CDATA[]]></xsdType>
+        <au_groupOwner><![CDATA[IndigoGroup:127000000001107055548721600002]]></au_groupOwner>
+        <au_xsd><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<DB>
+<ELP500>
+<E0TPID>CEUN</E0TPID>
+<E0LOG>4413758</E0LOG>
+<E0OT>017</E0OT>
+<E0PRO>0803506</E0PRO>
+<E0LORP>L</E0LORP>
+<E0TRM>P</E0TRM>
+<E0SCD>1086503</E0SCD>
+<E0SNM>SIGNATURE HARDWARE</E0SNM>
+<E0SA1>5 FLORIDIAN DR</E0SA1>
+<E0SA2>                              </E0SA2>
+<E0SCT>ERLANGER</E0SCT>
+<E0SST>KY</E0SST>
+<E0SZIP>41018</E0SZIP>
+<E0SPLT/>
+<E0CCD>9999041</E0CCD>
+<E0CNM>EDRIES RAHMAN</E0CNM>
+<E0CA1>3258 BRANSLEY WAY</E0CA1>
+<E0CA2/>
+<E0CCT>DULUTH</E0CCT>
+<E0CST>GA</E0CST>
+<E0CZIP>30097</E0CZIP>
+<E0CPLT/>
+<E0BTC>1086499</E0BTC>
+<E0BNM>SIGNATURE HARDWARE</E0BNM>
+<E0BA1>BT</E0BA1>
+<E0BA2>2700 CRESCENT SPRINGS PIKE    </E0BA2>
+<E0BCT>ERLANGER</E0BCT>
+<E0BST>KY</E0BST>
+<E0BZIP>41017</E0BZIP>
+<E0TR/>
+<E0TOTP>1</E0TOTP>
+<E0SWGT>438</E0SWGT>
+<E0RWGT>438</E0RWGT>
+<E0PROD>144.32</E0PROD>
+<E0ALLP>0.825</E0ALLP>
+<E0ALLD>431.56</E0ALLD>
+<E0SNUM>0170803506</E0SNUM>
+<E0PO>SHP2501495</E0PO>
+<E0DEPT/>
+<E0BL/>
+<E0REF>0170803506 PB</E0REF>
+<E0TC>R&amp;L</E0TC>
+<E0PUDT>20161014</E0PUDT>
+<E0XF/>
+<E0XFA/>
+<E0XFB/>
+<E0XFBD>0</E0XFBD>
+<E0XT/>
+<E0XTA/>
+<E0XTB/>
+<E0XTBD>0</E0XTBD>
+<E0PDAT>20161014</E0PDAT>
+<E0DT>041</E0DT>
+<E0REM1/>
+<E0REM2/>
+<E0REM3/>
+<E0REM4>00                                 </E0REM4>
+<E0REM5>                                   </E0REM5>
+<E0COD>25.00</E0COD>
+<E0I>0.00</E0I>
+<E0TPC>0.00</E0TPC>
+<E0SHCC>US</E0SHCC>
+<E0CNCC>US</E0CNCC>
+<E03PCC>US</E03PCC>
+<E0PO1>144.32</E0PO1>
+<E0OPC>0.00</E0OPC>
+<E0X03A/>
+<E0X03B/>
+<E0X10A>          </E0X10A>
+<E0X30A>404-395-8434</E0X30A>
+<E0X30B/>
+<E0X8NA>1</E0X8NA>
+<E0X8NB>0</E0X8NB>
+<E0X3NA>0</E0X3NA>
+<E0X3NB>0</E0X3NB>
+<E0X92A>0.00</E0X92A>
+<E0X92B>0.00</E0X92B>
+<ELP501>
+<E1TPID>CEUN</E1TPID>
+<E1LOG>4413758</E1LOG>
+<E1OT>017</E1OT>
+<E1PRO>0803506</E1PRO>
+<E1SEQ>1</E1SEQ>
+<E1LORP>L</E1LORP>
+<E1PCS>1</E1PCS>
+<E1CLS>150</E1CLS>
+<E1CMCL>150</E1CMCL>
+<E1HAZ/>
+<E1PKGC/>
+<E1DES>TUB</E1DES>
+<E1WQ>N</E1WQ>
+<E1WGT>438</E1WGT>
+<E1RQ>PH</E1RQ>
+<E1RAT>119.43</E1RAT>
+<E1PTB> </E1PTB>
+<E1MIN> </E1MIN>
+<E1AMT>523.10</E1AMT>
+</ELP501>
+<ELP501>
+<E1TPID>CEUN</E1TPID>
+<E1LOG>4413758</E1LOG>
+<E1OT>017</E1OT>
+<E1PRO>0803506</E1PRO>
+<E1SEQ>3</E1SEQ>
+<E1LORP>L</E1LORP>
+<E1PCS>0</E1PCS>
+<E1CLS/>
+<E1CMCL>RESD</E1CMCL>
+<E1HAZ/>
+<E1PKGC/>
+<E1DES>RESIDENTIAL DLVY</E1DES>
+<E1WQ>N</E1WQ>
+<E1WGT>0</E1WGT>
+<E1RQ>PH</E1RQ>
+<E1RAT>0.00</E1RAT>
+<E1PTB> </E1PTB>
+<E1MIN> </E1MIN>
+<E1AMT>45.00</E1AMT>
+</ELP501>
+<ELP501>
+<E1TPID>CEUN</E1TPID>
+<E1LOG>4413758</E1LOG>
+<E1OT>017</E1OT>
+<E1PRO>0803506</E1PRO>
+<E1SEQ>12</E1SEQ>
+<E1LORP>L</E1LORP>
+<E1PCS>0</E1PCS>
+<E1CLS/>
+<E1CMCL>FS</E1CMCL>
+<E1HAZ/>
+<E1PKGC/>
+<E1DES>FUEL SURCHARGE</E1DES>
+<E1WQ>N</E1WQ>
+<E1WGT>0</E1WGT>
+<E1RQ>PH</E1RQ>
+<E1RAT>0.00</E1RAT>
+<E1PTB> </E1PTB>
+<E1MIN>N</E1MIN>
+<E1AMT>7.78</E1AMT>
+</ELP501>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>2</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>NMFC ITEM 158260-04</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>4</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>**SHIPPER LOAD AND COUNT**</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>5</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>Quote#: 3545014</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>6</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>ARRIVAL NOTIFY</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>7</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>R&amp;L 03/31/14 50199 1086503</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>8</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>LOG 474955 CSA 683884</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>9</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>LOC 0004 SEQ 004</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>10</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>N3-AS/tariff specified/Rateware F</E6DES>
+</ELP502>
+<ELP502>
+<E6TPID>CEUN</E6TPID>
+<E6LOG>4413758</E6LOG>
+<E6OT>017</E6OT>
+<E6PRO>0803506</E6PRO>
+<E6SEQ>11</E6SEQ>
+<E6LORP>L</E6LORP>
+<E6DES>RATED AS CLASS 70</E6DES>
+</ELP502>
+<ELP503>
+<E7TPID>CEUN</E7TPID>
+<E7LOG>4413758</E7LOG>
+<E7OT>017</E7OT>
+<E7PRO>0803506</E7PRO>
+<E7SEQ>13</E7SEQ>
+<E7LORP>L</E7LORP>
+<E7K1>CCA</E7K1>
+<E7R1>** COMPANY CHECK ACCEPTABLE **</E7R1>
+<E7K2>      </E7K2>
+<E7R2/>
+<E7X03A>   </E7X03A>
+<E7X10A>          </E7X10A>
+<E7X30A>                              </E7X30A>
+<E7X40A>                                        </E7X40A>
+<E7X50A>                                                  </E7X50A>
+<E7X3NA>0</E7X3NA>
+<E7X80A>0</E7X80A>
+<E7X92A>0.00</E7X92A>
+</ELP503>
+<ELP503>
+<E7TPID>CEUN</E7TPID>
+<E7LOG>4413758</E7LOG>
+<E7OT>017</E7OT>
+<E7PRO>0803506</E7PRO>
+<E7SEQ>14</E7SEQ>
+<E7LORP>L</E7LORP>
+<E7K1>LIFT</E7K1>
+<E7R1>LIFTGATE DELIVERY</E7R1>
+<E7K2>      </E7K2>
+<E7R2/>
+<E7X03A>   </E7X03A>
+<E7X10A>          </E7X10A>
+<E7X30A>                              </E7X30A>
+<E7X40A>                                        </E7X40A>
+<E7X50A>                                                  </E7X50A>
+<E7X3NA>0</E7X3NA>
+<E7X80A>0</E7X80A>
+<E7X92A>0.00</E7X92A>
+</ELP503>
+<ELP503>
+<E7TPID>CEUN</E7TPID>
+<E7LOG>4413758</E7LOG>
+<E7OT>017</E7OT>
+<E7PRO>0803506</E7PRO>
+<E7SEQ>15</E7SEQ>
+<E7LORP>L</E7LORP>
+<E7K1>ARRN</E7K1>
+<E7R1>ARRIVAL NOTIFY</E7R1>
+<E7K2>      </E7K2>
+<E7R2/>
+<E7X03A>   </E7X03A>
+<E7X10A>          </E7X10A>
+<E7X30A>                              </E7X30A>
+<E7X40A>                                        </E7X40A>
+<E7X50A>                                                  </E7X50A>
+<E7X3NA>0</E7X3NA>
+<E7X80A>0</E7X80A>
+<E7X92A>0.00</E7X92A>
+</ELP503>
+</ELP500>
+</DB>
+]]></au_xsd>
+        <au_dtdFilePath><![CDATA[\\Adeptia\shares\EDIShare\ltl_ob_204\CEUN_08-18-1701-44-58-422.xml]]></au_dtdFilePath>
+        <au_wsProviderID><![CDATA[]]></au_wsProviderID>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_modifiedDate><![CDATA[2017-08-18T14:39:03]]></au_modifiedDate>
+        <au_xmlSchemaVersion><![CDATA[2.0]]></au_xmlSchemaVersion>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_validateXml><![CDATA[0]]></au_validateXml>
+        <au_dtdFile><![CDATA[]]></au_dtdFile>
+        <AU_DEFFMODE><![CDATA[null]]></AU_DEFFMODE>
+        <xsdFilePath><![CDATA[null]]></xsdFilePath>
+        <au_projectOwner><![CDATA[Project:010001005171149996534555800040]]></au_projectOwner>
+    </AU_SCHEMAXML>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_xsd" type="-1"/>
+        <column name="xsdFilePath" type="12"/>
+        <column name="au_encodingUsed" type="12"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_dtdFilePath" type="12"/>
+        <column name="au_convertToXSD" type="3"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_xmlSchemaVersion" type="12"/>
+        <column name="au_fileReferencesID" type="12"/>
+        <column name="au_dtdFile" type="-1"/>
+        <column name="au_validateXml" type="3"/>
+        <column name="au_wsMessageCallID" type="12"/>
+        <column name="au_wsProviderID" type="12"/>
+        <column name="au_jcaAdapterID" type="12"/>
+        <column name="xsdType" type="12"/>
+        <column name="providerXsdType" type="12"/>
+        <column name="xsdName" type="12"/>
+        <column name="au_frevvoXsd" type="12"/>
+        <column name="AU_XMLSCHEMATYPE" type="12"/>
+        <column name="AU_DEFFMODE" type="12"/>
+        <column name="AU_IDOCOBJTYPE" type="12"/>
+        <column name="AU_IDOCEXT" type="12"/>
+        <column name="au_selectedroot" type="12"/>
+        <column name="au_xmlValidator" type="12"/>
+        <column name="AU_IDOCTYPE" type="12"/>
+        <column name="AU_SYSTEMRELEASE" type="12"/>
+        <column name="AU_APPRELEASE" type="12"/>
+        <column name="AU_SAPCLIENT" type="12"/>
+    </columnInfo>
+</data>
