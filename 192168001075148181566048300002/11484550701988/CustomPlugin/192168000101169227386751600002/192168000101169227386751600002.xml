@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_SCRIPTEDSERVICE>
+        <au_variablesXML><![CDATA[<variables>
+</variables>
+]]></au_variablesXML>
+        <au_projectOwner><![CDATA[Project:11484550701988]]></au_projectOwner>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_entityName><![CDATA[PC_CP_ServiceBus]]></au_entityName>
+        <au_showHideFlag><![CDATA[0]]></au_showHideFlag>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_id><![CDATA[192168000101169227386751600002]]></au_id>
+        <au_modifiedDate><![CDATA[2023-08-21T14:22:06]]></au_modifiedDate>
+        <au_interpreterType><![CDATA[0]]></au_interpreterType>
+        <au_script><![CDATA[import com.azure.messaging.servicebus.ServiceBusClientBuilder;
+import com.azure.messaging.servicebus.ServiceBusMessage;
+import com.azure.messaging.servicebus.ServiceBusSenderClient;
+
+Map customProperties= new HashMap();
+			customProperties.put("Key1", "123");
+			customProperties.put("Key2", "345");
+ASBImpl.sendMessage("Endpoint=sb://adeptiadevbus.servicebus.windows.net/;SharedAccessKeyName=paradigmpolicy;SharedAccessKey=Z30z30FqXSbLRXS9NmZp6thTyI79epmNJ+ASbOpSbLw=","paradigm_topic","{\"header\":{\"transactionId\":\"20230623191905796960\",\"applicationId\":\"Adeptia\",\"partnerId\":\"101\",\"recordStatus\":null,\"companyName\":null,\"fileName\":\"INST_Sedgwick_ParadigmCombinedPPO_20230311071743.E02\",\"fileData\":null,\"recordId\":\"1002345000222235647\"},\"bills\":[{\"provider\":{\"recordId\":null,\"taxId\":\"300950488\",\"serviceFacilityNPI\":null,\"billingProviderNPI\":null,\"renderingNPI\":null,\"renderingTaxonomyCode\":null,\"lastOrEntityName\":\"THOMASVILLE EMERGENCY PHYSICIANS LLC\",\"firstName\":\"JOHN\",\"lastName\":\"FORTENBERRY\",\"addressLine1\":\"1000 MAR WALT DRIVE\",\"addressLine2\":null,\"city\":\"FORT WALTON BEACH\",\"state\":\"FL\",\"zip\":\"32547\",\"phone\":null,\"medicareId\":null,\"licenseNumber\":null,\"licIssueDate\":null,\"licExpirationDate\":null,\"providerType\":null,\"taxonomyCode\":null},\"providers\":[{\"recordId\":null,\"providerType\":\"RENDERING\",\"taxId\":null,\"npi\":\"1083693345\",\"taxonomyCode\":null,\"entityName\":null,\"firstName\":\"JOHN\",\"lastName\":\"FORTENBERRY\",\"addressLine1\":null,\"addressLine2\":null,\"city\":null,\"state\":null,\"zip\":\"32547\",\"phone\":null,\"medicareId\":null,\"licenseNumber\":\"ME0085957\",\"licIssueDate\":null,\"licExpirationDate\":null},{\"recordId\":null,\"providerType\":\"BILLING\",\"taxId\":\"300950488\",\"npi\":\"1639626187\",\"taxonomyCode\":null,\"entityName\":\"THOMASVILLE EMERGENCY PHYSICIANS LLC\",\"firstName\":null,\"lastName\":null,\"addressLine1\":\"P O BOX 80146\",\"addressLine2\":null,\"city\":\"PHILADELPHIA\",\"state\":\"PA\",\"zip\":\"19101\",\"phone\":null,\"medicareId\":null,\"licenseNumber\":null,\"licIssueDate\":null,\"licExpirationDate\":null},{\"recordId\":null,\"providerType\":\"SERVICE\",\"taxId\":null,\"npi\":null,\"taxonomyCode\":null,\"entityName\":\"THOMASVILLE EMERGENCY PHYSICIANS LLC\",\"firstName\":null,\"lastName\":null,\"addressLine1\":\"1000 MAR WALT DRIVE\",\"addressLine2\":null,\"city\":\"FORT WALTON BEACH\",\"state\":\"FL\",\"zip\":\"32547\",\"phone\":null,\"medicareId\":null,\"licenseNumber\":null,\"licIssueDate\":null,\"licExpirationDate\":null}],\"claim\":{\"coverage\":\"WC\",\"recordId\":null,\"jurisdiction\":\"FL\",\"dateOfInjury\":\"20220922\",\"claimNumber\":\"0400003132001\",\"admissionTypeCode\":null,\"admissionSourceCode\":null,\"admissionDate\":null,\"dischargeStatus\":null,\"admissionHour\":null,\"dischargeHour\":null},\"client\":[{\"clientName\":\"AMF - Sync client name in Mirth, EDI Trans, and Adva-Net\",\"clientType\":\"CLAIMADMIN\",\"addressLine1\":null,\"addressLine2\":null,\"city\":null,\"state\":null,\"zip\":null,\"adjusterFirstName\":null,\"adjusterLastName\":null,\"adjusterEmail\":null,\"nurseCaseManagerFirstName\":null,\"nurseCaseManagerLastName\":null,\"nurseCaseManagerEmail\":null,\"clientId\":\"AMF\",\"clientSecondaryId\":\"CC\",\"clientMasterId\":null,\"clientUniqueCode\":null},{\"clientName\":\"AMF - Sync client name in Mirth, EDI Trans, and Adva-Net\",\"clientType\":\"MCO\",\"addressLine1\":null,\"addressLine2\":null,\"city\":null,\"state\":null,\"zip\":null,\"adjusterFirstName\":null,\"adjusterLastName\":null,\"adjusterEmail\":null,\"nurseCaseManagerFirstName\":null,\"nurseCaseManagerLastName\":null,\"nurseCaseManagerEmail\":null,\"clientId\":\"AMF\",\"clientSecondaryId\":null,\"clientMasterId\":null,\"clientUniqueCode\":null},{\"clientName\":\"AMFED COMPANY -RIDGELAND\",\"clientType\":\"CARRIER\",\"addressLine1\":null,\"addressLine2\":null,\"city\":null,\"state\":null,\"zip\":null,\"adjusterFirstName\":null,\"adjusterLastName\":null,\"adjusterEmail\":null,\"nurseCaseManagerFirstName\":null,\"nurseCaseManagerLastName\":null,\"nurseCaseManagerEmail\":null,\"clientId\":\"AMF\",\"clientSecondaryId\":null,\"clientMasterId\":null,\"clientUniqueCode\":null},{\"clientName\":\"BREVARD ACHIEVEMENT CENTER INC\",\"clientType\":\"EMPLOYER\",\"addressLine1\":null,\"addressLine2\":null,\"city\":null,\"state\":null,\"zip\":null,\"adjusterFirstName\":null,\"adjusterLastName\":null,\"adjusterEmail\":null,\"nurseCaseManagerFirstName\":null,\"nurseCaseManagerLastName\":null,\"nurseCaseManagerEmail\":null,\"clientId\":\"AMF\",\"clientSecondaryId\":null,\"clientMasterId\":null,\"clientUniqueCode\":null}],\"patient\":{\"lastName\":\"STRONG\",\"firstName\":\"DARLA\",\"ssn\":\"337708922\",\"addressLine1\":\"138 IRON HORSE DR W\",\"addressLine2\":null,\"city\":\"CRESTVIEW\",\"state\":\"FL\",\"zipCode\":\"32539\",\"dateOfBirth\":\"19701020\",\"gender\":\"F\",\"homePhone\":null,\"workPhone\":null,\"email\":null,\"cellPhone\":null},\"bill_details\":[{\"vendorReasons\":[{\"reasonCode\":\"ZZZFL337\",\"reasonDescription\":\"PAID: NO MODIFICATION TO THE MEDICAL BILL: PAYMENT MADE PURSUANT TO FL WC HEALTH CARE PROVIDER REIMBURSEMENT MANUAL.\",\"isCARC\":null}],\"lineId\":\"1\",\"serviceCode\":\"99283\",\"modifier1\":null,\"modifier2\":null,\"modifier3\":null,\"modifier4\":null,\"description\":null,\"unit\":\"1\",\"pos\":\"23\",\"whichICD9\":null,\"charge\":\"836\",\"serviceDate\":\"20220922\",\"feeScheduleAllowance\":\"70\",\"renderingProviderNPI\":null,\"revenueCode\":null,\"ignoreLine\":null,\"tos\":\"0\",\"paymentAmount\":null,\"billedAmount\":null,\"serviceToDate\":\"20220922\",\"apportionment\":null}],\"icdCodes\":[{\"icd10Code\":\"S22.32XA\",\"icd\":null,\"icdOrderNumber\":null},{\"icd10Code\":\"S50.02XA\",\"icd\":null,\"icdOrderNumber\":null},{\"icd10Code\":\"S83.91XA\",\"icd\":null,\"icdOrderNumber\":null},{\"icd10Code\":\"W01.0XXA\",\"icd\":null,\"icdOrderNumber\":null}],\"programflags\":null,\"externalBillId\":\"AMFCCFL521\",\"billType\":\"HCFA\",\"patientType\":null,\"patientAccountNumber\":\"007344255141WL\",\"isRecon\":null,\"secondaryExternalBillId\":null,\"externalInvoiceId\":null,\"principalProcedureCode\":null,\"principalProcedureDate\":null,\"prospectivePaymentSystemCode\":null,\"signatureOfPhysicianFirstName\":null,\"signatureOfPhysicianLastName\":null,\"signatureOfPhysicianDegree\":null,\"signatureOfPhysicianDate\":null,\"signatureOfPhysicianLicense\":null,\"referringProvider\":null,\"referringProviderLicense\":null,\"isEligibleForTinFlip\":null,\"voidIndicator\":null,\"isReconOf\":null,\"typeOfBill\":null,\"drgCode\":null,\"totalCopayAmount\":null,\"totalChargeAmount\":null,\"totalFeeScheduleAmount\":null,\"totalPaymentAmount\":null,\"totalBilledAmount\":null,\"attendingProviderFirstName\":null,\"attendingProviderLastName\":null,\"attendingProviderNPI\":null,\"admittingDiagnosisCode\":null,\"patientVisitReasons\":null}],\"footer\":{\"billCount\":\"12345\",\"lineCount\":null,\"totalCharges\":null,\"totalFeeSchedule\":null,\"totalFinalAllowance\":null,\"totalPayment\":null,\"totalSavings\":null},\"messageProperties\":{}}", customProperties);]]></au_script>
+        <au_description><![CDATA[PC_CP_ServiceBus]]></au_description>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_encodingUsed><![CDATA[UTF-8]]></au_encodingUsed>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_userOwner><![CDATA[IndigoUser:11691911896004]]></au_userOwner>
+        <au_version><![CDATA[1]]></au_version>
+        <au_creationDate><![CDATA[2023-08-17T17:34:28]]></au_creationDate>
+    </AU_SCRIPTEDSERVICE>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_script" type="-1"/>
+        <column name="au_showHideFlag" type="3"/>
+        <column name="au_variablesXML" type="-1"/>
+        <column name="au_encodingUsed" type="12"/>
+        <column name="au_interpreterType" type="4"/>
+    </columnInfo>
+</data>
