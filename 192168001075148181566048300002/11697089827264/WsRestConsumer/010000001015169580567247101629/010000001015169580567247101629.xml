@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_WSRESTCONSUMER>
+        <au_creationDate><![CDATA[2023-09-27T09:07:52]]></au_creationDate>
+        <au_encodingUsed><![CDATA[UTF-8]]></au_encodingUsed>
+        <au_resourceParameterXML><![CDATA[<variables>
+<variable>
+<name>ACCESS_TOKEN</name>
+<value>MZzyxeyJhbGciOiJIUzI1NiIsImVuYyI6IlNIQS0yNTYifQ.ekg0dHUvRk1uZStRcm1ZdmNsQlRUc2l4RWNRTEp0dVBtUkRUSGtYemZDUGYwV3Y4U2JhUjFiM2VldTdWTmhLZnEwWTdmY1MxY0ZzdQp6bnNJZExVNHpwWDBKVU5BODZyeXdPb2FtWkdzWW1pK1VxRXc0R3BkRm5HWHEwbmhMclNDQ2FnWkFyc1VwSW1YdnZEc0RnM0JIeU14Ckk1bjlVNXhRekhzOVVuZi8zTWVGVUhvUGl5NzFPTkVQSnVWYUxoTWx6OU11L2F5NjJJamNsUGtua29DTGVJNTZQT29hY05hL0U1aVkKaW9ZbitmbGVBQU0xVlNmVlN5WlhTRm8xTnJ1cjhySUREV3hqVTBHWUFhY21jT2VnRVlZdzZkMjVWNmtjaEltaEszYmIwTjFGVG1UbwpVYmRpMWRBWEh6a3E3aThHSXRJY0lGMVgzVGxDa0V1ZGVDVW9GYUJUL21oaE9ESUVXZ2hsSUp0NFR6bms5ODUwbVhUaGRnQkhDY05XCjJ5aUhENkFhSk9HZ0EyQ2lFT3llVmRBMWxYQUNWM1VFZThSNzRKL3VzRG1tREhlL0JGQTBTY2RUVTJScm5SNEdXSEVGUW5kdlB4SDYKSUxzbG9BeUZsVFpqRkE3dlBRanBEWHFibkNyOUd5Z1M4OFB6ZXB6cUcwcFprUzBaYWxCVzBTWXZ4THczSXQyZUY1R0xDKzlnak1wQwpON1ZXYWpEVVZXenY2Q0Q5bFdPdytjU0liQVk5REFNNkxQbjhIdzl1Z1NzZ3FMYjZNd05WdUFiWUdubG53c1R2U3IzWnY5QmNiM1FFCjRrYWJZdGJCWjRSWEZVWTFoVXpwOGVjM3RkL3hvOTE0WnkyWStGTkNKWHpUMGhMejZRaHlkMDNTa0k3UTN1UTBENG9VNFFacklTazgKYUR3WFpOeTlVeGFvYzF0MmxVZjVUeVZqTWtseXdMejBOZE9IZU5yeXJyODVqMDJGTE43WmpOZjVLZ1o5QnpZZm1veHR3NVFlRDFrdApXRjUwSFB0ejV4MVdkOERrbU9TUXVrMi9BY2JYZnBCRFlTaExJQ1YzOWpiaEYxUVU4WGFGZ3ZFRCtSdEc4YkxtdUZJZWZrWGZJSHpWCnV3Q2l1NUZEa3hJdGJ2OEc2a0laWDVWNktpZ2d0OFczL3NQdGFMbXVOZGRDZmp3dncxTTZpWGhtcDFadXZRbVBSQ0pvaE1PckJtVVcKWHNXTVhZUnQxNmdaMlQ4OENnMU53THB1QTY2V2xHbDFBaC9UdC9jdjlJZ2ZtRmhTSklxNjMwUWpnZnNZcnlZeDdsZDF0aC9TYkZnNwova2E4QzdiRzJoREdnR1JQVG5uaVpORlNXUklLcEVDWGFuOEx3R0p4SE5NQUdDNmlzYmlud3dwdjBESVdMQ05ReDluMEk4TUxlc1NWCnJvdHBIbEE2elc2b2hQSkM3ajRoZ09OMk9idTFRK2hxaDAyMXVaamppYlhLY1dlMVhxV0wrNHduNmtGSkNaRko0eWJhcWkrbE5FUEoKUTg1aFd6TjBUUEFkKzBoMURiamVBRHp5ank2TEdGLzRsZz09.KhAVjXUhOdKzBGHthXNhmQhlztQrQSJkiJWDE1fRXak</value>
+<style>header</style>
+</variable>
+<variable>
+<name>Content-Type</name>
+<value>application/json</value>
+<style>header</style>
+</variable>
+</variables>
+]]></au_resourceParameterXML>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_signatureMethod><![CDATA[null]]></au_signatureMethod>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_consumerType><![CDATA[rest]]></au_consumerType>
+        <au_modifiedDate><![CDATA[2023-10-17T11:24:42]]></au_modifiedDate>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_connectTimeout><![CDATA[0]]></au_connectTimeout>
+        <au_securityPolicyID><![CDATA[]]></au_securityPolicyID>
+        <au_validateXML><![CDATA[0]]></au_validateXML>
+        <au_description><![CDATA[Get_Transaction_Entity]]></au_description>
+        <au_entityName><![CDATA[Get_Transaction_Entity]]></au_entityName>
+        <au_projectOwner><![CDATA[Project:11697089827264]]></au_projectOwner>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_version><![CDATA[1]]></au_version>
+        <au_readTimeout><![CDATA[0]]></au_readTimeout>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_presentationParameterXML><![CDATA[<variables>
+<methodtype methodname="GET">
+<variable>
+<name>restResponse</name>
+<value>RESPONSE</value>
+<style>application/json</style>
+<statuscode></statuscode>
+<xmlschemaid></xmlschemaid>
+</variable>
+<variable>
+<name>restFault</name>
+<value>FAULT</value>
+<style>application/json</style>
+<statuscode></statuscode>
+<xmlschemaid></xmlschemaid>
+</variable>
+</methodtype>
+</variables>
+]]></au_presentationParameterXML>
+        <au_oauthAccountID><![CDATA[null]]></au_oauthAccountID>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <AU_RESTURL><![CDATA[https://internal-training.adeptia.com:8843/rest/transaction?_dc=1695703385371&jsonData=&query=&page=1&start=0&limit=710]]></AU_RESTURL>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_id><![CDATA[010000001015169580567247101629]]></au_id>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <AU_PARTNAME><![CDATA[]]></AU_PARTNAME>
+        <au_postQueryString><![CDATA[off]]></au_postQueryString>
+        <AU_FILENAME><![CDATA[]]></AU_FILENAME>
+        <au_selectedMethod><![CDATA[GET]]></au_selectedMethod>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_enableMultipart><![CDATA[off]]></au_enableMultipart>
+        <au_userOwner><![CDATA[IndigoUser:11631863734171]]></au_userOwner>
+    </AU_WSRESTCONSUMER>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="AU_RESTURL" type="12"/>
+        <column name="AU_PARTNAME" type="12"/>
+        <column name="AU_FILENAME" type="12"/>
+        <column name="au_signatureMethod" type="12"/>
+        <column name="au_consumerType" type="12"/>
+        <column name="au_enableMultipart" type="12"/>
+        <column name="au_postQueryString" type="12"/>
+        <column name="au_securityPolicyID" type="12"/>
+        <column name="au_oauthAccountID" type="12"/>
+        <column name="au_selectedMethod" type="12"/>
+        <column name="au_validateXML" type="3"/>
+        <column name="au_presentationParameterXML" type="-1"/>
+        <column name="au_resourceParameterXML" type="-1"/>
+        <column name="au_encodingUsed" type="12"/>
+        <column name="au_readTimeout" type="4"/>
+        <column name="au_connectTimeout" type="4"/>
+    </columnInfo>
+</data>

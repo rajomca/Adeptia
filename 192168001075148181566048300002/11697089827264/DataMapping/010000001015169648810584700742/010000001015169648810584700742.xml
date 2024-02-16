@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_MAPPINGTRANSFORMATION>
+        <au_dbInfoName><![CDATA[]]></au_dbInfoName>
+        <au_valueMap><![CDATA[<ValueMap/>]]></au_valueMap>
+        <au_splitFile><![CDATA[0]]></au_splitFile>
+        <au_id><![CDATA[010000001015169648810584700742]]></au_id>
+        <au_projectOwner><![CDATA[Project:11697089827264]]></au_projectOwner>
+        <au_customAutoMap><![CDATA[]]></au_customAutoMap>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_pdfFileName><![CDATA[Adp_Map_Rules4864296945916614521.pdf]]></au_pdfFileName>
+        <au_numberOfRecords><![CDATA[500]]></au_numberOfRecords>
+        <au_modifiedDate><![CDATA[2023-10-27T07:18:56]]></au_modifiedDate>
+        <au_characterSetEncoding><![CDATA[UTF-8]]></au_characterSetEncoding>
+        <au_xslTransformer><![CDATA[Saxon]]></au_xslTransformer>
+        <au_metadata><![CDATA[]]></au_metadata>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_mapXmlFile><![CDATA[<?xml version="1.0" encoding="UTF-8"?><maps version="4.4">
+<mappingInformation>
+<mappingVersion>6.1</mappingVersion>
+<mappingName>Sada_JSON_To_Excel_Map_Copy</mappingName>
+<mappingProject>Project:11697089827264</mappingProject>
+<mappingDescription>Copy</mappingDescription>
+<sourceSchemaID>JSONSchema:010000001015169570751398400572</sourceSchemaID>
+<targetSchemaID>ExcelSchema:010000001015169589797362102131</targetSchemaID>
+<mappingOwnerGroup>Group_1</mappingOwnerGroup>
+<mappingOwner>Sadanand Datta Wanole</mappingOwner>
+<mappingLastModifiedBy>Admin User</mappingLastModifiedBy>
+<mappingCreationDate>Thu Oct 05 06:41:46 UTC 2023</mappingCreationDate>
+<mappingModifiedDate>Fri Oct 27 07:18:55 UTC 2023</mappingModifiedDate>
+<reusable>true</reusable>
+</mappingInformation>
+<sourceRoots>
+<sourceRoot>
+<name>Root</name>
+<schemaName>TR_Layout</schemaName>
+<schemaID>JSONSchema:010000001015169570751398400572</schemaID>
+</sourceRoot>
+</sourceRoots>
+<targetRoots>
+<targetRoot>
+<name>Root</name>
+<schemaName>Excel_Layout_TR_Detail</schemaName>
+<schemaID>ExcelSchema:010000001015169589797362102131</schemaID>
+<stream>output_1</stream>
+</targetRoot>
+</targetRoots>
+<nameSpace/>
+<xslProperty/>
+<GlobalPreCustomXSL/>
+<GlobalPostCustomXSL/>
+<xslTemplates/>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/Transaction_id</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_TR_Layout/Root/Transactions/id</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Transaction_id">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/Transaction_id" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/FTPEvent</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FTPEvent' } VALUE=[$Query_FTPEvent] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Var_FTPEvent_ActivityId</lname>
+<lvalue>$Input_TR_Layout/Root/item/Transactions/metadata/activityId</lvalue>
+<lcomment/>
+</localVariable>
+<localVariable>
+<lname>Query_FTPEvent</lname>
+<lvalue>DBQuery {select au_entityName from AU_FTPEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId' ,$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="FTPEvent">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/FTPEvent" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/FtpTarget</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpTarget' } VALUE=[$Query_FTP_Target] OTHERWISE VALUE=[  ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_FTP_Target</lname>
+<lvalue>DBQuery { select au_entityName from AU_FTPTARGET where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="FtpTarget">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/FtpTarget" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/EDIInboundRelationship</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='EDIInboundRelationship' } VALUE=[$Query_EDIInboundRelationship] OTHERWISE VALUE=[ ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_EDIInboundRelationship</lname>
+<lvalue>DBQuery { select au_entityName from AU_EDIINBOUNDRELATIONSHIP where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="EDIInboundRelationship">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/EDIInboundRelationship" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/FileEvent</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FileEvent' } VALUE=[$Query_FileEvent] OTHERWISE VALUE=[  ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_FileEvent</lname>
+<lvalue>DBQuery { select au_entityName from AU_FILEEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="FileEvent">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/FileEvent" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/LanFileTarget</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='LanFileTarget' } VALUE=[$Query_LanFileTarget] OTHERWISE VALUE=[ ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_LanFileTarget</lname>
+<lvalue>DBQuery { select au_entityName from AU_LANFILETARGET where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="LanFileTarget">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/LanFileTarget" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/JSONSchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='JSONSchema' } VALUE=[$Query_JSONSchema] OTHERWISE VALUE=[ ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_JSONSchema</lname>
+<lvalue>DBQuery { select au_entityName from AU_JSONSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="JSONSchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/JSONSchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/AdvancedDatabaseTarget</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancedDatabaseTarget' } VALUE=[$Query_AdvancedDatabaseTarget] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_AdvancedDatabaseTarget</lname>
+<lvalue>DBQuery { select au_entityName from AU_ADVDBTarget where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="AdvancedDatabaseTarget">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/AdvancedDatabaseTarget" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/AdvanceDbSchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvanceDbSchema' } VALUE=[$Query_AdvanceDbSchema] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_AdvanceDbSchema</lname>
+<lvalue>DBQuery { select au_entityName from AU_ADVANCEDBSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="AdvanceDbSchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/AdvanceDbSchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/TextSchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='TextSchema' } VALUE=[$Query_TextSchema] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_TextSchema</lname>
+<lvalue>DBQuery { select au_entityName from AU_TEXTSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="TextSchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/TextSchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/AdvancePositionalSchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancePositionalSchema' } VALUE=[$Query_AdvancePositionalSchema] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_AdvancePositionalSchema</lname>
+<lvalue>DBQuery { select au_entityName from AU_ADVANCESCHEMAPOSITIONAL where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="AdvancePositionalSchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/AdvancePositionalSchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/FtpSource</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpSource' } VALUE=[$Query_FtpSource] OTHERWISE VALUE=[ ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_FtpSource</lname>
+<lvalue>DBQuery { select au_entityName from AU_FTPSOURCE where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="FtpSource">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/FtpSource" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/DatabaseEvent</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='DatabaseEvent' } VALUE=[$Query_DatabaseEvent] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_DatabaseEvent</lname>
+<lvalue>DBQuery { select au_entityName from AU_DBEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="DatabaseEvent">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/DatabaseEvent" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/EDISchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type = 'EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+<comments>WHEN CONDITION{$Input_TR_Layout/Root/item/Transactions/metadata/type='EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=['Not Available']</comments>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_EDIShema</lname>
+<lvalue>DBQuery { select au_entityName from AU_EDISCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="EDISchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/EDISchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/XMLSchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='XMLSchema'} VALUE=[$Query_XMLSchema] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_XMLSchema</lname>
+<lvalue>DBQuery { select au_entityName from AU_SCHEMAXML where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="XMLSchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/XMLSchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/DataMapping</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='DataMapping' } VALUE=[$Query_DataMapping ] OTHERWISE VALUE=[]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+<comments>WHEN CONDITION{ $Input_TR_Layout/Root/item/Transactions/metadata/type = 'DataMapping' } VALUE=[$Query_DataMapping] OTHERWISE VALUE=[ ]</comments>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_DataMapping</lname>
+<lvalue> DBQuery { select au_entityName from AU_MAPPINGTRANSFORMATION where au_id ='$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'true'} </lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="DataMapping">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/DataMapping" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/ExcelSchema</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='ExcelSchema' } VALUE=[$Query_EXCELSCHEMA] OTHERWISE VALUE=[ ]</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_EXCELSCHEMA</lname>
+<lvalue>DBQuery { select au_entityName from AU_EXCELSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="ExcelSchema">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/ExcelSchema" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/EDIOutboundRelationship</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{ $Input_TR_Layout/Root/Transactions/metadata/type='EDIOutboundRelationship' } VALUE=[$Query_EDIOutboundRelationship] OTHERWISE VALUE=[]$Input_TR_Layout/Root/Transactions/id</mapValue>
+ <forEach>$Input_TR_Layout/Root/Transactions/metadata/activityId</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Query_EDIOutboundRelationship</lname>
+<lvalue>DBQuery { select au_entityName from AU_EDIOUTBOUNDRELATIONSHIP where au_id = '$Var_FTPEvent_ActivityId ', $var_Transaction ,'true' }</lvalue>
+<lcomment/>
+</localVariable>
+<localVariable>
+<lname>String</lname>
+<lvalue>normalize-space( 'EDIOutboundRelationship')</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="EDIOutboundRelationship">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/EDIOutboundRelationship" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_TR_Layout/Root/Transactions/id$Input_TR_Layout/Root/Transactions/id</mapValue>
+ <forEach>$Input_TR_Layout/Root$Input_TR_Layout/Root/Transactions/entityName</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>Var_FTPEvent_ActivityId</lname>
+<lvalue>$Input_TR_Layout/Root/Transactions/metadata/activityId</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="Record">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Excel_Layout_TR_Detail</targetName>
+<dest>/Root/Record/Transaction_Name</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_TR_Layout/Root/Transactions/entityName SELECT FIELD=[ ] FROM DB.TAB=[ ].[ ] WHERE {Conuntries }</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Transaction_Name">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/Transaction_Name" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<variables>
+<variable>
+<name>Countries</name>
+<value>100</value>
+</variable>
+</variables>
+
+<globalParameters>
+<keys>
+</keys>
+<contextVariables>
+</contextVariables>
+</globalParameters>
+
+<connections>
+<connectionVariable>
+<name>var_Transaction</name>
+<value>010000001015169590339640702164</value>
+</connectionVariable>
+</connections>
+<functions>
+</functions>
+<disableOutputNodes>
+</disableOutputNodes>
+<filters/>
+<valuemapNodes/>
+<accessLevel>
+<valueMap>global</valueMap>
+<globalTemplate>global</globalTemplate>
+<customAutoMap>global</customAutoMap>
+</accessLevel>
+<DataViewerRecordCount>50</DataViewerRecordCount>
+<isQuickSplittingEnabled>false</isQuickSplittingEnabled>
+<sourceExtensions/>
+<targetExtensions/>
+<disableOutputNodes/>
+<characterSetEncoding>UTF-8</characterSetEncoding>
+<tipOfTheDay>true</tipOfTheDay>
+<contextSchemaLoadedAtSource>false</contextSchemaLoadedAtSource>
+<contextSchemaLoadedAtTarget>false</contextSchemaLoadedAtTarget>
+<contextSchemaDefinition/>
+<filterUnmappedElement>false</filterUnmappedElement>
+<indentOutputXML>true</indentOutputXML>
+<streamingMode>false</streamingMode>
+<filterEmptyElements>true</filterEmptyElements>
+<dbQueryCaching>false</dbQueryCaching>
+<cacheIncludedSchemas>false</cacheIncludedSchemas>
+<TreeExpandLevelCount>3</TreeExpandLevelCount>
+<TreeExpandLevelCountForWebService>5</TreeExpandLevelCountForWebService>
+<TreeExpandLevelForEasySchemaExtensions>10</TreeExpandLevelForEasySchemaExtensions>
+<SelfRecursionLevel>0</SelfRecursionLevel>
+<EnableTypesBuffering>true</EnableTypesBuffering>
+<CdataSectionElements/>
+<excludeResultPrefixes> saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str</excludeResultPrefixes>
+<webservice>
+<consumers/>
+</webservice>
+
+<CustomAutoMapInUse/>
+<processElementFormDefault>true</processElementFormDefault>
+<xslVersion2.0>false</xslVersion2.0>
+<xslVersion3.0>false</xslVersion3.0>
+<sourceXpath/>
+<targetXpath/>
+</maps>
+]]></au_mapXmlFile>
+        <au_description><![CDATA[Copy]]></au_description>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_aimapFreeze><![CDATA[0]]></au_aimapFreeze>
+        <au_targetSchema><![CDATA[ExcelSchema:010000001015169589797362102131]]></au_targetSchema>
+        <au_creationDate><![CDATA[2023-10-05T06:41:46]]></au_creationDate>
+        <au_userOwner><![CDATA[IndigoUser:11631863734171]]></au_userOwner>
+        <au_json><![CDATA[{"json":{"category":"mapping","type":"mapping","encoding":"UTF-8","version":"1.0"},"cloneElements":"","filters":"","variables":{"variable":[{"name":"Countries","value":"100","comment":"","syntax":"Countries"}]},"globalParameters":{"keys":{"key":[]},"contextVariables":{"contextVariable":[]}},"connections":{"connectionVariable":[{"name":"var_Transaction","value":"010000001015169590339640702164","comment":"","syntax":"var_Transaction"}]},"functions":{"externalFunction":[]},"filterUnmappedElements":false,"indentOutputXML":true,"xslVersion":"1.1","enableStreaming":false,"filterEmptyElements":true,"xslTransformer":"Saxon","characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"settingConfigs":{"xslVersion":"1.1","xslTransformer":"Saxon","filterUnmappedElements":false,"indentOutputXML":true,"filterEmptyElements":true,"enableStreaming":false,"characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"cDataSectionElements":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"processElementFormDefault":true,"isAutoSaveEnable":true},"disableOuputNodes":{"disableOutputNodeProperty":[]},"isCustomXSLT":false,"contextSchemaLoadedAtSource":false,"contextSchemaLoadedAtTarget":false,"webservice":{"consumers":{"consumer":[]}},"GlobalPreCustomXSL":"","GlobalPostCustomXSL":"","xslTemplates":{"xslTemplateData":[]},"mappingTempId":1695965081853,"sourceXpath":"","targetXpath":"","cDataSectionElements":"","splittingData":false,"splitNumberOfRecords":"500","parallelProcessing":false,"maximumConcurrentProcessor":"1","CustomAutoMapInUse":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"metaData":"","processElementFormDefault":true,"mappingInformation":{"mappingVersion":"6.1","mappingName":"Sada_JSON_To_Excel_Map_Copy","mappingProject":"Project:11697089827264","mappingDescription":"Copy","sourceSchemaID":"JSONSchema:010000001015169570751398400572","targetSchemaID":"ExcelSchema:010000001015169589797362102131","mappingOwnerGroup":"","mappingOwner":"","mappingLastModifiedBy":"","mappingCreationDate":"","mappingModifiedDate":"","reusable":true},"namespace":"","namespaceList":[],"foreach":"","targetRoots":{"targetRoot":[{"name":"Root","schemaName":"Excel_Layout_TR_Detail","schemaID":"ExcelSchema:010000001015169589797362102131","stream":"output_1"}]},"sourceRoots":{"sourceRoot":[{"name":"Root","schemaName":"TR_Layout","schemaID":"JSONSchema:010000001015169570751398400572"}]},"contextSchemaDefinition":"","maps":[{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"Root","targetfieldpath":"/Root","targetrecord":"","mapping":[],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root","comments":"","defaultEditor":"textual","graphicalMappingJson":[],"confidence":"","foreachPath":""},{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"Transaction_id","targetfieldpath":"/Root/Record/Transaction_id","defaultEditor":"textual","graphicalMappingJson":[],"expression":"$Input_TR_Layout/Root/Transactions/id","targetrecord":"Record","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"id","sourcefielddisplayname":"id","sourcefieldpath":"/Root/Transactions/id","sourcerecord":"Transactions","id":"Mapping-1"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/Transaction_id","comments":"","expressionNote":"","expressionPath":"$Input_TR_Layout/Root/Transactions/id","confidence":""},{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"FTPEvent","targetfieldpath":"/Root/Record/FTPEvent","targetrecord":"Record","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-4"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/FTPEvent","expressionNote":"","expression":"\nWHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FTPEvent' } VALUE=[$Query_FTPEvent] OTHERWISE VALUE=[]","expressionPath":"\nWHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FTPEvent' } VALUE=[$Query_FTPEvent] OTHERWISE VALUE=[]","defaultEditor":"textual","confidence":"","localVariables":{"localVariable":[{"lname":"Var_FTPEvent_ActivityId","lvalue":"$Input_TR_Layout/Root/item/Transactions/metadata/activityId","lcomment":""},{"lname":"Query_FTPEvent","lvalue":"DBQuery {select au_entityName from AU_FTPEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId' ,$var_Transaction ,'false' }","lcomment":""}]},"comments":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"FtpTarget","targetfieldpath":"/Root/Record/FtpTarget","targetrecord":"Record","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-5"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/FtpTarget","expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpTarget' } VALUE=[$Query_FTP_Target] OTHERWISE VALUE=[  ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpTarget' } VALUE=[$Query_FTP_Target] OTHERWISE VALUE=[  ]","defaultEditor":"textual","confidence":"","localVariables":{"localVariable":[{"lname":"Query_FTP_Target","lvalue":"DBQuery { select au_entityName from AU_FTPTARGET where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"graphicalMappingJson":[],"foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"EDIInboundRelationship","targetfieldpath":"/Root/Record/EDIInboundRelationship","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-6"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/EDIInboundRelationship","localVariables":{"localVariable":[{"lname":"Query_EDIInboundRelationship","lvalue":"DBQuery { select au_entityName from AU_EDIINBOUNDRELATIONSHIP where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='EDIInboundRelationship' } VALUE=[$Query_EDIInboundRelationship] OTHERWISE VALUE=[ ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='EDIInboundRelationship' } VALUE=[$Query_EDIInboundRelationship] OTHERWISE VALUE=[ ]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"FileEvent","targetfieldpath":"/Root/Record/FileEvent","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-8"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/FileEvent","localVariables":{"localVariable":[{"lname":"Query_FileEvent","lvalue":"DBQuery { select au_entityName from AU_FILEEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FileEvent' } VALUE=[$Query_FileEvent] OTHERWISE VALUE=[  ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FileEvent' } VALUE=[$Query_FileEvent] OTHERWISE VALUE=[  ]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"LanFileTarget","targetfieldpath":"/Root/Record/LanFileTarget","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-9"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/LanFileTarget","localVariables":{"localVariable":[{"lname":"Query_LanFileTarget","lvalue":"DBQuery { select au_entityName from AU_LANFILETARGET where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='LanFileTarget' } VALUE=[$Query_LanFileTarget] OTHERWISE VALUE=[ ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='LanFileTarget' } VALUE=[$Query_LanFileTarget] OTHERWISE VALUE=[ ]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"JSONSchema","targetfieldpath":"/Root/Record/JSONSchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-10"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/JSONSchema","localVariables":{"localVariable":[{"lname":"Query_JSONSchema","lvalue":"DBQuery { select au_entityName from AU_JSONSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='JSONSchema' } VALUE=[$Query_JSONSchema] OTHERWISE VALUE=[ ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='JSONSchema' } VALUE=[$Query_JSONSchema] OTHERWISE VALUE=[ ]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"AdvancedDatabaseTarget","targetfieldpath":"/Root/Record/AdvancedDatabaseTarget","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-11"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/AdvancedDatabaseTarget","localVariables":{"localVariable":[{"lname":"Query_AdvancedDatabaseTarget","lvalue":"DBQuery { select au_entityName from AU_ADVDBTarget where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancedDatabaseTarget' } VALUE=[$Query_AdvancedDatabaseTarget] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancedDatabaseTarget' } VALUE=[$Query_AdvancedDatabaseTarget] OTHERWISE VALUE=[]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"AdvanceDbSchema","targetfieldpath":"/Root/Record/AdvanceDbSchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-12"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/AdvanceDbSchema","localVariables":{"localVariable":[{"lname":"Query_AdvanceDbSchema","lvalue":"DBQuery { select au_entityName from AU_ADVANCEDBSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvanceDbSchema' } VALUE=[$Query_AdvanceDbSchema] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvanceDbSchema' } VALUE=[$Query_AdvanceDbSchema] OTHERWISE VALUE=[]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"TextSchema","targetfieldpath":"/Root/Record/TextSchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-13"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/TextSchema","localVariables":{"localVariable":[{"lname":"Query_TextSchema","lvalue":"DBQuery { select au_entityName from AU_TEXTSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='TextSchema' } VALUE=[$Query_TextSchema] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='TextSchema' } VALUE=[$Query_TextSchema] OTHERWISE VALUE=[]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"AdvancePositionalSchema","targetfieldpath":"/Root/Record/AdvancePositionalSchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-14"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/AdvancePositionalSchema","localVariables":{"localVariable":[{"lname":"Query_AdvancePositionalSchema","lvalue":"DBQuery { select au_entityName from AU_ADVANCESCHEMAPOSITIONAL where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancePositionalSchema' } VALUE=[$Query_AdvancePositionalSchema] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancePositionalSchema' } VALUE=[$Query_AdvancePositionalSchema] OTHERWISE VALUE=[]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"FtpSource","targetfieldpath":"/Root/Record/FtpSource","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-15"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/FtpSource","localVariables":{"localVariable":[{"lname":"Query_FtpSource","lvalue":"DBQuery { select au_entityName from AU_FTPSOURCE where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpSource' } VALUE=[$Query_FtpSource] OTHERWISE VALUE=[ ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpSource' } VALUE=[$Query_FtpSource] OTHERWISE VALUE=[ ]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"DatabaseEvent","targetfieldpath":"/Root/Record/DatabaseEvent","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-16"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/DatabaseEvent","localVariables":{"localVariable":[{"lname":"Query_DatabaseEvent","lvalue":"DBQuery { select au_entityName from AU_DBEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='DatabaseEvent' } VALUE=[$Query_DatabaseEvent] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='DatabaseEvent' } VALUE=[$Query_DatabaseEvent] OTHERWISE VALUE=[]","confidence":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"EDISchema","targetfieldpath":"/Root/Record/EDISchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-17"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/EDISchema","localVariables":{"localVariable":[{"lname":"Query_EDIShema","lvalue":"DBQuery { select au_entityName from AU_EDISCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type = 'EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type = 'EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=[]","confidence":"","comments":"WHEN CONDITION{$Input_TR_Layout/Root/item/Transactions/metadata/type='EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=['Not Available']","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"XMLSchema","targetfieldpath":"/Root/Record/XMLSchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-19"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/XMLSchema","localVariables":{"localVariable":[{"lname":"Query_XMLSchema","lvalue":"DBQuery { select au_entityName from AU_SCHEMAXML where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='XMLSchema'} VALUE=[$Query_XMLSchema] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='XMLSchema'} VALUE=[$Query_XMLSchema] OTHERWISE VALUE=[]","confidence":"","comments":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"DataMapping","targetfieldpath":"/Root/Record/DataMapping","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-18"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/DataMapping","localVariables":{"localVariable":[{"lname":"Query_DataMapping","lvalue":" DBQuery { select au_entityName from AU_MAPPINGTRANSFORMATION where au_id ='$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'true'} ","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='DataMapping' } VALUE=[$Query_DataMapping ] OTHERWISE VALUE=[]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='DataMapping' } VALUE=[$Query_DataMapping ] OTHERWISE VALUE=[]","confidence":"","comments":"WHEN CONDITION{ $Input_TR_Layout/Root/item/Transactions/metadata/type = 'DataMapping' } VALUE=[$Query_DataMapping] OTHERWISE VALUE=[ ]","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetfield":"ExcelSchema","targetfieldpath":"/Root/Record/ExcelSchema","targetrecord":"Record","targetName":"Excel_Layout_TR_Detail","mapping":[{"sourceName":"TR_Layout","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata","id":"Mapping-7"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/ExcelSchema","localVariables":{"localVariable":[{"lname":"Query_EXCELSCHEMA","lvalue":"DBQuery { select au_entityName from AU_EXCELSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='ExcelSchema' } VALUE=[$Query_EXCELSCHEMA] OTHERWISE VALUE=[ ]","expressionPath":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='ExcelSchema' } VALUE=[$Query_EXCELSCHEMA] OTHERWISE VALUE=[ ]","confidence":"","comments":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"EDIOutboundRelationship","targetfieldpath":"/Root/Record/EDIOutboundRelationship","targetrecord":"Record","mapping":[{"sourceName":"","operatortype":"field","sourcefield":"type","sourcefielddisplayname":"type","sourcefieldpath":"/Root/Transactions/metadata/type","sourcerecord":"metadata"},{"sourceName":"","operatortype":"field","sourcefield":"id","sourcefielddisplayname":"id","sourcefieldpath":"/Root/Transactions/id","sourcerecord":"Transactions"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/EDIOutboundRelationship","expressionNote":"","expression":"WHEN CONDITION{ $Input_TR_Layout/Root/Transactions/metadata/type='EDIOutboundRelationship' } VALUE=[$Query_EDIOutboundRelationship] OTHERWISE VALUE=[]$Input_TR_Layout/Root/Transactions/id","expressionPath":"WHEN CONDITION{ $Input_TR_Layout/Root/Transactions/metadata/type='EDIOutboundRelationship' } VALUE=[$Query_EDIOutboundRelationship] OTHERWISE VALUE=[]$Input_TR_Layout/Root/Transactions/id","defaultEditor":"textual","confidence":"","localVariables":{"localVariable":[{"lname":"Query_EDIOutboundRelationship","lvalue":"DBQuery { select au_entityName from AU_EDIOUTBOUNDRELATIONSHIP where au_id = '$Var_FTPEvent_ActivityId ', $var_Transaction ,'true' }","lcomment":""},{"lname":"String","lvalue":"normalize-space( 'EDIOutboundRelationship')","lcomment":""}]},"graphicalMappingJson":[],"comments":"","foreachPath":"$Input_TR_Layout/Root/Transactions/metadata/activityId"},{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"Record","targetfieldpath":"/Root/Record","targetrecord":"Root","mapping":[{"sourceName":"","operatortype":"field","sourcefield":"id","sourcefielddisplayname":"id","sourcefieldpath":"/Root/Transactions/id","sourcerecord":"Transactions"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record","confidence":"","foreachPath":"$Input_TR_Layout/Root$Input_TR_Layout/Root/Transactions/entityName","localVariables":{"localVariable":[{"lname":"Var_FTPEvent_ActivityId","lvalue":"$Input_TR_Layout/Root/Transactions/metadata/activityId","lcomment":""}]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"$Input_TR_Layout/Root/Transactions/id$Input_TR_Layout/Root/Transactions/id","expressionPath":"$Input_TR_Layout/Root/Transactions/id$Input_TR_Layout/Root/Transactions/id","comments":""},{"order":1,"targetName":"Excel_Layout_TR_Detail","targetfield":"Transaction_Name","targetfieldpath":"/Root/Record/Transaction_Name","defaultEditor":"textual","graphicalMappingJson":[],"expression":"$Input_TR_Layout/Root/Transactions/entityName SELECT FIELD=[ ] FROM DB.TAB=[ ].[ ] WHERE {Conuntries }","targetrecord":"Record","mapping":[{"sourceName":"","operatortype":"field","sourcefield":"entityName","sourcefielddisplayname":"entityName","sourcefieldpath":"/Root/Transactions/entityName","sourcerecord":"Transactions"}],"markComplete":false,"mapId":"Excel_Layout_TR_Detail/Root/Record/Transaction_Name","comments":"","expressionNote":"","expressionPath":"$Input_TR_Layout/Root/Transactions/entityName SELECT FIELD=[ ] FROM DB.TAB=[ ].[ ] WHERE {Conuntries }","confidence":""}],"sourceExpandLevel":3,"targetExpandLevel":3,"sourceTargetSchemaDetails":{"sourceSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"JSONSchema","xpath":"/Root","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Transactions","root":false,"leaf":false,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"entityName","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/entityName","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"description","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/description","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"partner","root":false,"leaf":false,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"name","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/name","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"primaryContact","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/primaryContact","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"phoneNumber","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/phoneNumber","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"address","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/address","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"country","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/country","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"creationDate","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/creationDate","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedDate","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/modifiedDate","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedBy","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/modifiedBy","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"groupReceiverID","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/groupReceiverID","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"status","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/status","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"enableSelfOnboard","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/enableSelfOnboard","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"useDefaultLogoInAppHeader","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/useDefaultLogoInAppHeader","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"companySetup","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/companySetup","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"hubImageIdentifier","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/hubImageIdentifier","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"spokeCompany","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/spokeCompany","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"companyPrefrences","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partner/companyPrefrences","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"partnerName","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/partnerName","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"template","root":false,"leaf":false,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"accessLevel","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/accessLevel","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"approvalType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/approvalType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"status","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/status","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"processType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/processType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"dataEncoding","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/dataEncoding","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"lockedStatus","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/lockedStatus","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"notificationMode","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/notificationMode","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"latestRevisionvar","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/latestRevisionvar","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"authorized","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/template/authorized","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"templateId","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/templateId","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"status","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/status","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"type","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/type","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"direction","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/direction","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"srcAppType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/srcAppType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"destAppType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/destAppType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"srcTrigger","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/srcTrigger","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"processType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/processType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"company","root":false,"leaf":false,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"name","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/name","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"primaryContact","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/primaryContact","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"phoneNumber","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/phoneNumber","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"address","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/address","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"country","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/country","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"creationDate","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/creationDate","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedDate","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/modifiedDate","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedBy","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/modifiedBy","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"groupReceiverID","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/groupReceiverID","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"status","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/status","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"enableSelfOnboard","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/enableSelfOnboard","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"useDefaultLogoInAppHeader","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/useDefaultLogoInAppHeader","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"companySetup","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/companySetup","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"hubImageIdentifier","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/hubImageIdentifier","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"spokeCompany","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/spokeCompany","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"companyPrefrences","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/company/companyPrefrences","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"dataEncoding","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/dataEncoding","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"lockedStatus","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/lockedStatus","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"contactUser","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/contactUser","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"notificationMode","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/notificationMode","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"creationDate","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/creationDate","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedDate","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/modifiedDate","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"createdUser","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/createdUser","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"createdGroup","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/createdGroup","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedUser","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/modifiedUser","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"paramInfo","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/paramInfo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"createdBy","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/createdBy","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedBy","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/modifiedBy","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"srcReferenceField","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/srcReferenceField","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"metadata","root":false,"leaf":false,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"activityId","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata/activityId","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"sequenceId","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata/sequenceId","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"sequenceType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata/sequenceType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"type","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata/type","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"isUniqueName","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/metadata/isUniqueName","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"project","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/project","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"displayType","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/displayType","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"modifiedRole","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/modifiedRole","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"createdRole","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/createdRole","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"recentActivityNumber","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/recentActivityNumber","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"recentActivityText","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/recentActivityText","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"firstActivityNumber","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/firstActivityNumber","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"firstActivityText","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/firstActivityText","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"imageIdentifier","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/imageIdentifier","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"triggerStatus","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/triggerStatus","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"latestRevisionvar","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/latestRevisionvar","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"copying","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/Transactions/copying","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"totalCount","root":false,"leaf":true,"schemaName":"Input_TR_Layout","schemaNameWithoutInput":"TR_Layout","schemaType":"","xpath":"/Root/totalCount","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0},"destinationSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"ExcelSchema","xpath":"/Root","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Record","root":false,"leaf":false,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root$Input_TR_Layout/Root/Transactions/entityName","currentMapping":"$Input_TR_Layout/Root/Transactions/id$Input_TR_Layout/Root/Transactions/id","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Var_FTPEvent_ActivityId","value":"$Input_TR_Layout/Root/Transactions/metadata/activityId","comments":""}],"sortList":[],"children":[{"name":"Transaction_id","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/Transaction_id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_TR_Layout/Root/Transactions/id","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Transaction_Name","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/Transaction_Name","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_TR_Layout/Root/Transactions/entityName SELECT FIELD=[ ] FROM DB.TAB=[ ].[ ] WHERE {Conuntries }","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"EDIOutboundRelationship","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/EDIOutboundRelationship","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{ $Input_TR_Layout/Root/Transactions/metadata/type='EDIOutboundRelationship' } VALUE=[$Query_EDIOutboundRelationship] OTHERWISE VALUE=[]$Input_TR_Layout/Root/Transactions/id","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_EDIOutboundRelationship","value":"DBQuery { select au_entityName from AU_EDIOUTBOUNDRELATIONSHIP where au_id = '$Var_FTPEvent_ActivityId ', $var_Transaction ,'true' }","comments":""},{"name":"String","value":"normalize-space( 'EDIOutboundRelationship')","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"EDISchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/EDISchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type = 'EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=[]","currentComment":"WHEN CONDITION{$Input_TR_Layout/Root/item/Transactions/metadata/type='EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=['Not Available']","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_EDIShema","value":"DBQuery { select au_entityName from AU_EDISCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"DataMapping","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/DataMapping","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='DataMapping' } VALUE=[$Query_DataMapping ] OTHERWISE VALUE=[]","currentComment":"WHEN CONDITION{ $Input_TR_Layout/Root/item/Transactions/metadata/type = 'DataMapping' } VALUE=[$Query_DataMapping] OTHERWISE VALUE=[ ]","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_DataMapping","value":" DBQuery { select au_entityName from AU_MAPPINGTRANSFORMATION where au_id ='$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'true'} ","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"XMLSchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/XMLSchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type='XMLSchema'} VALUE=[$Query_XMLSchema] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_XMLSchema","value":"DBQuery { select au_entityName from AU_SCHEMAXML where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"FTPEvent","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/FTPEvent","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"\nWHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FTPEvent' } VALUE=[$Query_FTPEvent] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Var_FTPEvent_ActivityId","value":"$Input_TR_Layout/Root/item/Transactions/metadata/activityId","comments":""},{"name":"Query_FTPEvent","value":"DBQuery {select au_entityName from AU_FTPEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId' ,$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"FtpTarget","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/FtpTarget","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpTarget' } VALUE=[$Query_FTP_Target] OTHERWISE VALUE=[  ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_FTP_Target","value":"DBQuery { select au_entityName from AU_FTPTARGET where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"EDIInboundRelationship","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/EDIInboundRelationship","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='EDIInboundRelationship' } VALUE=[$Query_EDIInboundRelationship] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_EDIInboundRelationship","value":"DBQuery { select au_entityName from AU_EDIINBOUNDRELATIONSHIP where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"ExcelSchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/ExcelSchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='ExcelSchema' } VALUE=[$Query_EXCELSCHEMA] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_EXCELSCHEMA","value":"DBQuery { select au_entityName from AU_EXCELSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"FileEvent","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/FileEvent","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FileEvent' } VALUE=[$Query_FileEvent] OTHERWISE VALUE=[  ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_FileEvent","value":"DBQuery { select au_entityName from AU_FILEEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"LanFileTarget","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/LanFileTarget","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='LanFileTarget' } VALUE=[$Query_LanFileTarget] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_LanFileTarget","value":"DBQuery { select au_entityName from AU_LANFILETARGET where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"JSONSchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/JSONSchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='JSONSchema' } VALUE=[$Query_JSONSchema] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_JSONSchema","value":"DBQuery { select au_entityName from AU_JSONSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"AdvancedDatabaseTarget","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/AdvancedDatabaseTarget","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancedDatabaseTarget' } VALUE=[$Query_AdvancedDatabaseTarget] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_AdvancedDatabaseTarget","value":"DBQuery { select au_entityName from AU_ADVDBTarget where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"AdvanceDbSchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/AdvanceDbSchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvanceDbSchema' } VALUE=[$Query_AdvanceDbSchema] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_AdvanceDbSchema","value":"DBQuery { select au_entityName from AU_ADVANCEDBSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"TextSchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/TextSchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='TextSchema' } VALUE=[$Query_TextSchema] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_TextSchema","value":"DBQuery { select au_entityName from AU_TEXTSCHEMA where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"AdvancePositionalSchema","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/AdvancePositionalSchema","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='AdvancePositionalSchema' } VALUE=[$Query_AdvancePositionalSchema] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_AdvancePositionalSchema","value":"DBQuery { select au_entityName from AU_ADVANCESCHEMAPOSITIONAL where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"FtpSource","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/FtpSource","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='FtpSource' } VALUE=[$Query_FtpSource] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_FtpSource","value":"DBQuery { select au_entityName from AU_FTPSOURCE where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"DatabaseEvent","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/DatabaseEvent","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_TR_Layout/Root/Transactions/metadata/activityId","currentMapping":"WHEN CONDITION{$Input_TR_Layout/Root/Transactions/metadata/type ='DatabaseEvent' } VALUE=[$Query_DatabaseEvent] OTHERWISE VALUE=[]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"Query_DatabaseEvent","value":"DBQuery { select au_entityName from AU_DBEVENT where au_id = '$Input_TR_Layout/Root/Transactions/metadata/activityId',$var_Transaction ,'false' }","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_Excel_Layout_TR_Detail","schemaNameWithoutInput":"Excel_Layout_TR_Detail","schemaType":"","xpath":"/Root/Record/@recordNumber","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":20}],"totalChildMappings":20}],"totalChildMappings":20}}}]]></au_json>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_enableAIMap><![CDATA[0]]></au_enableAIMap>
+        <au_storedProcedure><![CDATA[]]></au_storedProcedure>
+        <au_sourceSchema><![CDATA[JSONSchema:010000001015169570751398400572]]></au_sourceSchema>
+        <au_version><![CDATA[1]]></au_version>
+        <au_parallelProcessing><![CDATA[0]]></au_parallelProcessing>
+        <au_aimapTrained><![CDATA[0]]></au_aimapTrained>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_xslTemplate><![CDATA[<XslTemplate/>]]></au_xslTemplate>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_concurrentProcessors><![CDATA[1]]></au_concurrentProcessors>
+        <au_entityName><![CDATA[Sada_JSON_To_Excel_Map_Copy]]></au_entityName>
+        <au_xslFile><![CDATA[<?xml version='1.0'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.1" xmlns:saxonJavaMappingTransformation="java:com.adeptia.indigo.services.mapping.MappingTransformation" xmlns:saxonJavaMapperQueryExecutor="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor" xmlns:saxonJavaAggregateFunctionHandler="java:com.adeptia.indigo.services.mapping.AggregateFunctionHandler"  xmlns:str="http://exslt.org/strings" exclude-result-prefixes="saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str" xmlns:saxon="http://saxon.sf.net/" extension-element-prefixes="saxon">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" cdata-section-elements="" indent="yes" /><xsl:param name="_userName"/><xsl:param name="_password"/><xsl:param name="_class"/><xsl:param name="_identifier"/><xsl:param name="_subject"/><xsl:param name="_repositoryPath"/><xsl:param name="_Input1"/> <xsl:variable name="varConn" select="saxonJavaMapperQueryExecutor:getInstance($_identifier,'false')"/> <xsl:variable name="apos">'</xsl:variable> <xsl:variable name="quot">"</xsl:variable><xsl:variable  name='var_Transaction' select = "'010000001015169590339640702164'"/><xsl:variable  name='Countries' select = "100"/><xsl:template match="/"><Root><xsl:for-each select = "../../../../../../RootRoot/Transactions/entityName"><xsl:apply-templates select="../../../../Root/Transactions/idRoot/Transactions/id" mode="_Root_Record_order1">
+</xsl:apply-templates></xsl:for-each></Root></xsl:template><xsl:template match="/Root/Transactions/idRoot/Transactions/id" mode="_Root_Record_order1">
+<Record><xsl:variable  name='Var_FTPEvent_ActivityId' select = "../../../../Root/Transactions/metadata/activityId"/><xsl:attribute name="recordNumber"></xsl:attribute><Transaction_id><xsl:value-of select="../../../../Root/Transactions/id"/></Transaction_id><Transaction_Name></Transaction_Name><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><EDIOutboundRelationship><xsl:variable  name="Query_EDIOutboundRelationship" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_EDIOUTBOUNDRELATIONSHIP where ',concat(' au_id = ',$apos,$Var_FTPEvent_ActivityId ,$apos)),$var_Transaction,'true')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:variable  name='String' select = "normalize-space( &apos;EDIOutboundRelationship&apos;)"/><xsl:choose><xsl:when test="../type=&apos;EDIOutboundRelationship&apos;"><xsl:value-of select="$Query_EDIOutboundRelationship"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose>../../id</EDIOutboundRelationship></xsl:for-each>
+<!--WHEN CONDITION{Root/item/Transactions/metadata/type='EDISchema'} VALUE=[$Query_EDIShema] OTHERWISE VALUE=['Not Available']--><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><EDISchema><xsl:variable  name="Query_EDIShema" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_EDISCHEMA where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type = &apos;EDISchema&apos;"><xsl:value-of select="$Query_EDIShema"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></EDISchema></xsl:for-each>
+<!--WHEN CONDITION{ Root/item/Transactions/metadata/type = 'DataMapping' } VALUE=[$Query_DataMapping] OTHERWISE VALUE=[ ]--><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><DataMapping><xsl:variable  name="Query_DataMapping" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_MAPPINGTRANSFORMATION where ',concat(' au_id =',$apos,.,$apos)),$var_Transaction,'true')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type=&apos;DataMapping&apos;"><xsl:value-of select="$Query_DataMapping"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></DataMapping></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><XMLSchema><xsl:variable  name="Query_XMLSchema" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_SCHEMAXML where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type=&apos;XMLSchema&apos;"><xsl:value-of select="$Query_XMLSchema"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></XMLSchema></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><FTPEvent><xsl:variable  name='Var_FTPEvent_ActivityId' select = "../../../item/Transactions/metadata/activityId"/><xsl:variable  name="Query_FTPEvent" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_FTPEVENT where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;FTPEvent&apos;"><xsl:value-of select="$Query_FTPEvent"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></FTPEvent></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><FtpTarget><xsl:variable  name="Query_FTP_Target" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_FTPTARGET where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;FtpTarget&apos;"><xsl:value-of select="$Query_FTP_Target"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></FtpTarget></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><EDIInboundRelationship><xsl:variable  name="Query_EDIInboundRelationship" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_EDIINBOUNDRELATIONSHIP where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;EDIInboundRelationship&apos;"><xsl:value-of select="$Query_EDIInboundRelationship"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></EDIInboundRelationship></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><ExcelSchema><xsl:variable  name="Query_EXCELSCHEMA" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_EXCELSCHEMA where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;ExcelSchema&apos;"><xsl:value-of select="$Query_EXCELSCHEMA"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></ExcelSchema></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><FileEvent><xsl:variable  name="Query_FileEvent" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_FILEEVENT where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;FileEvent&apos;"><xsl:value-of select="$Query_FileEvent"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></FileEvent></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><LanFileTarget><xsl:variable  name="Query_LanFileTarget" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_LANFILETARGET where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;LanFileTarget&apos;"><xsl:value-of select="$Query_LanFileTarget"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></LanFileTarget></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><JSONSchema><xsl:variable  name="Query_JSONSchema" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_JSONSCHEMA where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;JSONSchema&apos;"><xsl:value-of select="$Query_JSONSchema"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></JSONSchema></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><AdvancedDatabaseTarget><xsl:variable  name="Query_AdvancedDatabaseTarget" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_ADVDBTarget where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;AdvancedDatabaseTarget&apos;"><xsl:value-of select="$Query_AdvancedDatabaseTarget"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></AdvancedDatabaseTarget></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><AdvanceDbSchema><xsl:variable  name="Query_AdvanceDbSchema" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_ADVANCEDBSCHEMA where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;AdvanceDbSchema&apos;"><xsl:value-of select="$Query_AdvanceDbSchema"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></AdvanceDbSchema></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><TextSchema><xsl:variable  name="Query_TextSchema" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_TEXTSCHEMA where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;TextSchema&apos;"><xsl:value-of select="$Query_TextSchema"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></TextSchema></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><AdvancePositionalSchema><xsl:variable  name="Query_AdvancePositionalSchema" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_ADVANCESCHEMAPOSITIONAL where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;AdvancePositionalSchema&apos;"><xsl:value-of select="$Query_AdvancePositionalSchema"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></AdvancePositionalSchema></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><FtpSource><xsl:variable  name="Query_FtpSource" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_FTPSOURCE where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;FtpSource&apos;"><xsl:value-of select="$Query_FtpSource"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></FtpSource></xsl:for-each><xsl:for-each select = "../../../../Root/Transactions/metadata/activityId"><DatabaseEvent><xsl:variable  name="Query_DatabaseEvent" select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,concat('select au_entityName from AU_DBEVENT where ',concat(' au_id = ',$apos,.,$apos)),$var_Transaction,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/><xsl:choose><xsl:when test="../type =&apos;DatabaseEvent&apos;"><xsl:value-of select="$Query_DatabaseEvent"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></DatabaseEvent></xsl:for-each></Record></xsl:template></xsl:stylesheet>]]></au_xslFile>
+        <au_optimizedLoading><![CDATA[1]]></au_optimizedLoading>
+    </AU_MAPPINGTRANSFORMATION>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_splitFile" type="3"/>
+        <column name="au_numberOfRecords" type="4"/>
+        <column name="au_optimizedLoading" type="3"/>
+        <column name="au_sourceSchema" type="12"/>
+        <column name="au_targetSchema" type="12"/>
+        <column name="au_xslFile" type="-1"/>
+        <column name="au_metadata" type="12"/>
+        <column name="au_mapXmlFile" type="-1"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_pdfFileName" type="12"/>
+        <column name="au_parallelProcessing" type="3"/>
+        <column name="au_concurrentProcessors" type="4"/>
+        <column name="au_dbInfoName" type="12"/>
+        <column name="au_customAutoMap" type="-1"/>
+        <column name="au_valueMap" type="-1"/>
+        <column name="au_xslTemplate" type="-1"/>
+        <column name="au_xslTransformer" type="12"/>
+        <column name="au_characterSetEncoding" type="12"/>
+        <column name="au_enableAIMap" type="3"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_storedProcedure" type="-1"/>
+        <column name="au_aimapFreeze" type="3"/>
+        <column name="au_aimapTrained" type="3"/>
+    </columnInfo>
+</data>

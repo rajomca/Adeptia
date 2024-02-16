@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_SCRIPTEDSERVICE>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_id><![CDATA[010000001015169598239734202464]]></au_id>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_description><![CDATA[TR_Details_Splitter]]></au_description>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_variablesXML><![CDATA[<variables>
+<variable>
+<name>sourceXPath</name>
+<type>plainText</type>
+<value>[ABPM_._ESCAPE_._CDATA_._START]Root/Transactions[ABPM_._ESCAPE_._CDATA_._END]</value>
+</variable>
+<variable>
+<name>splitSize</name>
+<type>plainText</type>
+<value>[ABPM_._ESCAPE_._CDATA_._START]1[ABPM_._ESCAPE_._CDATA_._END]</value>
+</variable>
+</variables>
+]]></au_variablesXML>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_script><![CDATA[import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Vector;
+import com.adeptia.indigo.services.ServiceException;
+import com.adeptia.indigo.system.IndigoConfig;
+
+
+
+  InputStream inputStream = null;
+  OutputStream outputStream = null;
+  try {
+   boolean processRecord = true;
+   Integer startPosition = (Integer) context.get("startPosition");
+   if (startPosition == null) {
+    startPosition = 1;
+   }
+   inputStream = service.getSourceStream();
+   outputStream = service.getOutputStream();
+
+   int queueSize = Integer.parseInt(service
+     .getValueByName("splitSize"));
+   String sourceXPath = service.getValueByName("sourceXPath");
+   String characterSetEncoding = service.getEncodingUsed();
+
+   Integer totalRecordCount = (Integer) context
+     .get("totalRecordCount");
+   DataSplitter handler = new DataSplitter();
+   if (totalRecordCount == null) {
+    totalRecordCount = handler.splitData(inputStream, outputStream,
+      startPosition.intValue(), queueSize, sourceXPath,
+      characterSetEncoding);
+    if (totalRecordCount <= 0 )
+     processRecord = false;
+
+   } else {
+    totalRecordCount = totalRecordCount - queueSize;
+    if (totalRecordCount <= 0 )
+     processRecord = false;
+    startPosition = startPosition + queueSize;
+    handler.splitData(inputStream, outputStream, startPosition
+      .intValue(), queueSize, sourceXPath,
+      characterSetEncoding);
+   }
+
+   context.put("processRecord", processRecord);
+   context.put("totalRecordCount", totalRecordCount);
+   context.put("startPosition", startPosition);
+
+  } catch (Exception e) {
+   throw new ServiceException(e);
+  } finally {
+   try {
+    if (inputStream != null) {
+     inputStream.close();
+    }
+    if (outputStream != null) {
+     outputStream.close();
+    }
+   } catch (Exception e) {
+     e.printStackTrace();
+   }
+   }]]></au_script>
+        <au_modifiedDate><![CDATA[2023-12-13T11:26:59]]></au_modifiedDate>
+        <au_version><![CDATA[1]]></au_version>
+        <au_entityName><![CDATA[TR_Details_Splitter]]></au_entityName>
+        <au_showHideFlag><![CDATA[0]]></au_showHideFlag>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_creationDate><![CDATA[2023-09-29T10:13:17]]></au_creationDate>
+        <au_encodingUsed><![CDATA[UTF-8]]></au_encodingUsed>
+        <au_interpreterType><![CDATA[0]]></au_interpreterType>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_userOwner><![CDATA[IndigoUser:11631863734171]]></au_userOwner>
+        <au_projectOwner><![CDATA[Project:11697089827264]]></au_projectOwner>
+    </AU_SCRIPTEDSERVICE>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_script" type="-1"/>
+        <column name="au_showHideFlag" type="3"/>
+        <column name="au_variablesXML" type="-1"/>
+        <column name="au_encodingUsed" type="12"/>
+        <column name="au_interpreterType" type="4"/>
+    </columnInfo>
+</data>
