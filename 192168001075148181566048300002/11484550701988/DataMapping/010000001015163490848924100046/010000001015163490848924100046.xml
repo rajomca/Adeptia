@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_MAPPINGTRANSFORMATION>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_numberOfRecords><![CDATA[500]]></au_numberOfRecords>
+        <au_xslFile><![CDATA[<?xml version='1.0'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.1" xmlns:saxonJavaMappingTransformation="java:com.adeptia.indigo.services.mapping.MappingTransformation" xmlns:saxonJavaMapperQueryExecutor="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor" xmlns:saxonJavaAggregateFunctionHandler="java:com.adeptia.indigo.services.mapping.AggregateFunctionHandler"  xmlns:str="http://exslt.org/strings" exclude-result-prefixes="saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str" xmlns:saxon="http://saxon.sf.net/" extension-element-prefixes="saxon">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" cdata-section-elements="" indent="yes" /><xsl:param name="_userName"/><xsl:param name="_password"/><xsl:param name="_class"/><xsl:param name="_identifier"/><xsl:param name="_subject"/><xsl:param name="_repositoryPath"/><xsl:param name="_Input1"/> <xsl:variable name="varConn" select="saxonJavaMapperQueryExecutor:getInstance($_identifier,'false')"/> <xsl:variable name="apos">'</xsl:variable> <xsl:variable name="quot">"</xsl:variable><xsl:variable  name='AccountsDB' select = "'010000001015163275644228600151'"/><xsl:template match="/"><DB><xsl:for-each select = "Root/Record[Size ='M' and not (preceding:: counter = counter)]"><POS><xsl:attribute name="Action"></xsl:attribute><xsl:attribute name="RollBackOnError"></xsl:attribute><xsl:attribute name="recordNumber"></xsl:attribute><purchase_order_id><xsl:attribute name="isNull"></xsl:attribute><xsl:value-of select="counter"/></purchase_order_id><itemnumber><xsl:attribute name="isNull"></xsl:attribute><xsl:value-of select="Style"/></itemnumber><name><xsl:attribute name="isNull"></xsl:attribute><xsl:value-of select="Fabric_code"/></name><quantity><xsl:attribute name="isNull"></xsl:attribute><xsl:value-of select="Size"/></quantity><price><xsl:attribute name="isNull"></xsl:attribute><xsl:value-of select="globalMethod:DBQuery($varConn,$_class,$_identifier,$_subject,'SELECT purchase_order_id FROM POS',$AccountsDB,'false')" xmlns:globalMethod="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor"/></price><tax><xsl:attribute name="isNull"></xsl:attribute></tax><paymenttype><xsl:attribute name="isNull"></xsl:attribute></paymenttype><details><xsl:attribute name="isNull"></xsl:attribute></details><shipdate><xsl:attribute name="isNull"></xsl:attribute></shipdate></POS></xsl:for-each></DB><xsl:result-document href="{$_repositoryPath}/output_2"><Root><xsl:for-each select = "Root/Record[Size ='M' and not (preceding:: counter = counter)]"><Record><xsl:attribute name="recordNumber"><xsl:value-of select="./@recordNumber"/></xsl:attribute><counter><xsl:value-of select="counter"/></counter><Style><xsl:value-of select="Style"/></Style><Fabric_code><xsl:value-of select="Fabric_code"/></Fabric_code><color_code><xsl:value-of select="color_code"/></color_code><UPC><xsl:value-of select="UPC"/></UPC><Description><xsl:value-of select="Description"/></Description><Size><xsl:value-of select="Size"/></Size><Color_description><xsl:value-of select="Color_description"/></Color_description><Fabric_content><xsl:value-of select="Fabric_content"/></Fabric_content><qty><xsl:value-of select="qty"/></qty><price><xsl:value-of select="price"/></price></Record></xsl:for-each></Root></xsl:result-document><xsl:value-of select="globalmethod:processMultipleTargetSaxon($_class,$_repositoryPath,'output_2')" xmlns:globalmethod= "java:com.adeptia.indigo.services.mapping.MultipleTargetSaxon" /></xsl:template></xsl:stylesheet>]]></au_xslFile>
+        <au_concurrentProcessors><![CDATA[1]]></au_concurrentProcessors>
+        <au_pdfFileName><![CDATA[Adp_Map_Rules6297744206106902845.pdf]]></au_pdfFileName>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_enableAIMap><![CDATA[0]]></au_enableAIMap>
+        <au_characterSetEncoding><![CDATA[UTF-8]]></au_characterSetEncoding>
+        <au_modifiedDate><![CDATA[2024-01-31T10:49:06]]></au_modifiedDate>
+        <au_targetSchema><![CDATA[AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159]]></au_targetSchema>
+        <au_valueMap><![CDATA[<ValueMap/>]]></au_valueMap>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_id><![CDATA[010000001015163490848924100046]]></au_id>
+        <au_xslTemplate><![CDATA[<XslTemplate/>]]></au_xslTemplate>
+        <au_splitFile><![CDATA[0]]></au_splitFile>
+        <au_xslTransformer><![CDATA[Saxon]]></au_xslTransformer>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_aimapTrained><![CDATA[0]]></au_aimapTrained>
+        <au_entityName><![CDATA[AK_DataMapping_removeDuplicaterecords]]></au_entityName>
+        <au_projectOwner><![CDATA[Project:11484550701988]]></au_projectOwner>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_metadata><![CDATA[]]></au_metadata>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_parallelProcessing><![CDATA[0]]></au_parallelProcessing>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_mapXmlFile><![CDATA[<?xml version="1.0" encoding="UTF-8"?><maps version="4.4">
+<mappingInformation>
+<mappingVersion>6.1</mappingVersion>
+<mappingName>AK_DataMapping_removeDuplicaterecords</mappingName>
+<mappingProject>Project:11484550701988</mappingProject>
+<mappingDescription>AK_DataMapping_removeDuplicaterecords</mappingDescription>
+<sourceSchemaID>TextSchema:010000001015163422601940800159</sourceSchemaID>
+<targetSchemaID>AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159</targetSchemaID>
+<mappingOwnerGroup>Group_1</mappingOwnerGroup>
+<mappingOwner>Arun Kumar</mappingOwner>
+<mappingLastModifiedBy>Admin User</mappingLastModifiedBy>
+<mappingCreationDate>Fri Oct 22 13:14:49 UTC 2021</mappingCreationDate>
+<mappingModifiedDate>Wed Jan 31 10:48:58 UTC 2024</mappingModifiedDate>
+<reusable>true</reusable>
+</mappingInformation>
+<sourceRoots>
+<sourceRoot>
+<name>Root</name>
+<schemaName>AK_ConfigureCSVLayout</schemaName>
+<schemaID>TextSchema:010000001015163422601940800159</schemaID>
+</sourceRoot>
+</sourceRoots>
+<targetRoots>
+<targetRoot>
+<name>DB</name>
+<schemaName>AK_Design_DatabaseSchema</schemaName>
+<schemaID>AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159</schemaID>
+<stream>output_1</stream>
+</targetRoot>
+<targetRoot>
+<name>Root</name>
+<schemaName>AK_ConfigureCSVLayout</schemaName>
+<schemaID>AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159</schemaID>
+<stream>output_2</stream>
+</targetRoot>
+</targetRoots>
+<nameSpace/>
+<xslProperty/>
+<GlobalPreCustomXSL/>
+<GlobalPostCustomXSL/>
+<xslTemplates/>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/counter</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/counter</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="counter">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/counter" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/counter" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/counter" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/counter" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/Style</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Style</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Style">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Style" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Style" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Style" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Style" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/Fabric_code</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Fabric_code">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Fabric_code" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/color_code</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/color_code</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="color_code">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/color_code" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/color_code" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/color_code" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/color_code" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/UPC</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/UPC</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="UPC">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/UPC" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/UPC" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/UPC" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/UPC" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/Description</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Description</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Description">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Description" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Description" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Description" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Description" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/Size</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Size</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Size">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Size" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Size" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Size" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Size" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/Color_description</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Color_description</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Color_description">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Color_description" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Color_description" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Color_description" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Color_description" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/Fabric_content</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Fabric_content">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Fabric_content" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/qty</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/qty</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="qty">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/qty" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/qty" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/qty" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/qty" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/price</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/price</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="price">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/price" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/price" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/price" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/price" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record/@recordNumber</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="@recordNumber">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/@recordNumber" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>AK_Design_DatabaseSchema</targetName>
+<dest>/DB/POS/purchase_order_id</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/counter</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="purchase_order_id">
+<Position height="25" identify="&lt;T&gt;" label="/DB/POS/purchase_order_id" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/counter" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/counter" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/counter" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>AK_Design_DatabaseSchema</targetName>
+<dest>/DB/POS/itemnumber</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Style</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="itemnumber">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Style" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Style" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/DB/POS/itemnumber" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Style" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>AK_Design_DatabaseSchema</targetName>
+<dest>/DB/POS/name</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="name">
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/DB/POS/name" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>AK_Design_DatabaseSchema</targetName>
+<dest>/DB/POS/quantity</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_AK_ConfigureCSVLayout/Root/Record/Size</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="quantity">
+<Position height="25" identify="&lt;T&gt;" label="/DB/POS/quantity" mapString="$Input_AK_ConfigureCSVLayout/Root/Record/Size" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_AK_ConfigureCSVLayout/Root/Record/Size" mapString="&lt;S&gt;$Input_AK_ConfigureCSVLayout/Root/Record/Size" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>AK_Design_DatabaseSchema</targetName>
+<dest>/DB/POS</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+<mapValue/>
+ <forEach>$Input_AK_ConfigureCSVLayout/Root/Record[Size ='M' and not (preceding:: counter = counter)]</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="POS">
+      <Position height="25" identify="&lt;T&gt;" label="//DB/POS" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>2</order>
+ <targetName>AK_ConfigureCSVLayout</targetName>
+<dest>/Root/Record</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+<mapValue/>
+ <forEach>$Input_AK_ConfigureCSVLayout/Root/Record[Size ='M' and not (preceding:: counter = counter)]</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Record">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>AK_Design_DatabaseSchema</targetName>
+<dest>/DB/POS/price</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>DBQuery {SELECT purchase_order_id FROM POS,$AccountsDB ,false}</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="price">
+      <Position height="25" identify="&lt;T&gt;" label="//DB/POS/price" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<variables>
+</variables>
+
+<globalParameters>
+<keys>
+</keys>
+<contextVariables>
+</contextVariables>
+</globalParameters>
+
+<connections>
+<connectionVariable>
+<name>AccountsDB</name>
+<value>010000001015163275644228600151</value>
+</connectionVariable>
+</connections>
+<functions>
+</functions>
+<disableOutputNodes>
+</disableOutputNodes>
+<filters/>
+<valuemapNodes/>
+<accessLevel>
+<valueMap>global</valueMap>
+<globalTemplate>global</globalTemplate>
+<customAutoMap>global</customAutoMap>
+</accessLevel>
+<DataViewerRecordCount>50</DataViewerRecordCount>
+<isQuickSplittingEnabled>false</isQuickSplittingEnabled>
+<sourceExtensions/>
+<targetExtensions/>
+<disableOutputNodes/>
+<characterSetEncoding>UTF-8</characterSetEncoding>
+<tipOfTheDay>true</tipOfTheDay>
+<contextSchemaLoadedAtSource>false</contextSchemaLoadedAtSource>
+<contextSchemaLoadedAtTarget>false</contextSchemaLoadedAtTarget>
+<contextSchemaDefinition/>
+<filterUnmappedElement>false</filterUnmappedElement>
+<indentOutputXML>true</indentOutputXML>
+<streamingMode>false</streamingMode>
+<filterEmptyElements>false</filterEmptyElements>
+<dbQueryCaching>false</dbQueryCaching>
+<cacheIncludedSchemas>false</cacheIncludedSchemas>
+<TreeExpandLevelCount>3</TreeExpandLevelCount>
+<TreeExpandLevelCountForWebService>5</TreeExpandLevelCountForWebService>
+<TreeExpandLevelForEasySchemaExtensions>10</TreeExpandLevelForEasySchemaExtensions>
+<SelfRecursionLevel>0</SelfRecursionLevel>
+<EnableTypesBuffering>true</EnableTypesBuffering>
+<CdataSectionElements/>
+<excludeResultPrefixes> saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str</excludeResultPrefixes>
+<webservice>
+<consumers/>
+</webservice>
+
+<CustomAutoMapInUse/>
+<processElementFormDefault>true</processElementFormDefault>
+<xslVersion2.0>false</xslVersion2.0>
+<xslVersion3.0>false</xslVersion3.0>
+<sourceXpath/>
+<targetXpath/>
+</maps>
+]]></au_mapXmlFile>
+        <au_customAutoMap><![CDATA[]]></au_customAutoMap>
+        <au_dbInfoName><![CDATA[]]></au_dbInfoName>
+        <au_creationDate><![CDATA[2021-10-22T13:14:49]]></au_creationDate>
+        <au_description><![CDATA[AK_DataMapping_removeDuplicaterecords]]></au_description>
+        <au_sourceSchema><![CDATA[TextSchema:010000001015163422601940800159]]></au_sourceSchema>
+        <au_aimapFreeze><![CDATA[0]]></au_aimapFreeze>
+        <au_storedProcedure><![CDATA[]]></au_storedProcedure>
+        <au_version><![CDATA[1]]></au_version>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_optimizedLoading><![CDATA[1]]></au_optimizedLoading>
+        <au_json><![CDATA[{"json":{"category":"mapping","type":"mapping","encoding":"UTF-8","version":"1.0"},"cloneElements":"","filters":"","variables":{"variable":[]},"globalParameters":{"keys":{"key":[]},"contextVariables":{"contextVariable":[]}},"connections":{"connectionVariable":[{"name":"AccountsDB","value":"010000001015163275644228600151","comment":"","syntax":"AccountsDB"}]},"functions":{"externalFunction":[]},"filterUnmappedElements":false,"indentOutputXML":true,"xslVersion":"1.1","enableStreaming":false,"filterEmptyElements":false,"xslTransformer":"Saxon","characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"settingConfigs":{"xslVersion":"1.1","xslTransformer":"Saxon","filterUnmappedElements":false,"indentOutputXML":true,"filterEmptyElements":false,"enableStreaming":false,"characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"cDataSectionElements":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"processElementFormDefault":true,"isAutoSaveEnable":true},"disableOuputNodes":{"disableOutputNodeProperty":[]},"isCustomXSLT":false,"contextSchemaLoadedAtSource":false,"contextSchemaLoadedAtTarget":false,"webservice":{"consumers":{"consumer":[]}},"GlobalPreCustomXSL":"","GlobalPostCustomXSL":"","xslTemplates":{"xslTemplateData":[]},"mappingTempId":1634908761400,"sourceXpath":"","targetXpath":"","cDataSectionElements":"","splittingData":false,"splitNumberOfRecords":"500","parallelProcessing":false,"maximumConcurrentProcessor":"1","CustomAutoMapInUse":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"metaData":"","processElementFormDefault":true,"mappingInformation":{"mappingVersion":"6.1","mappingName":"AK_DataMapping_removeDuplicaterecords","mappingProject":"Project:11484550701988","mappingDescription":"AK_DataMapping_removeDuplicaterecords","sourceSchemaID":"TextSchema:010000001015163422601940800159","targetSchemaID":"AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159","mappingOwnerGroup":"","mappingOwner":"","mappingLastModifiedBy":"","mappingCreationDate":"","mappingModifiedDate":"","reusable":true},"namespace":"","namespaceList":[],"foreach":"","targetRoots":{"targetRoot":[{"name":"DB","schemaName":"AK_Design_DatabaseSchema","schemaID":"AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159","stream":"output_1"},{"name":"Root","schemaName":"AK_ConfigureCSVLayout","schemaID":"AdvanceDbSchema:010000001015163457985850100280;TextSchema:010000001015163422601940800159","stream":"output_2"}]},"sourceRoots":{"sourceRoot":[{"name":"Root","schemaName":"AK_ConfigureCSVLayout","schemaID":"TextSchema:010000001015163422601940800159"}]},"contextSchemaDefinition":"","maps":[{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"counter","targetfieldpath":"/Root/Record/counter","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"counter","sourcefielddisplayname":"counter","sourcefieldpath":"/Root/Record/counter","sourcerecord":"Record","id":"Mapping-1"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/counter","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730437","elementItem":{"elementType":"SourceElement","name":"counter","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/counter"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730438_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730438"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730438","elementItem":{"elementType":"TargetElement","name":"counter","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/counter"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730437"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Style","targetfieldpath":"/Root/Record/Style","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Style","sourcefielddisplayname":"Style","sourcefieldpath":"/Root/Record/Style","sourcerecord":"Record","id":"Mapping-2"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/Style","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730439","elementItem":{"elementType":"SourceElement","name":"Style","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Style"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730440_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730440"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730440","elementItem":{"elementType":"TargetElement","name":"Style","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/Style"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730439"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Fabric_code","targetfieldpath":"/Root/Record/Fabric_code","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Fabric_code","sourcefielddisplayname":"Fabric_code","sourcefieldpath":"/Root/Record/Fabric_code","sourcerecord":"Record","id":"Mapping-3"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/Fabric_code","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730441","elementItem":{"elementType":"SourceElement","name":"Fabric_code","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730442_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730442"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730442","elementItem":{"elementType":"TargetElement","name":"Fabric_code","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/Fabric_code"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730441"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"color_code","targetfieldpath":"/Root/Record/color_code","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"color_code","sourcefielddisplayname":"color_code","sourcefieldpath":"/Root/Record/color_code","sourcerecord":"Record","id":"Mapping-4"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/color_code","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730443","elementItem":{"elementType":"SourceElement","name":"color_code","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730444_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730444"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730444","elementItem":{"elementType":"TargetElement","name":"color_code","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/color_code"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730443"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"UPC","targetfieldpath":"/Root/Record/UPC","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"UPC","sourcefielddisplayname":"UPC","sourcefieldpath":"/Root/Record/UPC","sourcerecord":"Record","id":"Mapping-5"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/UPC","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730447","elementItem":{"elementType":"SourceElement","name":"UPC","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730448_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730448"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730448","elementItem":{"elementType":"TargetElement","name":"UPC","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/UPC"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730447"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Description","targetfieldpath":"/Root/Record/Description","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Description","sourcefielddisplayname":"Description","sourcefieldpath":"/Root/Record/Description","sourcerecord":"Record","id":"Mapping-6"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/Description","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Description","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/Description","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730449","elementItem":{"elementType":"SourceElement","name":"Description","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Description","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Description"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730450_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730450"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730450","elementItem":{"elementType":"TargetElement","name":"Description","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Description","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/Description"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730449"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Size","targetfieldpath":"/Root/Record/Size","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Size","sourcefielddisplayname":"Size","sourcefieldpath":"/Root/Record/Size","sourcerecord":"Record","id":"Mapping-7"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/Size","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730451","elementItem":{"elementType":"SourceElement","name":"Size","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Size"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730452_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730452"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730452","elementItem":{"elementType":"TargetElement","name":"Size","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/Size"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730451"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Color_description","targetfieldpath":"/Root/Record/Color_description","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Color_description","sourcefielddisplayname":"Color_description","sourcefieldpath":"/Root/Record/Color_description","sourcerecord":"Record","id":"Mapping-8"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/Color_description","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730453","elementItem":{"elementType":"SourceElement","name":"Color_description","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730454_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730454"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730454","elementItem":{"elementType":"TargetElement","name":"Color_description","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/Color_description"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730453"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Fabric_content","targetfieldpath":"/Root/Record/Fabric_content","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Fabric_content","sourcefielddisplayname":"Fabric_content","sourcefieldpath":"/Root/Record/Fabric_content","sourcerecord":"Record","id":"Mapping-9"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/Fabric_content","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730455","elementItem":{"elementType":"SourceElement","name":"Fabric_content","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730456_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730456"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730456","elementItem":{"elementType":"TargetElement","name":"Fabric_content","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/Fabric_content"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730455"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"qty","targetfieldpath":"/Root/Record/qty","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"qty","sourcefielddisplayname":"qty","sourcefieldpath":"/Root/Record/qty","sourcerecord":"Record","id":"Mapping-10"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/qty","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/qty","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/qty","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730457","elementItem":{"elementType":"SourceElement","name":"qty","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/qty","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/qty"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730458_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730458"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730458","elementItem":{"elementType":"TargetElement","name":"qty","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/qty","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/qty"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730457"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"price","targetfieldpath":"/Root/Record/price","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"price","sourcefielddisplayname":"price","sourcefieldpath":"/Root/Record/price","sourcerecord":"Record","id":"Mapping-11"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/price","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/price","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/price","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730460","elementItem":{"elementType":"SourceElement","name":"price","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/price","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/price"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730461_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730461"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730461","elementItem":{"elementType":"TargetElement","name":"price","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/price","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/price"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730460"]}]},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"@recordNumber","targetfieldpath":"/Root/Record/@recordNumber","targetrecord":"Record","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"@recordNumber","sourcefielddisplayname":"@recordNumber","sourcefieldpath":"/Root/Record/@recordNumber","sourcerecord":"Record","id":"Mapping-12"}],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record/@recordNumber","expressionNote":"","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber","expressionPath":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908730462","elementItem":{"elementType":"SourceElement","name":"@recordNumber","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908730463_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908730463"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908730463","elementItem":{"elementType":"TargetElement","name":"@recordNumber","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber","paramsCount":1,"syntax":"AK_ConfigureCSVLayout/Root/Record/@recordNumber"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908730462"]}]},{"order":1,"targetName":"AK_Design_DatabaseSchema","targetfield":"purchase_order_id","targetfieldpath":"/DB/POS/purchase_order_id","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908807810","elementItem":{"elementType":"SourceElement","name":"counter","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/counter"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908807811_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908807811"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908807811","elementItem":{"elementType":"TargetElement","name":"purchase_order_id","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","paramsCount":1,"syntax":"AK_Design_DatabaseSchema/DB/POS/purchase_order_id"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908807810"]}],"expression":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","targetrecord":"POS","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"counter","sourcefielddisplayname":"counter","sourcefieldpath":"/Root/Record/counter","sourcerecord":"Record","id":"Mapping-13"}],"markComplete":false,"mapId":"AK_Design_DatabaseSchema/DB/POS/purchase_order_id"},{"order":1,"targetName":"AK_Design_DatabaseSchema","targetfield":"itemnumber","targetfieldpath":"/DB/POS/itemnumber","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908839674","elementItem":{"elementType":"SourceElement","name":"Style","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Style"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908839675_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908839675"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908839675","elementItem":{"elementType":"TargetElement","name":"itemnumber","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","paramsCount":1,"syntax":"AK_Design_DatabaseSchema/DB/POS/itemnumber"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908839674"]}],"expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","targetrecord":"POS","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Style","sourcefielddisplayname":"Style","sourcefieldpath":"/Root/Record/Style","sourcerecord":"Record","id":"Mapping-14"}],"markComplete":false,"mapId":"AK_Design_DatabaseSchema/DB/POS/itemnumber"},{"order":1,"targetName":"AK_Design_DatabaseSchema","targetfield":"name","targetfieldpath":"/DB/POS/name","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908841499","elementItem":{"elementType":"SourceElement","name":"Fabric_code","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908841500_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908841500"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908841500","elementItem":{"elementType":"TargetElement","name":"name","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","paramsCount":1,"syntax":"AK_Design_DatabaseSchema/DB/POS/name"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908841499"]}],"expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","targetrecord":"POS","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Fabric_code","sourcefielddisplayname":"Fabric_code","sourcefieldpath":"/Root/Record/Fabric_code","sourcerecord":"Record","id":"Mapping-15"}],"markComplete":false,"mapId":"AK_Design_DatabaseSchema/DB/POS/name"},{"order":1,"targetName":"AK_Design_DatabaseSchema","targetfield":"quantity","targetfieldpath":"/DB/POS/quantity","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1634908867665","elementItem":{"elementType":"SourceElement","name":"Size","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","paramsCount":0,"syntax":"$Input_AK_ConfigureCSVLayout/Root/Record/Size"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1634908867666_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1634908867666"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1634908867666","elementItem":{"elementType":"TargetElement","name":"quantity","expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","paramsCount":1,"syntax":"AK_Design_DatabaseSchema/DB/POS/quantity"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1634908867665"]}],"expression":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","targetrecord":"POS","mapping":[{"sourceName":"AK_ConfigureCSVLayout","operatortype":"field","sourcefield":"Size","sourcefielddisplayname":"Size","sourcefieldpath":"/Root/Record/Size","sourcerecord":"Record","id":"Mapping-16"}],"markComplete":false,"mapId":"AK_Design_DatabaseSchema/DB/POS/quantity"},{"order":1,"targetName":"AK_Design_DatabaseSchema","targetfield":"POS","targetfieldpath":"/DB/POS","targetrecord":"DB","mapping":[],"markComplete":false,"mapId":"AK_Design_DatabaseSchema/DB/POS","confidence":"","foreachPath":"$Input_AK_ConfigureCSVLayout/Root/Record[Size ='M' and not (preceding:: counter = counter)]","expression":"","expressionPath":"","expressionNote":"","graphicalMappingJson":"","defaultEditor":"graphical"},{"order":2,"targetName":"AK_ConfigureCSVLayout","targetfield":"Record","targetfieldpath":"/Root/Record","targetrecord":"Root","mapping":[],"markComplete":false,"mapId":"AK_ConfigureCSVLayout/Root/Record","confidence":"","foreachPath":"$Input_AK_ConfigureCSVLayout/Root/Record[Size ='M' and not (preceding:: counter = counter)]","expressionNote":"","expression":"","expressionPath":"","defaultEditor":"graphical","graphicalMappingJson":""},{"order":1,"targetName":"AK_Design_DatabaseSchema","targetfield":"price","targetfieldpath":"/DB/POS/price","targetrecord":"POS","mapping":[],"markComplete":false,"mapId":"AK_Design_DatabaseSchema/DB/POS/price","expressionNote":"","expression":"DBQuery {SELECT purchase_order_id FROM POS,$AccountsDB ,false}","expressionPath":"DBQuery {SELECT purchase_order_id FROM POS,$AccountsDB ,false}","defaultEditor":"textual","confidence":""}],"sourceExpandLevel":3,"targetExpandLevel":3,"sourceTargetSchemaDetails":{"sourceSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"TextSchema","xpath":"/Root","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Record","root":false,"leaf":false,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"counter","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/counter","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Style","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Style","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Fabric_code","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Fabric_code","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"color_code","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/color_code","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"UPC","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/UPC","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Description","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Description","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Description","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Size","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Size","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Color_description","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Color_description","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Fabric_content","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Fabric_content","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"qty","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/qty","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/qty","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"price","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/price","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/price","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/@recordNumber","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1}],"totalChildMappings":12}],"totalChildMappings":12}],"totalChildMappings":12},"destinationSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"DB","root":true,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"AdvanceDbSchema","xpath":"/DB","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"POS","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_AK_ConfigureCSVLayout/Root/Record[Size ='M' and not (preceding:: counter = counter)]","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"purchase_order_id","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/purchase_order_id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/purchase_order_id/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":1},{"name":"itemnumber","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/itemnumber","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/itemnumber/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":1},{"name":"name","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/name","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/name/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":1},{"name":"quantity","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/quantity","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/quantity/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":1},{"name":"price","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/price","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"DBQuery {SELECT purchase_order_id FROM POS,$AccountsDB ,false}","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/price/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":1},{"name":"tax","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/tax","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/tax/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"paymenttype","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/paymenttype","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/paymenttype/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"details","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/details","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/details/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"shipdate","root":false,"leaf":false,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/shipdate","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"@isNull","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/shipdate/@isNull","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"@Action","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/@Action","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"@RollBackOnError","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/@RollBackOnError","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_AK_Design_DatabaseSchema","schemaNameWithoutInput":"AK_Design_DatabaseSchema","schemaType":"","xpath":"/DB/POS/@recordNumber","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":6}],"totalChildMappings":6},{"name":"Root","root":true,"leaf":false,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"TextSchema","xpath":"/Root","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Record","root":false,"leaf":false,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record","streamName":"output_2","namespacePrefix":"","currentForEach":"$Input_AK_ConfigureCSVLayout/Root/Record[Size ='M' and not (preceding:: counter = counter)]","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"counter","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/counter","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/counter","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Style","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Style","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Style","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Fabric_code","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Fabric_code","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_code","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"color_code","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/color_code","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/color_code","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"UPC","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/UPC","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/UPC","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Description","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Description","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Description","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Size","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Size","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Size","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Color_description","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Color_description","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Color_description","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Fabric_content","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/Fabric_content","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/Fabric_content","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"qty","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/qty","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/qty","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"price","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/price","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/price","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_AK_ConfigureCSVLayout","schemaNameWithoutInput":"AK_ConfigureCSVLayout","schemaType":"","xpath":"/Root/Record/@recordNumber","streamName":"output_2","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_AK_ConfigureCSVLayout/Root/Record/@recordNumber","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":2,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1}],"totalChildMappings":13}],"totalChildMappings":13}],"totalChildMappings":19}}}]]></au_json>
+        <au_userOwner><![CDATA[IndigoUser:11631863733277]]></au_userOwner>
+    </AU_MAPPINGTRANSFORMATION>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_splitFile" type="3"/>
+        <column name="au_numberOfRecords" type="4"/>
+        <column name="au_optimizedLoading" type="3"/>
+        <column name="au_sourceSchema" type="12"/>
+        <column name="au_targetSchema" type="12"/>
+        <column name="au_xslFile" type="-1"/>
+        <column name="au_metadata" type="12"/>
+        <column name="au_mapXmlFile" type="-1"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_pdfFileName" type="12"/>
+        <column name="au_parallelProcessing" type="3"/>
+        <column name="au_concurrentProcessors" type="4"/>
+        <column name="au_dbInfoName" type="12"/>
+        <column name="au_customAutoMap" type="-1"/>
+        <column name="au_valueMap" type="-1"/>
+        <column name="au_xslTemplate" type="-1"/>
+        <column name="au_xslTransformer" type="12"/>
+        <column name="au_characterSetEncoding" type="12"/>
+        <column name="au_enableAIMap" type="3"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_storedProcedure" type="-1"/>
+        <column name="au_aimapFreeze" type="3"/>
+        <column name="au_aimapTrained" type="3"/>
+    </columnInfo>
+</data>
