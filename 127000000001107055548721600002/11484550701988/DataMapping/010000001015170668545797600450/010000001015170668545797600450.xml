@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_MAPPINGTRANSFORMATION>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_splitFile><![CDATA[0]]></au_splitFile>
+        <au_projectOwner><![CDATA[Project:11484550701988]]></au_projectOwner>
+        <au_creationDate><![CDATA[2024-01-31T07:17:38]]></au_creationDate>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_enableAIMap><![CDATA[0]]></au_enableAIMap>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_valueMap><![CDATA[<ValueMap/>]]></au_valueMap>
+        <au_concurrentProcessors><![CDATA[1]]></au_concurrentProcessors>
+        <au_customAutoMap><![CDATA[]]></au_customAutoMap>
+        <au_modifiedDate><![CDATA[2024-02-06T05:08:41]]></au_modifiedDate>
+        <au_groupOwner><![CDATA[IndigoGroup:127000000001107055548721600002]]></au_groupOwner>
+        <au_id><![CDATA[010000001015170668545797600450]]></au_id>
+        <au_aimapTrained><![CDATA[0]]></au_aimapTrained>
+        <au_xslTransformer><![CDATA[Saxon]]></au_xslTransformer>
+        <au_metadata><![CDATA[]]></au_metadata>
+        <au_parallelProcessing><![CDATA[0]]></au_parallelProcessing>
+        <au_targetSchema><![CDATA[TextSchema:010000001015170496779799900019]]></au_targetSchema>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_xslFile><![CDATA[<?xml version='1.0'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.1" xmlns:saxonJavaMappingTransformation="java:com.adeptia.indigo.services.mapping.MappingTransformation" xmlns:saxonJavaMapperQueryExecutor="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor" xmlns:saxonJavaAggregateFunctionHandler="java:com.adeptia.indigo.services.mapping.AggregateFunctionHandler"  xmlns:str="http://exslt.org/strings" exclude-result-prefixes="saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str" xmlns:saxon="http://saxon.sf.net/" extension-element-prefixes="saxon">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" cdata-section-elements="" indent="yes" /><xsl:param name="_userName"/><xsl:param name="_password"/><xsl:param name="_class"/><xsl:param name="_identifier"/><xsl:param name="_subject"/><xsl:param name="_repositoryPath"/><xsl:param name="_Input1"/> <xsl:variable name="varConn" select="saxonJavaMapperQueryExecutor:getInstance($_identifier,'false')"/> <xsl:variable name="apos">'</xsl:variable> <xsl:variable name="quot">"</xsl:variable><xsl:template match="/"><Root><xsl:for-each select = "Root/Record"><Record><xsl:variable  name='test' select = "./@recordNumber"/><xsl:attribute name="recordNumber"></xsl:attribute>
+<!--IF CONDITION{(Root/Record/id != '')  and (matches(Root/Record/id, $varRegexSSN))}
+VALUE=["Invalid Emp ID |" ]
+--><id><xsl:variable  name='varRegexSSN' select = "&apos;/^(?!000|666|9[0-9]{2})([0-8]\d{2}|9(?!00)[0-9]{2})\d{4}(\d{4}|[0-8]\d{3}|9(?!000)\d{3})$/&apos;"/><xsl:if test="matches(id, $varRegexSSN)"><xsl:value-of select="&quot;Invalid Emp ID |&quot;"/></xsl:if></id><first_name><xsl:value-of select="first_name"/></first_name><Designation><xsl:value-of select="Designation"/></Designation><bonus><xsl:choose><xsl:when test="Record[not(preceding::first_name =first_name)]"><xsl:value-of select="&apos;jbkj&apos;"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose></bonus></Record></xsl:for-each></Root></xsl:template></xsl:stylesheet>]]></au_xslFile>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_userOwner><![CDATA[IndigoUser:127000000001107055536473900001]]></au_userOwner>
+        <au_sourceSchema><![CDATA[TextSchema:010000001015170496779799900019]]></au_sourceSchema>
+        <au_aimapFreeze><![CDATA[0]]></au_aimapFreeze>
+        <au_dbInfoName><![CDATA[]]></au_dbInfoName>
+        <au_numberOfRecords><![CDATA[500]]></au_numberOfRecords>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_storedProcedure><![CDATA[]]></au_storedProcedure>
+        <au_entityName><![CDATA[use_case1_Copy]]></au_entityName>
+        <au_pdfFileName><![CDATA[Adp_Map_Rules3409565625561402249.pdf]]></au_pdfFileName>
+        <au_mapXmlFile><![CDATA[<?xml version="1.0" encoding="UTF-8"?><maps version="4.4">
+<mappingInformation>
+<mappingVersion>6.1</mappingVersion>
+<mappingName>use_case1_Copy</mappingName>
+<mappingProject>Project:11484550701988</mappingProject>
+<mappingDescription>use_case1</mappingDescription>
+<sourceSchemaID>TextSchema:010000001015170496779799900019</sourceSchemaID>
+<targetSchemaID>TextSchema:010000001015170496779799900019</targetSchemaID>
+<mappingOwnerGroup>administrators</mappingOwnerGroup>
+<mappingOwner>Admin User</mappingOwner>
+<mappingLastModifiedBy>Admin User</mappingLastModifiedBy>
+<mappingCreationDate>Wed Jan 31 07:17:38 UTC 2024</mappingCreationDate>
+<mappingModifiedDate>Tue Feb 06 05:08:35 UTC 2024</mappingModifiedDate>
+<reusable>true</reusable>
+</mappingInformation>
+<sourceRoots>
+<sourceRoot>
+<name>Root</name>
+<schemaName>chirag_test12</schemaName>
+<schemaID>TextSchema:010000001015170496779799900019</schemaID>
+</sourceRoot>
+</sourceRoots>
+<targetRoots>
+<targetRoot>
+<name>Root</name>
+<schemaName>chirag_test12</schemaName>
+<schemaID>TextSchema:010000001015170496779799900019</schemaID>
+<stream>output_1</stream>
+</targetRoot>
+</targetRoots>
+<nameSpace/>
+<xslProperty/>
+<GlobalPreCustomXSL/>
+<GlobalPostCustomXSL/>
+<xslTemplates/>
+<map>
+<order>1</order>
+ <targetName>chirag_test12</targetName>
+<dest>/Root/Record/Designation</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_chirag_test12/Root/Record/Designation</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Designation">
+<Position height="25" identify="&lt;S&gt;" label="$Input_chirag_test12/Root/Record/Designation" mapString="&lt;S&gt;$Input_chirag_test12/Root/Record/Designation" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Designation" mapString="$Input_chirag_test12/Root/Record/Designation" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>chirag_test12</targetName>
+<dest>/Root/Record/first_name</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_chirag_test12/Root/Record/first_name</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="first_name">
+<Position height="25" identify="&lt;S&gt;" label="$Input_chirag_test12/Root/Record/first_name" mapString="&lt;S&gt;$Input_chirag_test12/Root/Record/first_name" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/first_name" mapString="$Input_chirag_test12/Root/Record/first_name" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>chirag_test12</targetName>
+<dest>/Root/Record/bonus</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{$Input_chirag_test12/Root/Record[not(preceding::first_name =first_name)]} VALUE=['jbkj'] OTHERWISE VALUE=[ ]</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="bonus">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/bonus" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>chirag_test12</targetName>
+<dest>/Root/Record</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+<mapValue/>
+ <forEach>$Input_chirag_test12/Root/Record</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>test</lname>
+<lvalue>$Input_chirag_test12/Root/Record/@recordNumber</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="Record">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>chirag_test12</targetName>
+<dest>/Root/Record/id</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>IF CONDITION{matches($Input_chirag_test12/Root/Record/id, $varRegexSSN)}
+VALUE=["Invalid Emp ID |" ]</mapValue>
+ <forEach/>
+<comments>IF CONDITION{($Input_chirag_test12/Root/Record/id != '')  and (matches($Input_chirag_test12/Root/Record/id, $varRegexSSN))}
+VALUE=["Invalid Emp ID |" ]</comments>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables>
+<localVariable>
+<lname>varRegexSSN</lname>
+<lvalue>'/^(?!000|666|9[0-9]{2})([0-8]\d{2}|9(?!00)[0-9]{2})\d{4}(\d{4}|[0-8]\d{3}|9(?!000)\d{3})$/'
+</lvalue>
+<lcomment/>
+</localVariable>
+</localVariables> <Sorting/>
+ <Target name="id">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/id" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<variables>
+</variables>
+
+<globalParameters>
+<keys>
+</keys>
+<contextVariables>
+</contextVariables>
+</globalParameters>
+
+<connections/>
+<functions>
+</functions>
+<disableOutputNodes>
+</disableOutputNodes>
+<filters/>
+<valuemapNodes/>
+<accessLevel>
+<valueMap>global</valueMap>
+<globalTemplate>global</globalTemplate>
+<customAutoMap>global</customAutoMap>
+</accessLevel>
+<DataViewerRecordCount>50</DataViewerRecordCount>
+<isQuickSplittingEnabled>false</isQuickSplittingEnabled>
+<sourceExtensions/>
+<targetExtensions/>
+<disableOutputNodes/>
+<characterSetEncoding>UTF-8</characterSetEncoding>
+<tipOfTheDay>true</tipOfTheDay>
+<contextSchemaLoadedAtSource>false</contextSchemaLoadedAtSource>
+<contextSchemaLoadedAtTarget>false</contextSchemaLoadedAtTarget>
+<contextSchemaDefinition/>
+<filterUnmappedElement>false</filterUnmappedElement>
+<indentOutputXML>true</indentOutputXML>
+<streamingMode>false</streamingMode>
+<filterEmptyElements>false</filterEmptyElements>
+<dbQueryCaching>false</dbQueryCaching>
+<cacheIncludedSchemas>false</cacheIncludedSchemas>
+<TreeExpandLevelCount>3</TreeExpandLevelCount>
+<TreeExpandLevelCountForWebService>5</TreeExpandLevelCountForWebService>
+<TreeExpandLevelForEasySchemaExtensions>10</TreeExpandLevelForEasySchemaExtensions>
+<SelfRecursionLevel>0</SelfRecursionLevel>
+<EnableTypesBuffering>true</EnableTypesBuffering>
+<CdataSectionElements/>
+<excludeResultPrefixes> saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str</excludeResultPrefixes>
+<webservice>
+<consumers/>
+</webservice>
+
+<CustomAutoMapInUse/>
+<processElementFormDefault>true</processElementFormDefault>
+<xslVersion2.0>false</xslVersion2.0>
+<xslVersion3.0>false</xslVersion3.0>
+<sourceXpath/>
+<targetXpath/>
+</maps>
+]]></au_mapXmlFile>
+        <au_version><![CDATA[1]]></au_version>
+        <au_json><![CDATA[{"json":{"category":"mapping","type":"mapping","encoding":"UTF-8","version":"1.0"},"cloneElements":"","filters":"","variables":{"variable":[]},"globalParameters":{"keys":{"key":[]},"contextVariables":{"contextVariable":[]}},"connections":{"connectionVariable":[]},"functions":{"externalFunction":[]},"filterUnmappedElements":false,"indentOutputXML":true,"xslVersion":"1.1","enableStreaming":false,"filterEmptyElements":false,"xslTransformer":"Saxon","characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"settingConfigs":{"xslVersion":"1.1","xslTransformer":"Saxon","filterUnmappedElements":false,"indentOutputXML":true,"filterEmptyElements":false,"enableStreaming":false,"characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"cDataSectionElements":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"processElementFormDefault":true,"isAutoSaveEnable":true},"disableOuputNodes":{"disableOutputNodeProperty":[]},"isCustomXSLT":false,"contextSchemaLoadedAtSource":false,"contextSchemaLoadedAtTarget":false,"webservice":{"consumers":{"consumer":[]}},"GlobalPreCustomXSL":"","GlobalPostCustomXSL":"","xslTemplates":{"xslTemplateData":[]},"mappingTempId":1704968215119,"sourceXpath":"","targetXpath":"","cDataSectionElements":"","splittingData":false,"splitNumberOfRecords":"500","parallelProcessing":false,"maximumConcurrentProcessor":"1","CustomAutoMapInUse":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"metaData":"","processElementFormDefault":true,"mappingInformation":{"mappingVersion":"6.1","mappingName":"use_case1_Copy","mappingProject":"Project:11484550701988","mappingDescription":"use_case1","sourceSchemaID":"TextSchema:010000001015170496779799900019","targetSchemaID":"TextSchema:010000001015170496779799900019","mappingOwnerGroup":"","mappingOwner":"","mappingLastModifiedBy":"","mappingCreationDate":"","mappingModifiedDate":"","reusable":true},"namespace":"","namespaceList":[],"foreach":"","targetRoots":{"targetRoot":[{"name":"Root","schemaName":"chirag_test12","schemaID":"TextSchema:010000001015170496779799900019","stream":"output_1"}]},"sourceRoots":{"sourceRoot":[{"name":"Root","schemaName":"chirag_test12","schemaID":"TextSchema:010000001015170496779799900019"}]},"contextSchemaDefinition":"","maps":[{"order":1,"targetName":"chirag_test12","targetfield":"Designation","targetfieldpath":"/Root/Record/Designation","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1704969275535","elementItem":{"elementType":"SourceElement","name":"Designation","expression":"$Input_chirag_test12/Root/Record/Designation","paramsCount":0,"syntax":"$Input_chirag_test12/Root/Record/Designation"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1704969275536_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1704969275536"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1704969275536","elementItem":{"elementType":"TargetElement","name":"Designation","expression":"$Input_chirag_test12/Root/Record/Designation","paramsCount":1,"syntax":"chirag_test12/Root/Record/Designation"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1704969275535"]}],"expression":"$Input_chirag_test12/Root/Record/Designation","targetrecord":"Record","mapping":[{"sourceName":"chirag_test12","operatortype":"field","sourcefield":"Designation","sourcefielddisplayname":"Designation","sourcefieldpath":"/Root/Record/Designation","sourcerecord":"Record","id":"Mapping-1"}],"markComplete":false,"mapId":"chirag_test12/Root/Record/Designation"},{"order":1,"targetName":"chirag_test12","targetfield":"first_name","targetfieldpath":"/Root/Record/first_name","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1704969703659","elementItem":{"elementType":"SourceElement","name":"first_name","expression":"$Input_chirag_test12/Root/Record/first_name","paramsCount":0,"syntax":"$Input_chirag_test12/Root/Record/first_name"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1704969703660_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1704969703660"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1704969703660","elementItem":{"elementType":"TargetElement","name":"first_name","expression":"$Input_chirag_test12/Root/Record/first_name","paramsCount":1,"syntax":"chirag_test12/Root/Record/first_name"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1704969703659"]}],"expression":"$Input_chirag_test12/Root/Record/first_name","targetrecord":"Record","mapping":[{"sourceName":"chirag_test12","operatortype":"field","sourcefield":"first_name","sourcefielddisplayname":"first_name","sourcefieldpath":"/Root/Record/first_name","sourcerecord":"Record","id":"Mapping-2"}],"markComplete":false,"mapId":"chirag_test12/Root/Record/first_name"},{"order":1,"targetName":"chirag_test12","targetfield":"bonus","targetfieldpath":"/Root/Record/bonus","targetrecord":"Record","mapping":[{"sourceName":"chirag_test12","operatortype":"field","sourcefield":"Record","sourcefielddisplayname":"Record","sourcefieldpath":"/Root/Record","sourcerecord":"Root","id":"Mapping-1"}],"markComplete":false,"mapId":"chirag_test12/Root/Record/bonus","expressionNote":"","expression":"WHEN CONDITION{$Input_chirag_test12/Root/Record[not(preceding::first_name =first_name)]} VALUE=['jbkj'] OTHERWISE VALUE=[ ]","expressionPath":"WHEN CONDITION{$Input_chirag_test12/Root/Record[not(preceding::first_name =first_name)]} VALUE=['jbkj'] OTHERWISE VALUE=[ ]","defaultEditor":"textual","confidence":""},{"order":1,"targetName":"chirag_test12","targetfield":"Record","targetfieldpath":"/Root/Record","targetrecord":"Root","mapping":[],"markComplete":false,"mapId":"chirag_test12/Root/Record","confidence":"","foreachPath":"$Input_chirag_test12/Root/Record","comments":"","defaultEditor":"textual","graphicalMappingJson":[],"localVariables":{"localVariable":[{"lname":"test","lvalue":"$Input_chirag_test12/Root/Record/@recordNumber","lcomment":""}]}},{"order":1,"targetName":"chirag_test12","targetfield":"id","targetfieldpath":"/Root/Record/id","defaultEditor":"textual","graphicalMappingJson":[],"expression":"IF CONDITION{matches($Input_chirag_test12/Root/Record/id, $varRegexSSN)}\nVALUE=[\"Invalid Emp ID |\" ]\n","targetrecord":"Record","mapping":[{"sourceName":"chirag_test12","operatortype":"field","sourcefield":"id","sourcefielddisplayname":"id","sourcefieldpath":"/Root/Record/id","sourcerecord":"Record","id":"Mapping-1"}],"markComplete":false,"mapId":"chirag_test12/Root/Record/id","comments":"IF CONDITION{($Input_chirag_test12/Root/Record/id != '')  and (matches($Input_chirag_test12/Root/Record/id, $varRegexSSN))}\nVALUE=[\"Invalid Emp ID |\" ]\n","expressionNote":"","expressionPath":"IF CONDITION{matches($Input_chirag_test12/Root/Record/id, $varRegexSSN)}\nVALUE=[\"Invalid Emp ID |\" ]\n","confidence":"","localVariables":{"localVariable":[{"lname":"varRegexSSN","lvalue":"'/^(?!000|666|9[0-9]{2})([0-8]\\d{2}|9(?!00)[0-9]{2})\\d{4}(\\d{4}|[0-8]\\d{3}|9(?!000)\\d{3})$/'\n","lcomment":""}]}}],"sourceExpandLevel":3,"targetExpandLevel":3,"sourceTargetSchemaDetails":{"sourceSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"TextSchema","xpath":"/Root","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Record","root":false,"leaf":false,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"IF CONDITION{matches($Input_chirag_test12/Root/Record/id, $varRegexSSN)}\nVALUE=[\"Invalid Emp ID |\" ]\n","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"first_name","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/first_name","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_chirag_test12/Root/Record/first_name","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Designation","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/Designation","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_chirag_test12/Root/Record/Designation","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"bonus","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/bonus","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"WHEN CONDITION{$Input_chirag_test12/Root/Record[not(preceding::first_name =first_name)]} VALUE=['jbkj'] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/@recordNumber","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":4}],"totalChildMappings":4}],"totalChildMappings":4},"destinationSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"TextSchema","xpath":"/Root","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Record","root":false,"leaf":false,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_chirag_test12/Root/Record","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"test","value":"$Input_chirag_test12/Root/Record/@recordNumber","comments":""}],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"IF CONDITION{matches($Input_chirag_test12/Root/Record/id, $varRegexSSN)}\nVALUE=[\"Invalid Emp ID |\" ]\n","currentComment":"IF CONDITION{($Input_chirag_test12/Root/Record/id != '')  and (matches($Input_chirag_test12/Root/Record/id, $varRegexSSN))}\nVALUE=[\"Invalid Emp ID |\" ]\n","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[{"name":"varRegexSSN","value":"'/^(?!000|666|9[0-9]{2})([0-8]\\d{2}|9(?!00)[0-9]{2})\\d{4}(\\d{4}|[0-8]\\d{3}|9(?!000)\\d{3})$/'\n","comments":""}],"sortList":[],"children":[],"totalChildMappings":1},{"name":"first_name","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/first_name","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_chirag_test12/Root/Record/first_name","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Designation","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/Designation","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_chirag_test12/Root/Record/Designation","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"bonus","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/bonus","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"WHEN CONDITION{$Input_chirag_test12/Root/Record[not(preceding::first_name =first_name)]} VALUE=['jbkj'] OTHERWISE VALUE=[ ]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_chirag_test12","schemaNameWithoutInput":"chirag_test12","schemaType":"","xpath":"/Root/Record/@recordNumber","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":5}],"totalChildMappings":5}],"totalChildMappings":5}}}]]></au_json>
+        <au_description><![CDATA[use_case1]]></au_description>
+        <au_characterSetEncoding><![CDATA[UTF-8]]></au_characterSetEncoding>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_modifiedBy><![CDATA[IndigoUser:127000000001107055536473900001]]></au_modifiedBy>
+        <au_xslTemplate><![CDATA[<XslTemplate/>]]></au_xslTemplate>
+        <au_optimizedLoading><![CDATA[1]]></au_optimizedLoading>
+    </AU_MAPPINGTRANSFORMATION>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_splitFile" type="3"/>
+        <column name="au_numberOfRecords" type="4"/>
+        <column name="au_optimizedLoading" type="3"/>
+        <column name="au_sourceSchema" type="12"/>
+        <column name="au_targetSchema" type="12"/>
+        <column name="au_xslFile" type="-1"/>
+        <column name="au_metadata" type="12"/>
+        <column name="au_mapXmlFile" type="-1"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_pdfFileName" type="12"/>
+        <column name="au_parallelProcessing" type="3"/>
+        <column name="au_concurrentProcessors" type="4"/>
+        <column name="au_dbInfoName" type="12"/>
+        <column name="au_customAutoMap" type="-1"/>
+        <column name="au_valueMap" type="-1"/>
+        <column name="au_xslTemplate" type="-1"/>
+        <column name="au_xslTransformer" type="12"/>
+        <column name="au_characterSetEncoding" type="12"/>
+        <column name="au_enableAIMap" type="3"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_storedProcedure" type="-1"/>
+        <column name="au_aimapFreeze" type="3"/>
+        <column name="au_aimapTrained" type="3"/>
+    </columnInfo>
+</data>
