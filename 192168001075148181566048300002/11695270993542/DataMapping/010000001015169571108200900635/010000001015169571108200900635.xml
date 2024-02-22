@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_MAPPINGTRANSFORMATION>
+        <au_pdfFileName><![CDATA[Adp_Map_Rules17052699701771969.pdf]]></au_pdfFileName>
+        <au_version><![CDATA[1]]></au_version>
+        <au_sourceSchema><![CDATA[JSONSchema:010000001015169571069561800619]]></au_sourceSchema>
+        <au_storedProcedure><![CDATA[]]></au_storedProcedure>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_userOwner><![CDATA[IndigoUser:11674552622369]]></au_userOwner>
+        <au_dbInfoName><![CDATA[]]></au_dbInfoName>
+        <au_optimizedLoading><![CDATA[1]]></au_optimizedLoading>
+        <au_description><![CDATA[BP_Mapping_JtoJ]]></au_description>
+        <au_modifiedDate><![CDATA[2023-10-06T08:39:57]]></au_modifiedDate>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_xslFile><![CDATA[<?xml version='1.0'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.1" xmlns:saxonJavaMappingTransformation="java:com.adeptia.indigo.services.mapping.MappingTransformation" xmlns:saxonJavaMapperQueryExecutor="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor" xmlns:saxonJavaAggregateFunctionHandler="java:com.adeptia.indigo.services.mapping.AggregateFunctionHandler"  xmlns:str="http://exslt.org/strings" exclude-result-prefixes="saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str" xmlns:saxon="http://saxon.sf.net/" extension-element-prefixes="saxon">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" cdata-section-elements="" indent="yes" /><xsl:param name="_userName"/><xsl:param name="_password"/><xsl:param name="_class"/><xsl:param name="_identifier"/><xsl:param name="_subject"/><xsl:param name="_repositoryPath"/><xsl:param name="_Input1"/> <xsl:variable name="varConn" select="saxonJavaMapperQueryExecutor:getInstance($_identifier,'false')"/> <xsl:variable name="apos">'</xsl:variable> <xsl:variable name="quot">"</xsl:variable><xsl:template match="/"><Root><Company><id><xsl:value-of select="Root/item/Company/id"/></id><name><xsl:value-of select="Root/item/Company/name"/></name><xsl:for-each select = "Root/item/Company/networkIds"><networkIds><xsl:value-of select="."/></networkIds></xsl:for-each><primaryContact><xsl:value-of select="Root/item/Company/primaryContact"/></primaryContact><agentId><xsl:value-of select="Root/item/Company/agentId"/></agentId><ediTradingPartner><emailAddress><xsl:value-of select="Root/item/Company/ediTradingPartner/emailAddress"/></emailAddress><groupSenderID><xsl:value-of select="Root/item/Company/ediTradingPartner/groupSenderID"/></groupSenderID><groupReceiverID><xsl:value-of select="Root/item/Company/ediTradingPartner/groupReceiverID"/></groupReceiverID><inInterLastUsedCNo><xsl:value-of select="Root/item/Company/ediTradingPartner/inInterLastUsedCNo"/></inInterLastUsedCNo><inGroupLastUsedCNo><xsl:value-of select="Root/item/Company/ediTradingPartner/inGroupLastUsedCNo"/></inGroupLastUsedCNo><inTranLastUsedCNo><xsl:value-of select="Root/item/Company/ediTradingPartner/inTranLastUsedCNo"/></inTranLastUsedCNo><outInterLastUsedCNo><xsl:value-of select="Root/item/Company/ediTradingPartner/outInterLastUsedCNo"/></outInterLastUsedCNo><outGroupLastUsedCNo><xsl:value-of select="Root/item/Company/ediTradingPartner/outGroupLastUsedCNo"/></outGroupLastUsedCNo><outTranLastUsedCNo><xsl:value-of select="Root/item/Company/ediTradingPartner/outTranLastUsedCNo"/></outTranLastUsedCNo><entityName><xsl:value-of select="Root/item/Company/ediTradingPartner/entityName"/></entityName><description><xsl:value-of select="Root/item/Company/ediTradingPartner/description"/></description><permissionMask><xsl:value-of select="Root/item/Company/ediTradingPartner/permissionMask"/></permissionMask><activeVersion><xsl:value-of select="Root/item/Company/ediTradingPartner/activeVersion"/></activeVersion><version><xsl:value-of select="Root/item/Company/ediTradingPartner/version"/></version></ediTradingPartner><status><xsl:value-of select="Root/item/Company/status"/></status><xsl:for-each select = "Root/item/Company/partnerNetworks"><partnerNetworks><id><xsl:value-of select="id"/></id></partnerNetworks></xsl:for-each></Company></Root></xsl:template></xsl:stylesheet>]]></au_xslFile>
+        <au_splitFile><![CDATA[0]]></au_splitFile>
+        <au_aimapTrained><![CDATA[0]]></au_aimapTrained>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_concurrentProcessors><![CDATA[1]]></au_concurrentProcessors>
+        <au_targetSchema><![CDATA[JSONSchema:010000001015169571089529300627]]></au_targetSchema>
+        <au_mapXmlFile><![CDATA[<?xml version="1.0" encoding="UTF-8"?><maps version="4.4">
+<mappingInformation>
+<mappingVersion>6.1</mappingVersion>
+<mappingName>BP_Mapping_JtoJ_U</mappingName>
+<mappingProject>Project:11695270993542</mappingProject>
+<mappingDescription>BP_Mapping_JtoJ</mappingDescription>
+<sourceSchemaID>JSONSchema:010000001015169571069561800619</sourceSchemaID>
+<targetSchemaID>JSONSchema:010000001015169571089529300627</targetSchemaID>
+<mappingOwnerGroup>Group_1</mappingOwnerGroup>
+<mappingOwner>Rajat Saxena</mappingOwner>
+<mappingLastModifiedBy>Rajat Saxena</mappingLastModifiedBy>
+<mappingCreationDate>Tue Sep 26 06:51:22 UTC 2023</mappingCreationDate>
+<mappingModifiedDate>Fri Oct 06 08:39:53 UTC 2023</mappingModifiedDate>
+<reusable>true</reusable>
+</mappingInformation>
+<sourceRoots>
+<sourceRoot>
+<name>Root</name>
+<schemaName>BP_Source_Layout</schemaName>
+<schemaID>JSONSchema:010000001015169571069561800619</schemaID>
+</sourceRoot>
+</sourceRoots>
+<targetRoots>
+<targetRoot>
+<name>Root</name>
+<schemaName>BP_Layout2</schemaName>
+<schemaID>JSONSchema:010000001015169571089529300627</schemaID>
+<stream>output_1</stream>
+</targetRoot>
+</targetRoots>
+<nameSpace/>
+<xslProperty/>
+<GlobalPreCustomXSL/>
+<GlobalPostCustomXSL/>
+<xslTemplates/>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/id</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/id</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="id">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/id" mapString="$Input_BP_Source_Layout/Root/item/Company/id" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/id" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/id" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/name</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/name</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="name">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/name" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/name" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/name" mapString="$Input_BP_Source_Layout/Root/item/Company/name" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/primaryContact</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/primaryContact</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="primaryContact">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/primaryContact" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/primaryContact" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/primaryContact" mapString="$Input_BP_Source_Layout/Root/item/Company/primaryContact" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/agentId</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/agentId</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="agentId">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/agentId" mapString="$Input_BP_Source_Layout/Root/item/Company/agentId" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/agentId" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/agentId" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/emailAddress</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="emailAddress">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/emailAddress" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/groupSenderID</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="groupSenderID">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/groupSenderID" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/groupReceiverID</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="groupReceiverID">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/groupReceiverID" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/inInterLastUsedCNo</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="inInterLastUsedCNo">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/inInterLastUsedCNo" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/inGroupLastUsedCNo</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="inGroupLastUsedCNo">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/inGroupLastUsedCNo" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/inTranLastUsedCNo</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="inTranLastUsedCNo">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/inTranLastUsedCNo" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/outInterLastUsedCNo</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="outInterLastUsedCNo">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/outInterLastUsedCNo" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/outGroupLastUsedCNo</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="outGroupLastUsedCNo">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/outGroupLastUsedCNo" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/outTranLastUsedCNo</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="outTranLastUsedCNo">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/outTranLastUsedCNo" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/entityName</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="entityName">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/entityName" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/description</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="description">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/description" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/permissionMask</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="permissionMask">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/permissionMask" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/activeVersion</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="activeVersion">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/activeVersion" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/ediTradingPartner/version</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="version">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/ediTradingPartner/version" mapString="$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/status</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/status</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="status">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Company/status" mapString="$Input_BP_Source_Layout/Root/item/Company/status" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Source_Layout/Root/item/Company/status" mapString="&lt;S&gt;$Input_BP_Source_Layout/Root/item/Company/status" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/partnerNetworks/id</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/partnerNetworks/id</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="id">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Company/partnerNetworks/id" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/partnerNetworks</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+<mapValue/>
+ <forEach>$Input_BP_Source_Layout/Root/item/Company/partnerNetworks</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="partnerNetworks">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Company/partnerNetworks" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>BP_Layout2</targetName>
+<dest>/Root/Company/networkIds</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Source_Layout/Root/item/Company/networkIds</mapValue>
+ <forEach>$Input_BP_Source_Layout/Root/item/Company/networkIds</forEach>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="networkIds">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Company/networkIds" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<variables>
+</variables>
+
+<globalParameters>
+<keys>
+</keys>
+<contextVariables>
+</contextVariables>
+</globalParameters>
+
+<connections/>
+<functions>
+</functions>
+<disableOutputNodes>
+</disableOutputNodes>
+<filters/>
+<valuemapNodes/>
+<accessLevel>
+<valueMap>global</valueMap>
+<globalTemplate>global</globalTemplate>
+<customAutoMap>global</customAutoMap>
+</accessLevel>
+<DataViewerRecordCount>50</DataViewerRecordCount>
+<isQuickSplittingEnabled>false</isQuickSplittingEnabled>
+<sourceExtensions/>
+<targetExtensions/>
+<disableOutputNodes/>
+<characterSetEncoding>UTF-8</characterSetEncoding>
+<tipOfTheDay>true</tipOfTheDay>
+<contextSchemaLoadedAtSource>false</contextSchemaLoadedAtSource>
+<contextSchemaLoadedAtTarget>false</contextSchemaLoadedAtTarget>
+<contextSchemaDefinition>Inc_Rec</contextSchemaDefinition>
+<filterUnmappedElement>false</filterUnmappedElement>
+<indentOutputXML>true</indentOutputXML>
+<streamingMode>false</streamingMode>
+<filterEmptyElements>false</filterEmptyElements>
+<dbQueryCaching>false</dbQueryCaching>
+<cacheIncludedSchemas>false</cacheIncludedSchemas>
+<TreeExpandLevelCount>3</TreeExpandLevelCount>
+<TreeExpandLevelCountForWebService>5</TreeExpandLevelCountForWebService>
+<TreeExpandLevelForEasySchemaExtensions>10</TreeExpandLevelForEasySchemaExtensions>
+<SelfRecursionLevel>0</SelfRecursionLevel>
+<EnableTypesBuffering>true</EnableTypesBuffering>
+<CdataSectionElements/>
+<excludeResultPrefixes> saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str</excludeResultPrefixes>
+<webservice>
+<consumers/>
+</webservice>
+
+<CustomAutoMapInUse/>
+<processElementFormDefault>true</processElementFormDefault>
+<xslVersion2.0>false</xslVersion2.0>
+<xslVersion3.0>false</xslVersion3.0>
+<sourceXpath/>
+<targetXpath/>
+</maps>
+]]></au_mapXmlFile>
+        <au_id><![CDATA[010000001015169571108200900635]]></au_id>
+        <au_parallelProcessing><![CDATA[0]]></au_parallelProcessing>
+        <au_creationDate><![CDATA[2023-09-26T06:51:22]]></au_creationDate>
+        <au_characterSetEncoding><![CDATA[UTF-8]]></au_characterSetEncoding>
+        <au_enableAIMap><![CDATA[0]]></au_enableAIMap>
+        <au_numberOfRecords><![CDATA[500]]></au_numberOfRecords>
+        <au_json><![CDATA[{"json":{"category":"mapping","type":"mapping","encoding":"UTF-8","version":"1.0"},"cloneElements":"","filters":"","variables":{"variable":[]},"globalParameters":{"keys":{"key":[]},"contextVariables":{"contextVariable":[]}},"connections":{"connectionVariable":[]},"functions":{"externalFunction":[]},"filterUnmappedElements":false,"indentOutputXML":true,"xslVersion":"1.1","enableStreaming":false,"filterEmptyElements":false,"xslTransformer":"Saxon","characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"settingConfigs":{"xslVersion":"1.1","xslTransformer":"Saxon","filterUnmappedElements":false,"indentOutputXML":true,"filterEmptyElements":false,"enableStreaming":false,"characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"cDataSectionElements":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"processElementFormDefault":true,"isAutoSaveEnable":true},"disableOuputNodes":{"disableOutputNodeProperty":[]},"isCustomXSLT":false,"contextSchemaLoadedAtSource":false,"contextSchemaLoadedAtTarget":false,"webservice":{"consumers":{"consumer":[]}},"GlobalPreCustomXSL":"","GlobalPostCustomXSL":"","xslTemplates":{"xslTemplateData":[]},"mappingTempId":1695711245992,"sourceXpath":"","targetXpath":"","cDataSectionElements":"","splittingData":false,"splitNumberOfRecords":"500","parallelProcessing":false,"maximumConcurrentProcessor":"1","CustomAutoMapInUse":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"metaData":"","processElementFormDefault":true,"mappingInformation":{"mappingVersion":"6.1","mappingName":"BP_Mapping_JtoJ_U","mappingProject":"Project:11695270993542","mappingDescription":"BP_Mapping_JtoJ","sourceSchemaID":"JSONSchema:010000001015169571069561800619","targetSchemaID":"JSONSchema:010000001015169571089529300627","mappingOwnerGroup":"","mappingOwner":"","mappingLastModifiedBy":"","mappingCreationDate":"","mappingModifiedDate":"","reusable":true},"namespace":"","namespaceList":[],"foreach":"","targetRoots":{"targetRoot":[{"name":"Root","schemaName":"BP_Layout2","schemaID":"JSONSchema:010000001015169571089529300627","stream":"output_1"}]},"sourceRoots":{"sourceRoot":[{"name":"Root","schemaName":"BP_Source_Layout","schemaID":"JSONSchema:010000001015169571069561800619"}]},"contextSchemaDefinition":"Inc_Rec","maps":[{"order":1,"targetName":"BP_Layout2","targetfield":"id","targetfieldpath":"/Root/Company/id","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711077294","elementItem":{"elementType":"SourceElement","name":"id","expression":"$Input_BP_Source_Layout/Root/item/Company/id","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/id"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711077295_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711077295"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711077295","elementItem":{"elementType":"TargetElement","name":"id","expression":"$Input_BP_Source_Layout/Root/item/Company/id","paramsCount":1,"syntax":"BP_Layout2/Root/Company/id"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711077294"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/id","targetrecord":"Company","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"id","sourcefielddisplayname":"id","sourcefieldpath":"/Root/item/Company/id","sourcerecord":"Company","id":"Mapping-1"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/id"},{"order":1,"targetName":"BP_Layout2","targetfield":"name","targetfieldpath":"/Root/Company/name","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711078701","elementItem":{"elementType":"SourceElement","name":"name","expression":"$Input_BP_Source_Layout/Root/item/Company/name","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/name"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711078702_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711078702"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711078702","elementItem":{"elementType":"TargetElement","name":"name","expression":"$Input_BP_Source_Layout/Root/item/Company/name","paramsCount":1,"syntax":"BP_Layout2/Root/Company/name"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711078701"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/name","targetrecord":"Company","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"name","sourcefielddisplayname":"name","sourcefieldpath":"/Root/item/Company/name","sourcerecord":"Company","id":"Mapping-2"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/name"},{"order":1,"targetName":"BP_Layout2","targetfield":"primaryContact","targetfieldpath":"/Root/Company/primaryContact","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711081105","elementItem":{"elementType":"SourceElement","name":"primaryContact","expression":"$Input_BP_Source_Layout/Root/item/Company/primaryContact","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/primaryContact"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711081106_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711081106"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711081106","elementItem":{"elementType":"TargetElement","name":"primaryContact","expression":"$Input_BP_Source_Layout/Root/item/Company/primaryContact","paramsCount":1,"syntax":"BP_Layout2/Root/Company/primaryContact"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711081105"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/primaryContact","targetrecord":"Company","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"primaryContact","sourcefielddisplayname":"primaryContact","sourcefieldpath":"/Root/item/Company/primaryContact","sourcerecord":"Company","id":"Mapping-3"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/primaryContact"},{"order":1,"targetName":"BP_Layout2","targetfield":"agentId","targetfieldpath":"/Root/Company/agentId","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711082770","elementItem":{"elementType":"SourceElement","name":"agentId","expression":"$Input_BP_Source_Layout/Root/item/Company/agentId","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/agentId"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711082771_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711082771"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711082771","elementItem":{"elementType":"TargetElement","name":"agentId","expression":"$Input_BP_Source_Layout/Root/item/Company/agentId","paramsCount":1,"syntax":"BP_Layout2/Root/Company/agentId"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711082770"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/agentId","targetrecord":"Company","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"agentId","sourcefielddisplayname":"agentId","sourcefieldpath":"/Root/item/Company/agentId","sourcerecord":"Company","id":"Mapping-4"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/agentId"},{"order":1,"targetName":"BP_Layout2","targetfield":"emailAddress","targetfieldpath":"/Root/Company/ediTradingPartner/emailAddress","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711173374","elementItem":{"elementType":"SourceElement","name":"emailAddress","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711173375_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711173375"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711173375","elementItem":{"elementType":"TargetElement","name":"emailAddress","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/emailAddress"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711173374"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"emailAddress","sourcefielddisplayname":"emailAddress","sourcefieldpath":"/Root/item/Company/ediTradingPartner/emailAddress","sourcerecord":"ediTradingPartner","id":"Mapping-5"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/emailAddress"},{"order":1,"targetName":"BP_Layout2","targetfield":"groupSenderID","targetfieldpath":"/Root/Company/ediTradingPartner/groupSenderID","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711174734","elementItem":{"elementType":"SourceElement","name":"groupSenderID","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711174735_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711174735"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711174735","elementItem":{"elementType":"TargetElement","name":"groupSenderID","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/groupSenderID"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711174734"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"groupSenderID","sourcefielddisplayname":"groupSenderID","sourcefieldpath":"/Root/item/Company/ediTradingPartner/groupSenderID","sourcerecord":"ediTradingPartner","id":"Mapping-6"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/groupSenderID"},{"order":1,"targetName":"BP_Layout2","targetfield":"groupReceiverID","targetfieldpath":"/Root/Company/ediTradingPartner/groupReceiverID","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711176131","elementItem":{"elementType":"SourceElement","name":"groupReceiverID","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711176132_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711176132"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711176132","elementItem":{"elementType":"TargetElement","name":"groupReceiverID","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711176131"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"groupReceiverID","sourcefielddisplayname":"groupReceiverID","sourcefieldpath":"/Root/item/Company/ediTradingPartner/groupReceiverID","sourcerecord":"ediTradingPartner","id":"Mapping-7"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID"},{"order":1,"targetName":"BP_Layout2","targetfield":"inInterLastUsedCNo","targetfieldpath":"/Root/Company/ediTradingPartner/inInterLastUsedCNo","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711177394","elementItem":{"elementType":"SourceElement","name":"inInterLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711177395_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711177395"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711177395","elementItem":{"elementType":"TargetElement","name":"inInterLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/inInterLastUsedCNo"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711177394"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"inInterLastUsedCNo","sourcefielddisplayname":"inInterLastUsedCNo","sourcefieldpath":"/Root/item/Company/ediTradingPartner/inInterLastUsedCNo","sourcerecord":"ediTradingPartner","id":"Mapping-8"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/inInterLastUsedCNo"},{"order":1,"targetName":"BP_Layout2","targetfield":"inGroupLastUsedCNo","targetfieldpath":"/Root/Company/ediTradingPartner/inGroupLastUsedCNo","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711178854","elementItem":{"elementType":"SourceElement","name":"inGroupLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711178855_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711178855"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711178855","elementItem":{"elementType":"TargetElement","name":"inGroupLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/inGroupLastUsedCNo"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711178854"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"inGroupLastUsedCNo","sourcefielddisplayname":"inGroupLastUsedCNo","sourcefieldpath":"/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo","sourcerecord":"ediTradingPartner","id":"Mapping-9"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/inGroupLastUsedCNo"},{"order":1,"targetName":"BP_Layout2","targetfield":"inTranLastUsedCNo","targetfieldpath":"/Root/Company/ediTradingPartner/inTranLastUsedCNo","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711180934","elementItem":{"elementType":"SourceElement","name":"inTranLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711180935_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711180935"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711180935","elementItem":{"elementType":"TargetElement","name":"inTranLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/inTranLastUsedCNo"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711180934"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"inTranLastUsedCNo","sourcefielddisplayname":"inTranLastUsedCNo","sourcefieldpath":"/Root/item/Company/ediTradingPartner/inTranLastUsedCNo","sourcerecord":"ediTradingPartner","id":"Mapping-10"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/inTranLastUsedCNo"},{"order":1,"targetName":"BP_Layout2","targetfield":"outInterLastUsedCNo","targetfieldpath":"/Root/Company/ediTradingPartner/outInterLastUsedCNo","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711183851","elementItem":{"elementType":"SourceElement","name":"outInterLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711183852_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711183852"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711183852","elementItem":{"elementType":"TargetElement","name":"outInterLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/outInterLastUsedCNo"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711183851"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"outInterLastUsedCNo","sourcefielddisplayname":"outInterLastUsedCNo","sourcefieldpath":"/Root/item/Company/ediTradingPartner/outInterLastUsedCNo","sourcerecord":"ediTradingPartner","id":"Mapping-11"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/outInterLastUsedCNo"},{"order":1,"targetName":"BP_Layout2","targetfield":"outGroupLastUsedCNo","targetfieldpath":"/Root/Company/ediTradingPartner/outGroupLastUsedCNo","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711185198","elementItem":{"elementType":"SourceElement","name":"outGroupLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711185199_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711185199"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711185199","elementItem":{"elementType":"TargetElement","name":"outGroupLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/outGroupLastUsedCNo"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711185198"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"outGroupLastUsedCNo","sourcefielddisplayname":"outGroupLastUsedCNo","sourcefieldpath":"/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo","sourcerecord":"ediTradingPartner","id":"Mapping-12"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/outGroupLastUsedCNo"},{"order":1,"targetName":"BP_Layout2","targetfield":"outTranLastUsedCNo","targetfieldpath":"/Root/Company/ediTradingPartner/outTranLastUsedCNo","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711186654","elementItem":{"elementType":"SourceElement","name":"outTranLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711186655_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711186655"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711186655","elementItem":{"elementType":"TargetElement","name":"outTranLastUsedCNo","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/outTranLastUsedCNo"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711186654"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"outTranLastUsedCNo","sourcefielddisplayname":"outTranLastUsedCNo","sourcefieldpath":"/Root/item/Company/ediTradingPartner/outTranLastUsedCNo","sourcerecord":"ediTradingPartner","id":"Mapping-13"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/outTranLastUsedCNo"},{"order":1,"targetName":"BP_Layout2","targetfield":"entityName","targetfieldpath":"/Root/Company/ediTradingPartner/entityName","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711187843","elementItem":{"elementType":"SourceElement","name":"entityName","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711187844_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711187844"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711187844","elementItem":{"elementType":"TargetElement","name":"entityName","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/entityName"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711187843"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"entityName","sourcefielddisplayname":"entityName","sourcefieldpath":"/Root/item/Company/ediTradingPartner/entityName","sourcerecord":"ediTradingPartner","id":"Mapping-14"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/entityName"},{"order":1,"targetName":"BP_Layout2","targetfield":"description","targetfieldpath":"/Root/Company/ediTradingPartner/description","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711188946","elementItem":{"elementType":"SourceElement","name":"description","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711188947_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711188947"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711188947","elementItem":{"elementType":"TargetElement","name":"description","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/description"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711188946"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"description","sourcefielddisplayname":"description","sourcefieldpath":"/Root/item/Company/ediTradingPartner/description","sourcerecord":"ediTradingPartner","id":"Mapping-15"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/description"},{"order":1,"targetName":"BP_Layout2","targetfield":"permissionMask","targetfieldpath":"/Root/Company/ediTradingPartner/permissionMask","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711191703","elementItem":{"elementType":"SourceElement","name":"permissionMask","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711191704_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711191704"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711191704","elementItem":{"elementType":"TargetElement","name":"permissionMask","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/permissionMask"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711191703"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"permissionMask","sourcefielddisplayname":"permissionMask","sourcefieldpath":"/Root/item/Company/ediTradingPartner/permissionMask","sourcerecord":"ediTradingPartner","id":"Mapping-16"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/permissionMask"},{"order":1,"targetName":"BP_Layout2","targetfield":"activeVersion","targetfieldpath":"/Root/Company/ediTradingPartner/activeVersion","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711192951","elementItem":{"elementType":"SourceElement","name":"activeVersion","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711192952_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711192952"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711192952","elementItem":{"elementType":"TargetElement","name":"activeVersion","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/activeVersion"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711192951"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"activeVersion","sourcefielddisplayname":"activeVersion","sourcefieldpath":"/Root/item/Company/ediTradingPartner/activeVersion","sourcerecord":"ediTradingPartner","id":"Mapping-17"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/activeVersion"},{"order":1,"targetName":"BP_Layout2","targetfield":"version","targetfieldpath":"/Root/Company/ediTradingPartner/version","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711194267","elementItem":{"elementType":"SourceElement","name":"version","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711194268_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711194268"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711194268","elementItem":{"elementType":"TargetElement","name":"version","expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version","paramsCount":1,"syntax":"BP_Layout2/Root/Company/ediTradingPartner/version"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711194267"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version","targetrecord":"ediTradingPartner","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"version","sourcefielddisplayname":"version","sourcefieldpath":"/Root/item/Company/ediTradingPartner/version","sourcerecord":"ediTradingPartner","id":"Mapping-18"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/ediTradingPartner/version"},{"order":1,"targetName":"BP_Layout2","targetfield":"status","targetfieldpath":"/Root/Company/status","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1695711195388","elementItem":{"elementType":"SourceElement","name":"status","expression":"$Input_BP_Source_Layout/Root/item/Company/status","paramsCount":0,"syntax":"$Input_BP_Source_Layout/Root/item/Company/status"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1695711195389_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1695711195389"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1695711195389","elementItem":{"elementType":"TargetElement","name":"status","expression":"$Input_BP_Source_Layout/Root/item/Company/status","paramsCount":1,"syntax":"BP_Layout2/Root/Company/status"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1695711195388"]}],"expression":"$Input_BP_Source_Layout/Root/item/Company/status","targetrecord":"Company","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"status","sourcefielddisplayname":"status","sourcefieldpath":"/Root/item/Company/status","sourcerecord":"Company","id":"Mapping-19"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/status"},{"order":1,"targetName":"BP_Layout2","targetfield":"id","targetfieldpath":"/Root/Company/partnerNetworks/id","targetrecord":"partnerNetworks","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"id","sourcefielddisplayname":"id","sourcefieldpath":"/Root/item/Company/partnerNetworks/id","sourcerecord":"partnerNetworks","id":"Mapping-21"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/partnerNetworks/id","expressionNote":"","expression":"$Input_BP_Source_Layout/Root/item/Company/partnerNetworks/id","expressionPath":"$Input_BP_Source_Layout/Root/item/Company/partnerNetworks/id","defaultEditor":"textual","confidence":""},{"order":1,"targetName":"BP_Layout2","targetfield":"partnerNetworks","targetfieldpath":"/Root/Company/partnerNetworks","defaultEditor":"graphical","graphicalMappingJson":"","expression":"","targetrecord":"Company","mapping":[],"markComplete":false,"mapId":"BP_Layout2/Root/Company/partnerNetworks","confidence":"","foreachPath":"$Input_BP_Source_Layout/Root/item/Company/partnerNetworks","expressionPath":"","expressionNote":""},{"order":1,"targetName":"BP_Layout2","targetfield":"networkIds","targetfieldpath":"/Root/Company/networkIds","targetrecord":"Company","mapping":[{"sourceName":"BP_Source_Layout","operatortype":"field","sourcefield":"networkIds","sourcefielddisplayname":"networkIds","sourcefieldpath":"/Root/item/Company/networkIds","sourcerecord":"Company","id":"Mapping-1"}],"markComplete":false,"mapId":"BP_Layout2/Root/Company/networkIds","confidence":"","foreachPath":"$Input_BP_Source_Layout/Root/item/Company/networkIds","expressionNote":"","expression":"$Input_BP_Source_Layout/Root/item/Company/networkIds","expressionPath":"$Input_BP_Source_Layout/Root/item/Company/networkIds","defaultEditor":"textual"}],"sourceExpandLevel":3,"targetExpandLevel":3,"sourceTargetSchemaDetails":{"sourceSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"JSONSchema","xpath":"/Root","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"item","root":false,"leaf":false,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Company","root":false,"leaf":false,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"name","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/name","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"networkIds","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/networkIds","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"primaryContact","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/primaryContact","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"agentId","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/agentId","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"ediTradingPartner","root":false,"leaf":false,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"emailAddress","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/emailAddress","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"groupSenderID","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/groupSenderID","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"groupReceiverID","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/groupReceiverID","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"inInterLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/inInterLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"inGroupLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"inTranLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/inTranLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"outInterLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/outInterLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"outGroupLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"outTranLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/outTranLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"entityName","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/entityName","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"description","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/description","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"permissionMask","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/permissionMask","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"activeVersion","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/activeVersion","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"version","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/ediTradingPartner/version","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"status","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/status","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"partnerNetworks","root":false,"leaf":false,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/partnerNetworks","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_BP_Source_Layout","schemaNameWithoutInput":"BP_Source_Layout","schemaType":"","xpath":"/Root/item/Company/partnerNetworks/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0},"destinationSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"JSONSchema","xpath":"/Root","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Company","root":false,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/id","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"name","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/name","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/name","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"networkIds","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/networkIds","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_BP_Source_Layout/Root/item/Company/networkIds","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/networkIds","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"primaryContact","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/primaryContact","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/primaryContact","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"agentId","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/agentId","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/agentId","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"ediTradingPartner","root":false,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"emailAddress","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/emailAddress","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/emailAddress","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"groupSenderID","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/groupSenderID","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupSenderID","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"groupReceiverID","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/groupReceiverID","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/groupReceiverID","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"inInterLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/inInterLastUsedCNo","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inInterLastUsedCNo","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"inGroupLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/inGroupLastUsedCNo","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inGroupLastUsedCNo","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"inTranLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/inTranLastUsedCNo","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/inTranLastUsedCNo","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"outInterLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/outInterLastUsedCNo","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outInterLastUsedCNo","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"outGroupLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/outGroupLastUsedCNo","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outGroupLastUsedCNo","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"outTranLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/outTranLastUsedCNo","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/outTranLastUsedCNo","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"entityName","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/entityName","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/entityName","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"description","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/description","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/description","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"permissionMask","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/permissionMask","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/permissionMask","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"activeVersion","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/activeVersion","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/activeVersion","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"version","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/version","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/ediTradingPartner/version","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1}],"totalChildMappings":14},{"name":"status","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/status","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/status","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"partnerNetworks","root":false,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/partnerNetworks","streamName":"output_1","namespacePrefix":"","currentForEach":"$Input_BP_Source_Layout/Root/item/Company/partnerNetworks","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/partnerNetworks/id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Source_Layout/Root/item/Company/partnerNetworks/id","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1}],"totalChildMappings":2}],"totalChildMappings":22}],"totalChildMappings":22}],"totalChildMappings":22}}}]]></au_json>
+        <au_xslTransformer><![CDATA[Saxon]]></au_xslTransformer>
+        <au_projectOwner><![CDATA[Project:11695270993542]]></au_projectOwner>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_entityName><![CDATA[BP_Mapping_JtoJ_U]]></au_entityName>
+        <au_modifiedBy><![CDATA[IndigoUser:11674552622369]]></au_modifiedBy>
+        <au_valueMap><![CDATA[<ValueMap/>]]></au_valueMap>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_metadata><![CDATA[]]></au_metadata>
+        <au_customAutoMap><![CDATA[]]></au_customAutoMap>
+        <au_aimapFreeze><![CDATA[0]]></au_aimapFreeze>
+        <au_xslTemplate><![CDATA[<XslTemplate/>]]></au_xslTemplate>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+    </AU_MAPPINGTRANSFORMATION>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_splitFile" type="3"/>
+        <column name="au_numberOfRecords" type="4"/>
+        <column name="au_optimizedLoading" type="3"/>
+        <column name="au_sourceSchema" type="12"/>
+        <column name="au_targetSchema" type="12"/>
+        <column name="au_xslFile" type="-1"/>
+        <column name="au_metadata" type="12"/>
+        <column name="au_mapXmlFile" type="-1"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_pdfFileName" type="12"/>
+        <column name="au_parallelProcessing" type="3"/>
+        <column name="au_concurrentProcessors" type="4"/>
+        <column name="au_dbInfoName" type="12"/>
+        <column name="au_customAutoMap" type="-1"/>
+        <column name="au_valueMap" type="-1"/>
+        <column name="au_xslTemplate" type="-1"/>
+        <column name="au_xslTransformer" type="12"/>
+        <column name="au_characterSetEncoding" type="12"/>
+        <column name="au_enableAIMap" type="3"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_storedProcedure" type="-1"/>
+        <column name="au_aimapFreeze" type="3"/>
+        <column name="au_aimapTrained" type="3"/>
+    </columnInfo>
+</data>

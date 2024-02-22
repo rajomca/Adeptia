@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_LANFILESOURCE>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_deleteOnSuccess><![CDATA[0]]></au_deleteOnSuccess>
+        <au_entityName><![CDATA[Lan_Source_BP]]></au_entityName>
+        <au_id><![CDATA[010000001015169641094608600221]]></au_id>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_fileSystem><![CDATA[WINDOWS]]></au_fileSystem>
+        <au_projectOwner><![CDATA[Project:11695270993542]]></au_projectOwner>
+        <au_version><![CDATA[1]]></au_version>
+        <au_fileName><![CDATA[*]]></au_fileName>
+        <au_modifiedBy><![CDATA[IndigoUser:11674552622369]]></au_modifiedBy>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_userId><![CDATA[]]></au_userId>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_userOwner><![CDATA[IndigoUser:11674552622369]]></au_userOwner>
+        <au_secure><![CDATA[0]]></au_secure>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_modifiedDate><![CDATA[2023-10-04T09:15:46]]></au_modifiedDate>
+        <au_creationDate><![CDATA[2023-10-04T09:15:46]]></au_creationDate>
+        <au_filepath><![CDATA[SFG]]></au_filepath>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_useWindowsService><![CDATA[0]]></au_useWindowsService>
+        <au_description><![CDATA[Lan_Source_BP]]></au_description>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_password><![CDATA[]]></au_password>
+    </AU_LANFILESOURCE>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_filepath" type="12"/>
+        <column name="au_fileName" type="12"/>
+        <column name="au_deleteOnSuccess" type="3"/>
+        <column name="au_useWindowsService" type="3"/>
+        <column name="au_fileSystem" type="12"/>
+        <column name="au_secure" type="3"/>
+        <column name="au_userId" type="12"/>
+        <column name="au_password" type="12"/>
+    </columnInfo>
+</data>

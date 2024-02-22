@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_MAPPINGTRANSFORMATION>
+        <au_mapXmlFile><![CDATA[<?xml version="1.0" encoding="UTF-8"?><maps version="4.4">
+<mappingInformation>
+<mappingVersion>6.1</mappingVersion>
+<mappingName>NotCreatedPartnermapping</mappingName>
+<mappingProject>Project:11695270993542</mappingProject>
+<mappingDescription>NotCreatedPartnermapping</mappingDescription>
+<sourceSchemaID>JSONSchema:010000001015169571089529300627</sourceSchemaID>
+<targetSchemaID>ExcelSchema:010000001015169650633346300960</targetSchemaID>
+<mappingOwnerGroup>Group_1</mappingOwnerGroup>
+<mappingOwner>Rajat Saxena</mappingOwner>
+<mappingLastModifiedBy>Rajat Saxena</mappingLastModifiedBy>
+<mappingCreationDate>Fri Sep 29 06:47:42 UTC 2023</mappingCreationDate>
+<mappingModifiedDate>Mon Oct 09 05:08:07 UTC 2023</mappingModifiedDate>
+<reusable>true</reusable>
+</mappingInformation>
+<sourceRoots>
+<sourceRoot>
+<name>Root</name>
+<schemaName>BP_Layout2</schemaName>
+<schemaID>JSONSchema:010000001015169571089529300627</schemaID>
+</sourceRoot>
+</sourceRoots>
+<targetRoots>
+<targetRoot>
+<name>Root</name>
+<schemaName>Not_Created_Partner_Status_Layout</schemaName>
+<schemaID>ExcelSchema:010000001015169650633346300960</schemaID>
+<stream>output_1</stream>
+</targetRoot>
+</targetRoots>
+<nameSpace/>
+<xslProperty/>
+<GlobalPreCustomXSL/>
+<GlobalPostCustomXSL/>
+<xslTemplates/>
+<map>
+<order>1</order>
+ <targetName>Not_Created_Partner_Status_Layout</targetName>
+<dest>/Root/Record/Partner_Name</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Layout2/Root/Company/name</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Partner_Name">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Partner_Name" mapString="$Input_BP_Layout2/Root/Company/name" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Layout2/Root/Company/name" mapString="&lt;S&gt;$Input_BP_Layout2/Root/Company/name" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Not_Created_Partner_Status_Layout</targetName>
+<dest>/Root/Record/Email_Address</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Email_Address">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Email_Address" mapString="$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress" mapString="&lt;S&gt;$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Not_Created_Partner_Status_Layout</targetName>
+<dest>/Root/Record/Sender_ID</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Sender_ID">
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Sender_ID" mapString="$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID" mapString="&lt;S&gt;$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Not_Created_Partner_Status_Layout</targetName>
+<dest>/Root/Record/Receiver_ID</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Receiver_ID">
+<Position height="25" identify="&lt;S&gt;" label="$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID" mapString="&lt;S&gt;$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID" x="100" y="20">
+<SourceLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</SourceLines>
+<TargetLines/>
+</Position>
+<Position height="25" identify="&lt;T&gt;" label="/Root/Record/Receiver_ID" mapString="$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID" x="300" y="20">
+<SourceLines/>
+<TargetLines>
+<Line x1="180" y1="32" x2="280" y2="32"/>
+</TargetLines>
+</Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Not_Created_Partner_Status_Layout</targetName>
+<dest>/Root/Record</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>$var</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/> <Sorting/>
+ <Target name="Record">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<map>
+<order>1</order>
+ <targetName>Not_Created_Partner_Status_Layout</targetName>
+<dest>/Root/Record/Status</dest>
+<preCustomXSL/>
+<postCustomXSL/>
+ <mapValue>WHEN CONDITION{get-context('Inc_Rec' ,'resp' ) =1 } VALUE=['Incomplete Input data or either network name is incorrect'] OTHERWISE VALUE=[ get-context('res1' ,'response' )]</mapValue>
+ <forEach/>
+ <comments/>
+<namespacePrefix/>
+
+ <namespaceRemovePrefix>false</namespaceRemovePrefix>
+<localVariables/>
+ <Sorting/>
+ <Target name="Status">
+      <Position height="25" identify="&lt;T&gt;" label="//Root/Record/Status" mapString="" x="300" y="10">
+          <SourceLines/>
+          <TargetLines/>
+     </Position>
+</Target>
+ </map>
+<variables>
+</variables>
+
+<globalParameters>
+<keys>
+</keys>
+<contextVariables>
+</contextVariables>
+</globalParameters>
+
+<connections/>
+<functions>
+</functions>
+<disableOutputNodes>
+</disableOutputNodes>
+<filters/>
+<valuemapNodes/>
+<accessLevel>
+<valueMap>global</valueMap>
+<globalTemplate>global</globalTemplate>
+<customAutoMap>global</customAutoMap>
+</accessLevel>
+<DataViewerRecordCount>50</DataViewerRecordCount>
+<isQuickSplittingEnabled>false</isQuickSplittingEnabled>
+<sourceExtensions/>
+<targetExtensions/>
+<disableOutputNodes/>
+<characterSetEncoding>UTF-8</characterSetEncoding>
+<tipOfTheDay>true</tipOfTheDay>
+<contextSchemaLoadedAtSource>false</contextSchemaLoadedAtSource>
+<contextSchemaLoadedAtTarget>false</contextSchemaLoadedAtTarget>
+<contextSchemaDefinition/>
+<filterUnmappedElement>false</filterUnmappedElement>
+<indentOutputXML>true</indentOutputXML>
+<streamingMode>false</streamingMode>
+<filterEmptyElements>false</filterEmptyElements>
+<dbQueryCaching>false</dbQueryCaching>
+<cacheIncludedSchemas>false</cacheIncludedSchemas>
+<TreeExpandLevelCount>3</TreeExpandLevelCount>
+<TreeExpandLevelCountForWebService>5</TreeExpandLevelCountForWebService>
+<TreeExpandLevelForEasySchemaExtensions>10</TreeExpandLevelForEasySchemaExtensions>
+<SelfRecursionLevel>0</SelfRecursionLevel>
+<EnableTypesBuffering>true</EnableTypesBuffering>
+<CdataSectionElements/>
+<excludeResultPrefixes> saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str</excludeResultPrefixes>
+<webservice>
+<consumers/>
+</webservice>
+
+<CustomAutoMapInUse/>
+<processElementFormDefault>true</processElementFormDefault>
+<xslVersion2.0>false</xslVersion2.0>
+<xslVersion3.0>false</xslVersion3.0>
+<sourceXpath/>
+<targetXpath/>
+</maps>
+]]></au_mapXmlFile>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <au_userOwner><![CDATA[IndigoUser:11674552622369]]></au_userOwner>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_json><![CDATA[{"json":{"category":"mapping","type":"mapping","encoding":"UTF-8","version":"1.0"},"cloneElements":"","filters":"","variables":{"variable":[]},"globalParameters":{"keys":{"key":[]},"contextVariables":{"contextVariable":[]}},"connections":{"connectionVariable":[]},"functions":{"externalFunction":[]},"filterUnmappedElements":false,"indentOutputXML":true,"xslVersion":"1.1","enableStreaming":false,"filterEmptyElements":false,"xslTransformer":"Saxon","characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"settingConfigs":{"xslVersion":"1.1","xslTransformer":"Saxon","filterUnmappedElements":false,"indentOutputXML":true,"filterEmptyElements":false,"enableStreaming":false,"characterSetEncoding":"UTF-8","DataViewerRecordCount":50,"dbQueryCaching":false,"isQuickSplittingEnabled":false,"TreeExpandLevelCountForWebService":5,"TreeExpandLevelForEasySchemaExtensions":10,"SelfRecursionLevel":0,"EnableTypesBuffering":true,"TreeExpandLevelCount":3,"onDemandLoadingOfXMLSchemaTree":true,"cDataSectionElements":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"processElementFormDefault":true,"isAutoSaveEnable":true},"disableOuputNodes":{"disableOutputNodeProperty":[]},"isCustomXSLT":false,"contextSchemaLoadedAtSource":false,"contextSchemaLoadedAtTarget":false,"webservice":{"consumers":{"consumer":[]}},"GlobalPreCustomXSL":"","GlobalPostCustomXSL":"","xslTemplates":{"xslTemplateData":[]},"mappingTempId":null,"sourceXpath":"","targetXpath":"","cDataSectionElements":"","splittingData":false,"splitNumberOfRecords":"500","parallelProcessing":false,"maximumConcurrentProcessor":"1","CustomAutoMapInUse":"","excludeResultPrefixes":"saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str","cacheIncludedSchemas":false,"metaData":"","processElementFormDefault":true,"mappingInformation":{"mappingVersion":"6.1","mappingName":"NotCreatedPartnermapping","mappingProject":"Project:11695270993542","mappingDescription":"NotCreatedPartnermapping","sourceSchemaID":"JSONSchema:010000001015169571089529300627","targetSchemaID":"ExcelSchema:010000001015169650633346300960","mappingOwnerGroup":"","mappingOwner":"","mappingLastModifiedBy":"","mappingCreationDate":"","mappingModifiedDate":"","reusable":true},"namespace":"","namespaceList":[],"foreach":"","targetRoots":{"targetRoot":[{"name":"Root","schemaName":"Not_Created_Partner_Status_Layout","schemaID":"ExcelSchema:010000001015169650633346300960","stream":"output_1"}]},"sourceRoots":{"sourceRoot":[{"name":"Root","schemaName":"BP_Layout2","schemaID":"JSONSchema:010000001015169571089529300627"}]},"contextSchemaDefinition":"","maps":[{"order":1,"targetName":"Not_Created_Partner_Status_Layout","targetfield":"Partner_Name","targetfieldpath":"/Root/Record/Partner_Name","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1696506419136","elementItem":{"elementType":"SourceElement","name":"name","expression":"$Input_BP_Layout2/Root/Company/name","paramsCount":0,"syntax":"$Input_BP_Layout2/Root/Company/name"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1696506419137_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1696506419137"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1696506419137","elementItem":{"elementType":"TargetElement","name":"Partner_Name","expression":"$Input_BP_Layout2/Root/Company/name","paramsCount":1,"syntax":"Not_Created_Partner_Status_Layout/Root/Record/Partner_Name"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1696506419136"]}],"expression":"$Input_BP_Layout2/Root/Company/name","targetrecord":"Record","mapping":[{"sourceName":"BP_Layout2","operatortype":"field","sourcefield":"name","sourcefielddisplayname":"name","sourcefieldpath":"/Root/Company/name","sourcerecord":"Company","id":"Mapping-1"}],"markComplete":false,"mapId":"Not_Created_Partner_Status_Layout/Root/Record/Partner_Name"},{"order":1,"targetName":"Not_Created_Partner_Status_Layout","targetfield":"Email_Address","targetfieldpath":"/Root/Record/Email_Address","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1696506421360","elementItem":{"elementType":"SourceElement","name":"emailAddress","expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress","paramsCount":0,"syntax":"$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1696506421361_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1696506421361"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1696506421361","elementItem":{"elementType":"TargetElement","name":"Email_Address","expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress","paramsCount":1,"syntax":"Not_Created_Partner_Status_Layout/Root/Record/Email_Address"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1696506421360"]}],"expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress","targetrecord":"Record","mapping":[{"sourceName":"BP_Layout2","operatortype":"field","sourcefield":"emailAddress","sourcefielddisplayname":"emailAddress","sourcefieldpath":"/Root/Company/ediTradingPartner/emailAddress","sourcerecord":"ediTradingPartner","id":"Mapping-2"}],"markComplete":false,"mapId":"Not_Created_Partner_Status_Layout/Root/Record/Email_Address"},{"order":1,"targetName":"Not_Created_Partner_Status_Layout","targetfield":"Sender_ID","targetfieldpath":"/Root/Record/Sender_ID","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1696506423972","elementItem":{"elementType":"SourceElement","name":"groupSenderID","expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID","paramsCount":0,"syntax":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1696506423973_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1696506423973"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1696506423973","elementItem":{"elementType":"TargetElement","name":"Sender_ID","expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID","paramsCount":1,"syntax":"Not_Created_Partner_Status_Layout/Root/Record/Sender_ID"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1696506423972"]}],"expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID","targetrecord":"Record","mapping":[{"sourceName":"BP_Layout2","operatortype":"field","sourcefield":"groupSenderID","sourcefielddisplayname":"groupSenderID","sourcefieldpath":"/Root/Company/ediTradingPartner/groupSenderID","sourcerecord":"ediTradingPartner","id":"Mapping-3"}],"markComplete":false,"mapId":"Not_Created_Partner_Status_Layout/Root/Record/Sender_ID"},{"order":1,"targetName":"Not_Created_Partner_Status_Layout","targetfield":"Receiver_ID","targetfieldpath":"/Root/Record/Receiver_ID","defaultEditor":"graphical","graphicalMappingJson":[{"elementId":"GraphicalElement-ext-1696506425929","elementItem":{"elementType":"SourceElement","name":"groupReceiverID","expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID","paramsCount":0,"syntax":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID"},"elementPos":[1600,1520],"nextElementIds":["GraphicalElement-ext-1696506425930_IncomingElement-1"],"nextGraphicalElementIds":["GraphicalElement-ext-1696506425930"],"previousElementIds":[]},{"elementId":"GraphicalElement-ext-1696506425930","elementItem":{"elementType":"TargetElement","name":"Receiver_ID","expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID","paramsCount":1,"syntax":"Not_Created_Partner_Status_Layout/Root/Record/Receiver_ID"},"elementPos":[1800,1520],"nextElementIds":[],"nextGraphicalElementIds":[],"previousElementIds":["GraphicalElement-ext-1696506425929"]}],"expression":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID","targetrecord":"Record","mapping":[{"sourceName":"BP_Layout2","operatortype":"field","sourcefield":"groupReceiverID","sourcefielddisplayname":"groupReceiverID","sourcefieldpath":"/Root/Company/ediTradingPartner/groupReceiverID","sourcerecord":"ediTradingPartner","id":"Mapping-4"}],"markComplete":false,"mapId":"Not_Created_Partner_Status_Layout/Root/Record/Receiver_ID"},{"order":1,"targetfield":"Record","targetfieldpath":"/Root/Record","targetrecord":"Root","targetName":"Not_Created_Partner_Status_Layout","mapping":[],"markComplete":false,"mapId":"Not_Created_Partner_Status_Layout/Root/Record","localVariables":{"localVariable":[]},"defaultEditor":"textual","graphicalMappingJson":[],"expressionNote":"","expression":"$var","expressionPath":"$var","confidence":""},{"order":1,"targetName":"Not_Created_Partner_Status_Layout","targetfield":"Status","targetfieldpath":"/Root/Record/Status","targetrecord":"Record","mapping":[],"markComplete":false,"mapId":"Not_Created_Partner_Status_Layout/Root/Record/Status","expressionNote":"","expression":" WHEN CONDITION{get-context('Inc_Rec' ,'resp' ) =1 } VALUE=['Incomplete Input data or either network name is incorrect'] OTHERWISE VALUE=[ get-context('res1' ,'response' )]","expressionPath":" WHEN CONDITION{get-context('Inc_Rec' ,'resp' ) =1 } VALUE=['Incomplete Input data or either network name is incorrect'] OTHERWISE VALUE=[ get-context('res1' ,'response' )]","defaultEditor":"textual","confidence":""}],"sourceExpandLevel":3,"targetExpandLevel":3,"sourceTargetSchemaDetails":{"sourceSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"JSONSchema","xpath":"/Root","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Company","root":false,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"name","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/name","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"networkIds","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/networkIds","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"primaryContact","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/primaryContact","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"agentId","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/agentId","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"ediTradingPartner","root":false,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"emailAddress","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/emailAddress","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"groupSenderID","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/groupSenderID","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"groupReceiverID","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/groupReceiverID","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"inInterLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/inInterLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"inGroupLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/inGroupLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"inTranLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/inTranLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"outInterLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/outInterLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"outGroupLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/outGroupLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"outTranLastUsedCNo","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/outTranLastUsedCNo","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"entityName","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/entityName","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"description","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/description","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"permissionMask","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/permissionMask","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"activeVersion","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/activeVersion","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"version","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/ediTradingPartner/version","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0},{"name":"status","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/status","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"partnerNetworks","root":false,"leaf":false,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/partnerNetworks","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"id","root":false,"leaf":true,"schemaName":"Input_BP_Layout2","schemaNameWithoutInput":"BP_Layout2","schemaType":"","xpath":"/Root/Company/partnerNetworks/id","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0}],"totalChildMappings":0},"destinationSchema":{"name":"","root":false,"leaf":false,"schemaName":"Input_undefined","schemaType":"","xpath":"/","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Root","root":true,"leaf":false,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"ExcelSchema","xpath":"/Root","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Record","root":false,"leaf":false,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$var","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[{"name":"Partner_id","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/Partner_id","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0},{"name":"Partner_Name","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/Partner_Name","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Layout2/Root/Company/name","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Email_Address","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/Email_Address","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Layout2/Root/Company/ediTradingPartner/emailAddress","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Sender_ID","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/Sender_ID","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupSenderID","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Receiver_ID","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/Receiver_ID","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"$Input_BP_Layout2/Root/Company/ediTradingPartner/groupReceiverID","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"Status","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/Status","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":" WHEN CONDITION{get-context('Inc_Rec' ,'resp' ) =1 } VALUE=['Incomplete Input data or either network name is incorrect'] OTHERWISE VALUE=[ get-context('res1' ,'response' )]","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":false,"localVariableList":[],"sortList":[],"children":[],"totalChildMappings":1},{"name":"@recordNumber","root":false,"leaf":true,"schemaName":"Input_Not_Created_Partner_Status_Layout","schemaNameWithoutInput":"Not_Created_Partner_Status_Layout","schemaType":"","xpath":"/Root/Record/@recordNumber","streamName":"output_1","namespacePrefix":"","currentForEach":"","currentMapping":"","currentComment":"","preCustomXSL":"","postCustomXSL":"","disableOutputEscaping":false,"order":1,"filter":false,"loadedOptimized":false,"namespaceRemoved":"","attribute":"true","localVariableList":[],"sortList":[],"children":[],"totalChildMappings":0}],"totalChildMappings":6}],"totalChildMappings":6}],"totalChildMappings":6}}}]]></au_json>
+        <au_version><![CDATA[1]]></au_version>
+        <au_customAutoMap><![CDATA[]]></au_customAutoMap>
+        <au_storedProcedure><![CDATA[]]></au_storedProcedure>
+        <au_creationDate><![CDATA[2023-09-29T06:47:42]]></au_creationDate>
+        <au_aimapTrained><![CDATA[0]]></au_aimapTrained>
+        <au_xslTransformer><![CDATA[Saxon]]></au_xslTransformer>
+        <au_dbInfoName><![CDATA[]]></au_dbInfoName>
+        <au_characterSetEncoding><![CDATA[UTF-8]]></au_characterSetEncoding>
+        <au_description><![CDATA[NotCreatedPartnermapping]]></au_description>
+        <au_optimizedLoading><![CDATA[1]]></au_optimizedLoading>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_projectOwner><![CDATA[Project:11695270993542]]></au_projectOwner>
+        <au_targetSchema><![CDATA[ExcelSchema:010000001015169650633346300960]]></au_targetSchema>
+        <au_concurrentProcessors><![CDATA[1]]></au_concurrentProcessors>
+        <au_valueMap><![CDATA[<ValueMap/>]]></au_valueMap>
+        <au_id><![CDATA[010000001015169597006172502313]]></au_id>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_modifiedDate><![CDATA[2023-10-09T05:08:11]]></au_modifiedDate>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_metadata><![CDATA[]]></au_metadata>
+        <au_pdfFileName><![CDATA[Adp_Map_Rules7980854927532108554.pdf]]></au_pdfFileName>
+        <au_splitFile><![CDATA[0]]></au_splitFile>
+        <au_xslTemplate><![CDATA[<XslTemplate/>]]></au_xslTemplate>
+        <au_numberOfRecords><![CDATA[500]]></au_numberOfRecords>
+        <au_sourceSchema><![CDATA[JSONSchema:010000001015169571089529300627]]></au_sourceSchema>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_enableAIMap><![CDATA[0]]></au_enableAIMap>
+        <au_entityName><![CDATA[NotCreatedPartnermapping]]></au_entityName>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_xslFile><![CDATA[<?xml version='1.0'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.1" xmlns:saxonJavaMappingTransformation="java:com.adeptia.indigo.services.mapping.MappingTransformation" xmlns:saxonJavaMapperQueryExecutor="java:com.adeptia.indigo.services.mapping.support.dbquery.MapperQueryExecutor" xmlns:saxonJavaAggregateFunctionHandler="java:com.adeptia.indigo.services.mapping.AggregateFunctionHandler"  xmlns:str="http://exslt.org/strings" exclude-result-prefixes="saxonJavaMappingTransformation saxonJavaMapperQueryExecutor saxonJavaAggregateFunctionHandler str" xmlns:saxon="http://saxon.sf.net/" extension-element-prefixes="saxon">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" cdata-section-elements="" indent="yes" /><xsl:param name="_userName"/><xsl:param name="_password"/><xsl:param name="_class"/><xsl:param name="_identifier"/><xsl:param name="_subject"/><xsl:param name="_repositoryPath"/><xsl:param name="_Input1"/> <xsl:variable name="varConn" select="saxonJavaMapperQueryExecutor:getInstance($_identifier,'false')"/> <xsl:variable name="apos">'</xsl:variable> <xsl:variable name="quot">"</xsl:variable><xsl:template match="/"><Root><Record><xsl:attribute name="recordNumber"></xsl:attribute><Partner_id></Partner_id><Partner_Name><xsl:value-of select="Root/Company/name"/></Partner_Name><Email_Address><xsl:value-of select="Root/Company/ediTradingPartner/emailAddress"/></Email_Address><Sender_ID><xsl:value-of select="Root/Company/ediTradingPartner/groupSenderID"/></Sender_ID><Receiver_ID><xsl:value-of select="Root/Company/ediTradingPartner/groupReceiverID"/></Receiver_ID><Status><xsl:choose><xsl:when test="saxonJavaMappingTransformation:getVariable($_class,&apos;Inc_Rec&apos;,&apos;resp&apos;)=1"><xsl:value-of select="&apos;Incomplete Input data or either network name is incorrect&apos;"/></xsl:when><xsl:otherwise><xsl:value-of select="saxonJavaMappingTransformation:getVariable($_class,&apos;res1&apos;,&apos;response&apos;)"/></xsl:otherwise></xsl:choose></Status></Record></Root></xsl:template></xsl:stylesheet>]]></au_xslFile>
+        <au_aimapFreeze><![CDATA[0]]></au_aimapFreeze>
+        <au_parallelProcessing><![CDATA[0]]></au_parallelProcessing>
+        <au_persistDataEnabled><![CDATA[0]]></au_persistDataEnabled>
+        <au_modifiedBy><![CDATA[IndigoUser:11674552622369]]></au_modifiedBy>
+    </AU_MAPPINGTRANSFORMATION>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_persistDataEnabled" type="3"/>
+        <column name="au_splitFile" type="3"/>
+        <column name="au_numberOfRecords" type="4"/>
+        <column name="au_optimizedLoading" type="3"/>
+        <column name="au_sourceSchema" type="12"/>
+        <column name="au_targetSchema" type="12"/>
+        <column name="au_xslFile" type="-1"/>
+        <column name="au_metadata" type="12"/>
+        <column name="au_mapXmlFile" type="-1"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_pdfFileName" type="12"/>
+        <column name="au_parallelProcessing" type="3"/>
+        <column name="au_concurrentProcessors" type="4"/>
+        <column name="au_dbInfoName" type="12"/>
+        <column name="au_customAutoMap" type="-1"/>
+        <column name="au_valueMap" type="-1"/>
+        <column name="au_xslTemplate" type="-1"/>
+        <column name="au_xslTransformer" type="12"/>
+        <column name="au_characterSetEncoding" type="12"/>
+        <column name="au_enableAIMap" type="3"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_storedProcedure" type="-1"/>
+        <column name="au_aimapFreeze" type="3"/>
+        <column name="au_aimapTrained" type="3"/>
+    </columnInfo>
+</data>

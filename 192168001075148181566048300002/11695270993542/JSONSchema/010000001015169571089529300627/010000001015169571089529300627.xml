@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <AU_JSONSCHEMA>
+        <au_jsonType><![CDATA[0]]></au_jsonType>
+        <au_id><![CDATA[010000001015169571089529300627]]></au_id>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_version><![CDATA[1]]></au_version>
+        <au_jsonFilePath><![CDATA[C:\fakepath\Layout2.json]]></au_jsonFilePath>
+        <au_modifiedDate><![CDATA[2023-09-27T10:02:04]]></au_modifiedDate>
+        <au_encodingUsed><![CDATA[UTF-8]]></au_encodingUsed>
+        <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_description><![CDATA[BP_Layout2]]></au_description>
+        <au_projectOwner><![CDATA[Project:11695270993542]]></au_projectOwner>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_originalJson><![CDATA[{
+   "Company":{
+      "id":"",
+      "name":"Multi_Part_Network_p1",
+      "networkIds":[
+         11695183019868,
+         11695270990551
+      ],
+      "primaryContact":"",
+      "agentId":"",
+     
+      "ediTradingPartner":{
+         "emailAddress":"abc@gmail.com",
+         "groupSenderID":"asadsa",
+         "groupReceiverID":"IA22915",
+         "inInterLastUsedCNo":"000000000",
+         "inGroupLastUsedCNo":"0",
+         "inTranLastUsedCNo":"0000",
+         "outInterLastUsedCNo":"000000000",
+         "outGroupLastUsedCNo":"0",
+         "outTranLastUsedCNo":"0000",
+         "entityName":"Multi_Part_Network_p1",
+         "description":"Multi_Part_Network_p1",
+         "permissionMask":"770",
+         "activeVersion":true,
+         "version":"1"
+      },
+      "status":200,
+      "partnerNetworks":[
+         {
+            "id":11695183019868
+         },
+         {
+            "id":11695270990551
+         }
+      ]
+   }
+}]]></au_originalJson>
+        <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
+        <au_modifiedBy><![CDATA[IndigoUser:11674552622369]]></au_modifiedBy>
+        <au_xsd><![CDATA[<Root>
+  <Company>
+    <id>[ABPM_._ESCAPE_._CDATA_._START][ABPM_._ESCAPE_._CDATA_._END]</id>
+    <name>[ABPM_._ESCAPE_._CDATA_._START]Multi_Part_Network_p1[ABPM_._ESCAPE_._CDATA_._END]</name>
+    <networkIds>11695183019868</networkIds>
+    <networkIds>11695270990551</networkIds>
+    <primaryContact>[ABPM_._ESCAPE_._CDATA_._START][ABPM_._ESCAPE_._CDATA_._END]</primaryContact>
+    <agentId>[ABPM_._ESCAPE_._CDATA_._START][ABPM_._ESCAPE_._CDATA_._END]</agentId>
+    <ediTradingPartner>
+      <emailAddress>[ABPM_._ESCAPE_._CDATA_._START]abc@gmail.com[ABPM_._ESCAPE_._CDATA_._END]</emailAddress>
+      <groupSenderID>[ABPM_._ESCAPE_._CDATA_._START]asadsa[ABPM_._ESCAPE_._CDATA_._END]</groupSenderID>
+      <groupReceiverID>[ABPM_._ESCAPE_._CDATA_._START]IA22915[ABPM_._ESCAPE_._CDATA_._END]</groupReceiverID>
+      <inInterLastUsedCNo>[ABPM_._ESCAPE_._CDATA_._START]000000000[ABPM_._ESCAPE_._CDATA_._END]</inInterLastUsedCNo>
+      <inGroupLastUsedCNo>[ABPM_._ESCAPE_._CDATA_._START]0[ABPM_._ESCAPE_._CDATA_._END]</inGroupLastUsedCNo>
+      <inTranLastUsedCNo>[ABPM_._ESCAPE_._CDATA_._START]0000[ABPM_._ESCAPE_._CDATA_._END]</inTranLastUsedCNo>
+      <outInterLastUsedCNo>[ABPM_._ESCAPE_._CDATA_._START]000000000[ABPM_._ESCAPE_._CDATA_._END]</outInterLastUsedCNo>
+      <outGroupLastUsedCNo>[ABPM_._ESCAPE_._CDATA_._START]0[ABPM_._ESCAPE_._CDATA_._END]</outGroupLastUsedCNo>
+      <outTranLastUsedCNo>[ABPM_._ESCAPE_._CDATA_._START]0000[ABPM_._ESCAPE_._CDATA_._END]</outTranLastUsedCNo>
+      <entityName>[ABPM_._ESCAPE_._CDATA_._START]Multi_Part_Network_p1[ABPM_._ESCAPE_._CDATA_._END]</entityName>
+      <description>[ABPM_._ESCAPE_._CDATA_._START]Multi_Part_Network_p1[ABPM_._ESCAPE_._CDATA_._END]</description>
+      <permissionMask>[ABPM_._ESCAPE_._CDATA_._START]770[ABPM_._ESCAPE_._CDATA_._END]</permissionMask>
+      <activeVersion>true</activeVersion>
+      <version>[ABPM_._ESCAPE_._CDATA_._START]1[ABPM_._ESCAPE_._CDATA_._END]</version>
+    </ediTradingPartner>
+    <status>200</status>
+    <partnerNetworks>
+      <id>11695183019868</id>
+    </partnerNetworks>
+    <partnerNetworks>
+      <id>11695270990551</id>
+    </partnerNetworks>
+  </Company>
+</Root>]]></au_xsd>
+        <au_arrayFields><![CDATA[]]></au_arrayFields>
+        <au_entityName><![CDATA[BP_Layout2]]></au_entityName>
+        <au_revision><![CDATA[null]]></au_revision>
+        <au_userOwner><![CDATA[IndigoUser:11674552622369]]></au_userOwner>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
+        <xsdFilePath><![CDATA[null]]></xsdFilePath>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
+        <au_json><![CDATA[{"fieldName":"Root","expanded":true,"leaf":false,"children":[{"fieldName":"Company","expanded":true,"isAttribute":false,"leaf":false,"value":"\n  ","children":[{"fieldName":"id","expanded":true,"isAttribute":false,"leaf":true},{"fieldName":"name","expanded":true,"isAttribute":false,"value":"Multi_Part_Network_p1","leaf":true},{"fieldName":"networkIds","expanded":true,"isAttribute":false,"value":"11695183019868","leaf":true},{"fieldName":"primaryContact","expanded":true,"isAttribute":false,"leaf":true},{"fieldName":"agentId","expanded":true,"isAttribute":false,"leaf":true},{"fieldName":"ediTradingPartner","expanded":true,"isAttribute":false,"leaf":false,"value":"\n    ","children":[{"fieldName":"emailAddress","expanded":true,"isAttribute":false,"value":"abc@gmail.com","leaf":true},{"fieldName":"groupSenderID","expanded":true,"isAttribute":false,"value":"asadsa","leaf":true},{"fieldName":"groupReceiverID","expanded":true,"isAttribute":false,"value":"IA22915","leaf":true},{"fieldName":"inInterLastUsedCNo","expanded":true,"isAttribute":false,"value":"000000000","leaf":true},{"fieldName":"inGroupLastUsedCNo","expanded":true,"isAttribute":false,"value":"0","leaf":true},{"fieldName":"inTranLastUsedCNo","expanded":true,"isAttribute":false,"value":"0000","leaf":true},{"fieldName":"outInterLastUsedCNo","expanded":true,"isAttribute":false,"value":"000000000","leaf":true},{"fieldName":"outGroupLastUsedCNo","expanded":true,"isAttribute":false,"value":"0","leaf":true},{"fieldName":"outTranLastUsedCNo","expanded":true,"isAttribute":false,"value":"0000","leaf":true},{"fieldName":"entityName","expanded":true,"isAttribute":false,"value":"Multi_Part_Network_p1","leaf":true},{"fieldName":"description","expanded":true,"isAttribute":false,"value":"Multi_Part_Network_p1","leaf":true},{"fieldName":"permissionMask","expanded":true,"isAttribute":false,"value":"770","leaf":true},{"fieldName":"activeVersion","expanded":true,"isAttribute":false,"value":"true","leaf":true},{"fieldName":"version","expanded":true,"isAttribute":false,"value":"1","leaf":true}]},{"fieldName":"status","expanded":true,"isAttribute":false,"value":"200","leaf":true},{"fieldName":"partnerNetworks","expanded":true,"isAttribute":false,"leaf":false,"value":"\n    ","children":[{"fieldName":"id","expanded":true,"isAttribute":false,"value":"11695183019868","leaf":true}]}]}]}]]></au_json>
+        <au_specialCharacters><![CDATA[null]]></au_specialCharacters>
+        <au_removeLeadingZeros><![CDATA[0]]></au_removeLeadingZeros>
+        <au_creationDate><![CDATA[2023-09-26T06:48:15]]></au_creationDate>
+    </AU_JSONSCHEMA>
+    <columnInfo dbtype="4">
+        <column name="au_id" type="12"/>
+        <column name="au_version" type="12"/>
+        <column name="au_previousVersion" type="12"/>
+        <column name="au_activeVersion" type="3"/>
+        <column name="au_entityName" type="12"/>
+        <column name="au_userOwner" type="12"/>
+        <column name="au_groupOwner" type="12"/>
+        <column name="au_permissionMask" type="12"/>
+        <column name="au_description" type="12"/>
+        <column name="au_comments" type="12"/>
+        <column name="au_modifiedBy" type="12"/>
+        <column name="au_creationDate" type="93"/>
+        <column name="au_modifiedDate" type="93"/>
+        <column name="au_revision" type="12"/>
+        <column name="au_synchronized" type="3"/>
+        <column name="au_projectOwner" type="12"/>
+        <column name="au_xsd" type="-1"/>
+        <column name="xsdFilePath" type="12"/>
+        <column name="au_encodingUsed" type="12"/>
+        <column name="AU_REUSABLE" type="3"/>
+        <column name="au_json" type="-1"/>
+        <column name="au_originalJson" type="-1"/>
+        <column name="au_jsonFilePath" type="12"/>
+        <column name="au_specialCharacters" type="-1"/>
+        <column name="au_removeLeadingZeros" type="3"/>
+        <column name="au_jsonType" type="4"/>
+        <column name="au_arrayFields" type="-1"/>
+    </columnInfo>
+</data>
