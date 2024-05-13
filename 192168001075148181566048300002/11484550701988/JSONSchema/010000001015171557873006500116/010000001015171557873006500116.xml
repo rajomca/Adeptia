@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
     <AU_JSONSCHEMA>
-        <au_version><![CDATA[1]]></au_version>
-        <au_projectOwner><![CDATA[Project:11484550701988]]></au_projectOwner>
-        <au_permissionMask><![CDATA[770]]></au_permissionMask>
-        <au_activeVersion><![CDATA[1]]></au_activeVersion>
-        <au_synchronized><![CDATA[0]]></au_synchronized>
-        <au_json><![CDATA[{"fieldName":"Root","expanded":true,"leaf":false,"children":[{"fieldName":"SourceSystem","expanded":true,"isAttribute":false,"value":"postman","leaf":true},{"fieldName":"SourceType","expanded":true,"isAttribute":false,"value":"Enrollment","leaf":true}]}]]></au_json>
-        <au_creationDate><![CDATA[2024-05-13T05:38:50]]></au_creationDate>
-        <xsdFilePath><![CDATA[null]]></xsdFilePath>
-        <au_description><![CDATA[WebhookTest_JSC]]></au_description>
+        <au_encodingUsed><![CDATA[UTF-8]]></au_encodingUsed>
         <au_previousVersion><![CDATA[]]></au_previousVersion>
+        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
+        <au_json><![CDATA[{"fieldName":"Root","expanded":true,"leaf":false,"children":[{"fieldName":"SourceSystem","expanded":true,"isAttribute":false,"value":"postman","leaf":true},{"fieldName":"SourceType","expanded":true,"isAttribute":false,"value":"Enrollment","leaf":true},{"fieldName":"TargetSystem","expanded":true,"isAttribute":false,"value":"Salesforce","leaf":true}]}]]></au_json>
+        <au_description><![CDATA[WebhookTest_JSC]]></au_description>
+        <au_modifiedBy><![CDATA[IndigoUser:11677662868127]]></au_modifiedBy>
+        <au_userOwner><![CDATA[IndigoUser:11677662868127]]></au_userOwner>
+        <au_jsonFilePath><![CDATA[C:\fakepath\test.json]]></au_jsonFilePath>
+        <au_entityName><![CDATA[WebhookTest_JSC]]></au_entityName>
+        <au_modifiedDate><![CDATA[2024-05-13T06:35:25]]></au_modifiedDate>
         <au_arrayFields><![CDATA[]]></au_arrayFields>
         <au_groupOwner><![CDATA[IndigoGroup:192168001075148181566048300002]]></au_groupOwner>
-        <AU_REUSABLE><![CDATA[1]]></AU_REUSABLE>
-        <au_modifiedDate><![CDATA[2024-05-13T05:38:50]]></au_modifiedDate>
         <au_originalJson><![CDATA[{
 	"SourceSystem":"postman",
-	"SourceType":"Enrollment"
+	"SourceType":"Enrollment",
+	"TargetSystem":"Salesforce"
 }]]></au_originalJson>
-        <au_entityName><![CDATA[WebhookTest_JSC]]></au_entityName>
-        <au_userOwner><![CDATA[IndigoUser:11677662868127]]></au_userOwner>
-        <au_jsonType><![CDATA[0]]></au_jsonType>
+        <au_comments><![CDATA[null]]></au_comments>
+        <au_id><![CDATA[010000001015171557873006500116]]></au_id>
+        <au_creationDate><![CDATA[2024-05-13T05:38:50]]></au_creationDate>
+        <au_permissionMask><![CDATA[770]]></au_permissionMask>
         <au_xsd><![CDATA[<Root>
   <SourceSystem>[ABPM_._ESCAPE_._CDATA_._START]postman[ABPM_._ESCAPE_._CDATA_._END]</SourceSystem>
   <SourceType>[ABPM_._ESCAPE_._CDATA_._START]Enrollment[ABPM_._ESCAPE_._CDATA_._END]</SourceType>
+  <TargetSystem>[ABPM_._ESCAPE_._CDATA_._START]Salesforce[ABPM_._ESCAPE_._CDATA_._END]</TargetSystem>
 </Root>
 ]]></au_xsd>
-        <au_id><![CDATA[010000001015171557873006500116]]></au_id>
-        <au_modifiedBy><![CDATA[IndigoUser:11677662868127]]></au_modifiedBy>
-        <au_jsonFilePath><![CDATA[C:\fakepath\test.json]]></au_jsonFilePath>
-        <au_comments><![CDATA[null]]></au_comments>
+        <au_revision><![CDATA[cac0a6e81a7c457a9534946ea28bbd59063830be]]></au_revision>
+        <xsdFilePath><![CDATA[null]]></xsdFilePath>
         <au_removeLeadingZeros><![CDATA[0]]></au_removeLeadingZeros>
-        <au_revision><![CDATA[null]]></au_revision>
-        <au_encodingUsed><![CDATA[UTF-8]]></au_encodingUsed>
+        <au_projectOwner><![CDATA[Project:11484550701988]]></au_projectOwner>
+        <au_jsonType><![CDATA[0]]></au_jsonType>
         <au_specialCharacters><![CDATA[null]]></au_specialCharacters>
+        <au_version><![CDATA[1]]></au_version>
+        <au_synchronized><![CDATA[0]]></au_synchronized>
+        <au_activeVersion><![CDATA[1]]></au_activeVersion>
     </AU_JSONSCHEMA>
     <columnInfo dbtype="4">
         <column name="au_id" type="12"/>
